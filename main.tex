@@ -1,0 +1,45 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Qualificacao de Doutorado / Dept Fisica, CFM, UFSC            %
+% Eduardo@UFSC - 2015                                           %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass{nathesis}
+
+\begin{document}
+
+\begin{frontmatter}
+  \input{capa}
+  %\input{dedicatoria}
+  %\input{agradecimentos}
+  \input{resumo}
+  %\input{abstract}
+  \tableofcontents
+  \listoffigures
+  %\listoftables
+\end{frontmatter}
+
+\begin{mainmatter}
+  % Introdução
+  \input{cap1}
+  % EmLinesDataCube
+  \input{cap2}
+  % Amostra
+  \input{cap3}
+  % Neb vs Syn
+  \input{cap4}
+  % tau_V
+  \input{cap5}
+  % dust2gas
+  \input{cap6}
+  
+  \appendix
+  \input{anexo1}
+\end{mainmatter}
+
+\begin{backmatter}
+	\bibliographystyle{apj}
+	\bibliography{bibliografia}
+\end{backmatter}
+
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

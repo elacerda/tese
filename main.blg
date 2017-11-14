@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: main.aux
+The style file: apj.bst
+Database file #1: bibliografia.bib
+Warning--empty publisher in Osterbrock.Ferland.2006a
+You've used 60 entries,
+            2967 wiz_defined-function locations,
+            1038 strings with 29491 characters,
+and the built_in function-call counts, 49937 in all, are:
+= -- 3851
+> -- 5579
+< -- 14
++ -- 2021
+- -- 1959
+* -- 5074
+:= -- 9317
+add.period$ -- 60
+call.type$ -- 60
+change.case$ -- 1059
+chr.to.int$ -- 58
+cite$ -- 61
+duplicate$ -- 1099
+empty$ -- 1621
+format.name$ -- 2111
+if$ -- 9217
+int.to.chr$ -- 3
+int.to.str$ -- 1
+missing$ -- 60
+newline$ -- 184
+num.names$ -- 240
+pop$ -- 1089
+preamble$ -- 1
+purify$ -- 1059
+quote$ -- 0
+skip$ -- 1521
+stack$ -- 0
+substring$ -- 1235
+swap$ -- 4
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 537
+warning$ -- 1
+while$ -- 239
+width$ -- 0
+write$ -- 602
+(There was 1 warning)
