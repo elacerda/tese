@@ -1,6 +1,7 @@
-*.aux
-*.bbl
-*.blg
-*.out
-*.lof
-*.out
+main.aux
+main.bbl
+main.blg
+main.out
+main.lof
+main.out
+main.log
