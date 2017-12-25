@@ -1,6 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Qualificacao de Doutorado / Dept Fisica, CFM, UFSC            %
-% Eduardo@UFSC - 2015                                           %
+% Tese de Doutorado / Dept. Fisica, CFM, UFSC                   %
+% Lacerda@Cidreira - Dez/2017                                   %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::%
@@ -11,20 +11,17 @@
 
 %***************************************************************%
 %                                                               %
-%                        EmLinesDataCube                        %
+%                             DIG                               %
 %                                                               %
 %***************************************************************%
 
 \chapter{Linhas de emissão}
 \label{sec:emlines}
 
-Espectros observados carregam uma mistura de luz provenientes de distintas componentes das galáxias
-(estrelas, gás, poeira, etc). Com a síntese de populações estelares pode-se modelar os espectros
-proveniente das estrelas de diferentes idades e composições químicas (metalicidade), além da
-correção pela aplicação de uma lei de extinção por poeira. Subtraindo os espectros observados dos
-espectros modelados obtêm-se os espectros residuais, compostos basicamente pelas linhas de emissão.
-Essas linhas são geradas principalmente através das ionizações e recombinações de átomos dos
-elementos encontrados no meio interestelar, e mais densamente, nas nuvens de gás. Neste capítulo
+Espectros observados carregam uma mistura de luz provenientes de distintas componentes das galáxias (estrelas, gás, poeira, etc). Com a síntese de populações estelares pode-se modelar os espectros proveniente das estrelas de diferentes idades e composições químicas (metalicidade), além da correção pela aplicação de uma lei de extinção por poeira. Subtraindo os espectros observados dos espectros modelados obtêm-se os espectros residuais, compostos basicamente pelas linhas de emissão. Essas linhas são geradas principalmente através das ionizações e recombinações de átomos dos elementos encontrados no meio interestelar, e mais densamente, nas nuvens de gás. 
+
+
+Neste capítulo
 descrevo um módulo em \pyt que desenvolvemos para incluir medidas de linhas de emissão (e seus
 subprodutos) derivados em nossa plataforma geral de análise dos cubos de dados do CALIFA.
 
@@ -88,9 +85,9 @@ possamos escrever uma equação para $\tau_V$:
  \frac{F_\lambda^{int} e^{-q_\lambda \tauV}}{F_{\lambda^\prime}^{int} e^{-q_{\lambda^\prime} \tauV}} \\
    \ln \left(\frac{F_\lambda^{obs}}{F_{\lambda^\prime}^{obs}}\right) &=& \
  \tauV (q_{\lambda^\prime} - q_\lambda) \ln \left(\frac{F_\lambda^{int}}{F_{\lambda^\prime}^{int}}\right) \\
-   \tauV &=& \frac{1}{(q_{\lambda^\prime} - q_\lambda)} \left[\ln \ 
+   \tauV &=& \frac{1}{(q_{\lambda^\prime} - q_\lambda)} \left[\ln \
  \left(\frac{F_\lambda^{obs}}{F_{\lambda^\prime}^{obs}}\right) - \
- \ln \left(\frac{F_\lambda^{int}}{F_{\lambda^\prime}^{int}}\right)\right] 
+ \ln \left(\frac{F_\lambda^{int}}{F_{\lambda^\prime}^{int}}\right)\right]
  \label{eq:tauV}
 \end{eqnarray}
 \noindent Nessa equação, os $q_\lambda$ são provenientes da curva de extinção adotada.
@@ -152,7 +149,7 @@ parametrização encontrada pelos autores foi:
 \end{equation}
 \noindent onde O3N2 vem da razão entre os fluxos intrínsecos de \oIII, \Hbeta, \nII e \Halpha:
 \begin{equation}
-	\textrm{O3N2}\ \equiv\ \log \left(\frac{\OIII}{\Hbeta} \times \frac{\Halpha}{\NII}\right). 
+	\textrm{O3N2}\ \equiv\ \log \left(\frac{\OIII}{\Hbeta} \times \frac{\Halpha}{\NII}\right).
 \end{equation}
 A Fig.\ \ref{fig:Marino2013_O3N2} mostra o resultado da calibração por M13. As regiões estudadas
 nesse trabalho possuem abundâncias relativas de oxigênio nebular com média (mediana) $0.60\
@@ -161,8 +158,8 @@ nesse trabalho possuem abundâncias relativas de oxigênio nebular com média (m
 \begin{figure}
 	\centering
 	\includegraphics[scale=0.7, trim=2cm 13cm 2cm 3cm, clip]{figuras/O3N2_CALIFA.pdf}
-	\caption[Calibração da abundância de oxigênio no gás]{Calibração da abundância de oxigênio 
-	nebular	para 3423 regiões \Hii mapeadas por \citet{Sanchez.etal.2013a}. Figura retirada de 
+	\caption[Calibração da abundância de oxigênio no gás]{Calibração da abundância de oxigênio
+	nebular	para 3423 regiões \Hii mapeadas por \citet{Sanchez.etal.2013a}. Figura retirada de
 	\citet{Marino.etal.2013a}}
 	\label{fig:Marino2013_O3N2}
 \end{figure}
@@ -217,7 +214,7 @@ O3Hb__z = np.log10(O3_obs__z) - np.log10(Hb_obs__z)
 f = plt.figure()
 ax = f.gca()
 sc = ax.scatter(N2Ha__z, O3Hb__z, c = K.zoneDistance_HLR,
-           		cmap = 'viridis_r', marker = 'o', s = 10, 
+           		cmap = 'viridis_r', marker = 'o', s = 10,
            		alpha = 0.8, edgecolor = 'none')
 ax.set_xlabel(r'$\log\ [NII]/H\alpha$')
 ax.set_ylabel(r'$\log\ [OIII]/H\beta$')
@@ -227,7 +224,7 @@ plt.axis([-0.6, 0.3, -1.5, 1])
 f.savefig('%s-BPT.pdf' % K.califaID)
 	\end{python}
 	\caption[Exemplo de programa utilizando o EmLinesDataCube]
-	{Exemplo de programa utilizando os fluxos de \Halpha, \Hbeta, \OIII e \NII 
+	{Exemplo de programa utilizando os fluxos de \Halpha, \Hbeta, \OIII e \NII
 para construção de um gráfico BPT utilizando o objeto \emldc juntamente com o \pycasso.}
 	\label{fig:BPTprog}
 \end{figure}
@@ -259,7 +256,7 @@ de SFR usando uma relação linear:
 	\mathrm{SFR}_{\Halpha} = k \times \LHalpha.
 	\label{eq:SFRHa}
 \end{equation}
-\noindent Portanto, nosso trabalho é encontrar $k$. Faremos isso investigando a natureza dos 
+\noindent Portanto, nosso trabalho é encontrar $k$. Faremos isso investigando a natureza dos
 fótons H-ionizantes.
 
 Chamamos $\Lambda$ o valor total de luz ($l$) que recebemos de estrelas que se formaram $t$ anos
@@ -297,7 +294,7 @@ nenhuma radiação ionizante escapa da nuvem e, apesar de $\LHalpha$ estar corri
 extinção, também assume-se que a poeira não absorve muito os fótons com $h\nu\ > 13.6$ eV.
 Escrevemos $dQ_H$ como a equação \eqref{eq:dLambda}.
 \begin{equation}
-	Q_H(t)\ =\ \int dQ_H = \int q_H(t)\ \mathrm{d}\mathrm{M}(t) 
+	Q_H(t)\ =\ \int dQ_H = \int q_H(t)\ \mathrm{d}\mathrm{M}(t)
 	\label{eq:QH_t}
 \end{equation}
 \noindent Nas equações acima, $q_H$ (que assume o mesmo papel de $l(t)$ na Eq.\ \ref{eq:dLambda}) é
@@ -351,13 +348,13 @@ para $t = 10^7$ anos. Finalmente, resolvendo \eqref{eq:SFR_theoric} encontramos 
 \end{equation}
 
 Em \citet{Kennicutt.1998a} esse coeficiente é calculado utilizando diferentes modelos estelares mas
-utilizando a mesma IMF. Nosso valor é bem próximo daquele obtido no artigo ($7.9 \times 10^{-42}$). 
+utilizando a mesma IMF. Nosso valor é bem próximo daquele obtido no artigo ($7.9 \times 10^{-42}$).
 
 \begin{figure}
 	\centering
 	\includegraphics[scale=0.62]{figuras/Nh_logt_metBase_Padova2000_salp.pdf}
 	\caption[Evolução temporal do número e da taxa de fótons H-ionizantes em unidades da massa
-	formada.] 
+	formada.]
 	{\emph{Painel superior esquerdo}: A	evolução no tempo do número de fótons ($\mathcal{N}_H$) para 6
 metalicidades (de 0.02 $Z_\odot$ até 1.58 $Z_\odot$) que compoem nossos modelos de SSP. A linha
 preta grossa representa a evolução utilizando metalicidade solar. \emph{Painel superior direito}:
@@ -368,5 +365,5 @@ massa formada.
 Também mostra o valor seguindo o código de cores para as mesmas metalicidades.}
 	\label{fig:Nh_qh}
 \end{figure}
- 
+
 % End of this chapter

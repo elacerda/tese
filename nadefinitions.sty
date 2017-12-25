@@ -6,7 +6,7 @@
 
 \ProvidesPackage{nadefinitions}
 \usepackage{xspace}
-\usepackage{color}
+\usepackage[usenames]{color}
 
 % ********************* Andre's Definitions ************************
 \def\starlight{\textsc{starlight}\xspace}      %smallcaps Starlight%
@@ -21,10 +21,10 @@
 \def\Halpha{\ifmmode \mathrm{H}\alpha \else H$\alpha$\xspace \fi}
 \def\WHa{\ifmmode W_{\mathrm{H}\alpha} \else $W_{\mathrm{H}\alpha}$\xspace \fi}
 \def\Hbeta{\ifmmode \mathrm{H}\beta \else H$\beta$\xspace \fi}
-\def\NII{\ifmmode [\mathrm{N}\textsc{ii}] \lambda 6584 \else [N\thinspace\textsc{ii}]$\lambda 6584$\xspace \fi} 
-\def\nII{\ifmmode [\mathrm{N\,\textsc{ii}}] \else [N\thinspace\textsc{ii}]\xspace \fi} 
-\def\WnII{W_{\mathrm{[N\,\textsc{ii}]}}} 
-\def\OIII{\ifmmode [\mathrm{O}\textsc{iii}] \lambda 5007 \else [O\thinspace\textsc{iii}] $\lambda 5007$\xspace \fi} 
+\def\NII{\ifmmode [\mathrm{N}\textsc{ii}] \lambda 6584 \else [N\thinspace\textsc{ii}]$\lambda 6584$\xspace \fi}
+\def\nII{\ifmmode [\mathrm{N\,\textsc{ii}}] \else [N\thinspace\textsc{ii}]\xspace \fi}
+\def\WnII{W_{\mathrm{[N\,\textsc{ii}]}}}
+\def\OIII{\ifmmode [\mathrm{O}\textsc{iii}] \lambda 5007 \else [O\thinspace\textsc{iii}] $\lambda 5007$\xspace \fi}
 \def\oIII{\ifmmode [\mathrm{O\,\textsc{iii}}] \else [O\thinspace{\sc iii}]\xspace \fi}
 %*******************************************************************
 
@@ -62,6 +62,12 @@
 \def\Hii{H\textsc{ii}\xspace}
 \def\emldc{E\textsc{m}L\textsc{ines}D\textsc{ata}C\textsc{ube}\xspace}
 \def\pyt{\textsc{p}y\textsc{thon}\xspace}
+\def\ATT{\color{red}}                				% Marks new stuff!
+\def\ATR{\color{red}}                				% Marks new stuff!
+\def\ATB{\color{blue}}                			% Marks new stuff!
+\def\ATG{\color{green}}                			% Marks new stuff!
+\def\ATC{\color{cyan}}                			% Marks new stuff!
+\def\ATM{\color{magenta}}                		% Marks new stuff!
 % Correction% *******************************************************************
 
 % I guess these are Cid's definitions. I have found them in Luis'
@@ -184,4 +190,3 @@
           % Planetary Space Science
 \def\procspie{Proc.~SPIE}%
           % Proceedings of the SPIE
-
