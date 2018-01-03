@@ -1,43 +1,6 @@
 \select@language {brazil} \contentsline {chapter}{\numberline {1}Introdu\IeC {\c c}\IeC {\~a}o}{1}{chapter.1}
-\select@language {brazil} \contentsline {section}{\numberline {1.1}O GAS-UFSC e o IAA-CSIC}{1}{section.1.1}
-\select@language {brazil} \contentsline {section}{\numberline {1.2}G\IeC {\'a}s, estrelas e poeira nas gal\IeC {\'a}xias}{2}{section.1.2}
-\select@language {brazil} \contentsline {section}{\numberline {1.3}De poeira para g\IeC {\'a}s}{3}{section.1.3}
-\select@language {brazil} \contentsline {section}{\numberline {1.4}Este trabalho}{4}{section.1.4}
-\select@language {brazil} \contentsline {chapter}{\numberline {2}Linhas de emiss\IeC {\~a}o}{7}{chapter.2}
-\select@language {brazil} \contentsline {section}{\numberline {2.1}EmLinesDataCube}{7}{section.2.1}
-\select@language {brazil} \contentsline {subsection}{\numberline {2.1.1}Extin\IeC {\c c}\IeC {\~a}o estimada atrav\IeC {\'e}s do decremento de Balmer}{9}{subsection.2.1.1}
-\select@language {brazil} \contentsline {subsection}{\numberline {2.1.2}Metalicidade Nebular}{10}{subsection.2.1.2}
-\select@language {brazil} \contentsline {subsection}{\numberline {2.1.3}Exemplo de utiliza\IeC {\c c}\IeC {\~a}o}{11}{subsection.2.1.3}
-\select@language {brazil} \contentsline {section}{\numberline {2.2}Taxa de forma\IeC {\c c}\IeC {\~a}o estelar}{13}{section.2.2}
-\select@language {brazil} \contentsline {chapter}{\numberline {3}Amostra de gal\IeC {\'a}xias}{17}{chapter.3}
-\select@language {brazil} \contentsline {section}{\numberline {3.1}Artigo - CALIFA, the Calar Alto Legacy Field Area survey III. Second public data release.}{17}{section.3.1}
-\select@language {brazil} \contentsline {section}{\numberline {3.2}Defini\IeC {\c c}\IeC {\~a}o da amostra deste trabalho}{18}{section.3.2}
-\select@language {brazil} \contentsline {subsection}{\numberline {3.2.1}Mascarando elementos e removendo {\em outliers}}{18}{subsection.3.2.1}
-\select@language {brazil} \contentsline {subsection}{\numberline {3.2.2}Classifica\IeC {\c c}\IeC {\~a}o Morfol\IeC {\'o}gica}{19}{subsection.3.2.2}
-\select@language {brazil} \contentsline {section}{\numberline {3.3}Perfis radiais}{22}{section.3.3}
-\select@language {brazil} \contentsline {chapter}{\numberline {4}Compara\IeC {\c c}\IeC {\~o}es entre propriedades estelares e propriedades nebulares}{27}{chapter.4}
-\select@language {brazil} \contentsline {section}{\numberline {4.1}Compara\IeC {\c c}\IeC {\~a}o entre as taxas de forma\IeC {\c c}\IeC {\~a}o estelar}{27}{section.4.1}
-\select@language {brazil} \contentsline {section}{\numberline {4.2}Compara\IeC {\c c}\IeC {\~a}o entre os coeficientes de extin\IeC {\c c}\IeC {\~a}o}{31}{section.4.2}
-\select@language {brazil} \contentsline {section}{\numberline {4.3}Compara\IeC {\c c}\IeC {\~a}o entre as metalicidades}{33}{section.4.3}
-\select@language {brazil} \contentsline {subsection}{\numberline {4.3.1}Metais em gal\IeC {\'a}xias - \relax $\delimiter "426830A \qopname \relax o{log}Z_\star \delimiter "526930B _M$\xspace e $\qopname \relax o{log}\ (O/H)$}{33}{subsection.4.3.1}
-\select@language {brazil} \contentsline {subsection}{\numberline {4.3.2}Artigo - Insights on the Stellar Mass-Metallicity Relation from the CALIFA Survey.}{33}{subsection.4.3.2}
-\select@language {brazil} \contentsline {subsection}{\numberline {4.3.3}Artigo - The CALIFA Survey across the Hubble sequence. Spatially resolved stellar population properties in galaxies.}{36}{subsection.4.3.3}
-\select@language {brazil} \contentsline {chapter}{\numberline {5}Extin\IeC {\c c}\IeC {\~a}o diferencial}{39}{chapter.5}
-\select@language {brazil} \contentsline {section}{\numberline {5.1}Estudo emp\IeC {\'\i }rico}{39}{section.5.1}
-\select@language {brazil} \contentsline {subsection}{\numberline {5.1.1}Compara\IeC {\c c}\IeC {\~a}o direta entre os coeficientes}{39}{subsection.5.1.1}
-\select@language {brazil} \contentsline {subsection}{\numberline {5.1.2}O papel de $x_Y$ e de $b/a$}{40}{subsection.5.1.2}
-\select@language {brazil} \contentsline {section}{\numberline {5.2}Modelagem e interpreta\IeC {\c c}\IeC {\~a}o}{45}{section.5.2}
-\select@language {brazil} \contentsline {subsection}{\numberline {5.2.1}O modelo}{45}{subsection.5.2.1}
-\select@language {brazil} \contentsline {section}{\numberline {5.3}Pr\IeC {\'o}ximos passos}{48}{section.5.3}
-\select@language {brazil} \contentsline {chapter}{\numberline {6}Estimando fra\IeC {\c c}\IeC {\~o}es de g\IeC {\'a}s}{49}{chapter.6}
-\select@language {brazil} \contentsline {section}{\numberline {6.1}Um modelo simples de evolu\IeC {\c c}\IeC {\~a}o qu\IeC {\'\i }mica}{49}{section.6.1}
-\select@language {brazil} \contentsline {section}{\numberline {6.2}Rela\IeC {\c c}\IeC {\~a}o de Kennicutt-Schmidt e a pseudo-KS}{51}{section.6.2}
-\select@language {brazil} \contentsline {subsection}{\numberline {6.2.1}Res\IeC {\'\i }duos da pseudo-KS}{52}{subsection.6.2.1}
-\select@language {brazil} \contentsline {section}{\numberline {6.3}Convers\IeC {\~a}o de poeira em g\IeC {\'a}s}{56}{section.6.3}
-\select@language {brazil} \contentsline {subsection}{\numberline {6.3.1}Analisando a convers\IeC {\~a}o}{58}{subsection.6.3.1}
-\select@language {brazil} \contentsline {section}{\numberline {6.4}Perspectivas e pr\IeC {\'o}ximos passos}{64}{section.6.4}
-\select@language {brazil} \contentsline {chapter}{\numberline {A}Artigos publicados}{67}{appendix.A}
-\select@language {brazil} \contentsline {section}{\numberline {A.1}CALIFA, the Calar Alto Legacy Integral Field Area survey. III. Second public data release}{67}{section.A.1}
-\select@language {brazil} \contentsline {section}{\numberline {A.2}Insights on the stellar mass-metallicity relation from the CALIFA Survey}{99}{section.A.2}
-\select@language {brazil} \contentsline {section}{\numberline {A.3}The CALIFA survey across the Hubble sequence. Spatially resolved stellar population properties in galaxies}{106}{section.A.3}
-\select@language {brazil} \contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{I}{appendix*.3}
+\select@language {brazil} \contentsline {section}{\numberline {1.1}O todo e as partes}{2}{section.1.1}
+\select@language {brazil} \contentsline {section}{\numberline {1.2}O GAS-UFSC e o IAA-CSIC}{2}{section.1.2}
+\select@language {brazil} \contentsline {section}{\numberline {1.3}De poeira para g\IeC {\'a}s}{4}{section.1.3}
+\select@language {brazil} \contentsline {section}{\numberline {1.4}Este trabalho}{5}{section.1.4}
+\select@language {brazil} \contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{I}{chapter*.3}

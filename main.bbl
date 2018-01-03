@@ -1,129 +1,36 @@
-\begin{thebibliography}{60}
+\begin{thebibliography}{15}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
-
-\bibitem[{{Abazajian} {et~al.}(2009){Abazajian}, {Adelman-McCarthy},
-  {Ag{\"u}eros}, {Allam}, {Allende Prieto}, {An}, {Anderson}, {Anderson},
-  {Annis}, {Bahcall}, \& et~al.}]{Abazajian.etal.2009a}
-{Abazajian}, K.~N., {Adelman-McCarthy}, J.~K., {Ag{\"u}eros}, M.~A., {Allam},
-  S.~S., {Allende Prieto}, C., {An}, D., {Anderson}, K.~S.~J., {Anderson},
-  S.~F. {et~al.} 2009, \apjs, 182, 543
-
-\bibitem[{{Asari} {et~al.}(2007){Asari}, {Cid Fernandes}, {Stasi{\'n}ska},
-  {Torres-Papaqui}, {Mateus}, {Sodr{\'e}}, {Schoenell}, \&
-  {Gomes}}]{Asari.etal.2007a}
-{Asari}, N.~V., {Cid Fernandes}, R., {Stasi{\'n}ska}, G., {Torres-Papaqui},
-  J.~P., {Mateus}, A., {Sodr{\'e}}, L., {Schoenell}, W., \& {Gomes}, J.~M.
-  2007, \mnras, 381, 263
-
-\bibitem[{{Ascasibar} {et~al.}(2015){Ascasibar}, {Gavil{\'a}n}, {Pinto},
-  {Casado}, {Rosales-Ortega}, \& {D{\'{\i}}az}}]{Ascasibar.etal.2015a}
-{Ascasibar}, Y., {Gavil{\'a}n}, M., {Pinto}, N., {Casado}, J.,
-  {Rosales-Ortega}, F., \& {D{\'{\i}}az}, A.~I. 2015, \mnras, 448, 2126
-
-\bibitem[{{Baldwin} {et~al.}(1981){Baldwin}, {Phillips}, \&
-  {Terlevich}}]{Baldwin.Phillips.Terlevich.1981a}
-{Baldwin}, J.~A., {Phillips}, M.~M., \& {Terlevich}, R. 1981, \pasp, 93, 5
-
-\bibitem[{{Barnard}(1908)}]{Barnard.1908a}
-{Barnard}, E.~E. 1908, Astronomische Nachrichten, 177, 231
-
-\bibitem[{{Bolatto} {et~al.}(2013){Bolatto}, {Wolfire}, \&
-  {Leroy}}]{Bolatto.etal.2013a}
-{Bolatto}, A.~D., {Wolfire}, M., \& {Leroy}, A.~K. 2013, \araa, 51, 207
 
 \bibitem[{{Brinchmann} {et~al.}(2013){Brinchmann}, {Charlot}, {Kauffmann},
   {Heckman}, {White}, \& {Tremonti}}]{Brinchmann.etal.2013a}
 {Brinchmann}, J., {Charlot}, S., {Kauffmann}, G., {Heckman}, T., {White},
   S.~D.~M., \& {Tremonti}, C. 2013, \mnras, 432, 2112
 
-\bibitem[{{Bruzual} \& {Charlot}(2003)}]{BC03a}
-{Bruzual}, G. \& {Charlot}, S. 2003, \mnras, 344, 1000
-
-\bibitem[{{Calzetti} {et~al.}(1994){Calzetti}, {Kinney}, \&
-  {Storchi-Bergmann}}]{Calzetti.etal.1994a}
-{Calzetti}, D., {Kinney}, A.~L., \& {Storchi-Bergmann}, T. 1994, \apj, 429, 582
-
-\bibitem[{{Calzetti} {et~al.}(2012){Calzetti}, {Liu}, \&
-  {Koda}}]{Calzetti.Liu.Koda.2012a}
-{Calzetti}, D., {Liu}, G., \& {Koda}, J. 2012, \apj, 752, 98
-
-\bibitem[{{Cardelli} {et~al.}(1989){Cardelli}, {Clayton}, \&
-  {Mathis}}]{CCM1989a}
-{Cardelli}, J.~A., {Clayton}, G.~C., \& {Mathis}, J.~S. 1989, \apj, 345, 245
-
-\bibitem[{{Casasola} {et~al.}(2015){Casasola}, {Hunt}, {Combes}, \&
-  {Garc{\'{\i}}a-Burillo}}]{Casasola.etal.2015a}
-{Casasola}, V., {Hunt}, L., {Combes}, F., \& {Garc{\'{\i}}a-Burillo}, S. 2015,
-  \aap, 577, A135
-
-\bibitem[{{Chabrier}(2003)}]{Chabrier.2003a}
-{Chabrier}, G. 2003, \pasp, 115, 763
-
-\bibitem[{{Charlot} \& {Fall}(2000)}]{Charlot.Fall.2000a}
-{Charlot}, S. \& {Fall}, S.~M. 2000, \apj, 539, 718
-
-\bibitem[{{Cid Fernandes} {et~al.}(2007){Cid Fernandes}, {Asari}, {Sodr{\'e}},
-  {Stasi{\'n}ska}, {Mateus}, {Torres-Papaqui}, \&
-  {Schoenell}}]{CidFernandes.etal.2007a}
-{Cid Fernandes}, R., {Asari}, N.~V., {Sodr{\'e}}, L., {Stasi{\'n}ska}, G.,
-  {Mateus}, A., {Torres-Papaqui}, J.~P., \& {Schoenell}, W. 2007, \mnras, 375,
-  L16
-
 \bibitem[{{Cid Fernandes} {et~al.}(2005){Cid Fernandes}, {Mateus}, {Sodr{\'e}},
   {Stasi{\'n}ska}, \& {Gomes}}]{CidFernandes.etal.2005a}
 {Cid Fernandes}, R., {Mateus}, A., {Sodr{\'e}}, L., {Stasi{\'n}ska}, G., \&
   {Gomes}, J.~M. 2005, \mnras, 358, 363
-
-\bibitem[{{Cid Fernandes} {et~al.}(2013){Cid Fernandes}, {P{\'e}rez},
-  {Garc{\'{\i}}a Benito}, {Gonz{\'a}lez Delgado}, {de Amorim}, {S{\'a}nchez},
-  {Husemann}, {Falc{\'o}n Barroso}, {S{\'a}nchez-Bl{\'a}zquez}, {Walcher}, \&
-  {Mast}}]{CidFernandes.etal.2013a}
-{Cid Fernandes}, R., {P{\'e}rez}, E., {Garc{\'{\i}}a Benito}, R., {Gonz{\'a}lez
-  Delgado}, R.~M., {de Amorim}, A.~L., {S{\'a}nchez}, S.~F., {Husemann}, B.,
-  {Falc{\'o}n Barroso}, J. {et~al.} 2013, \aap, 557, A86
 
 \bibitem[{{Cid Fernandes} {et~al.}(2011){Cid Fernandes}, {Stasi{\'n}ska},
   {Mateus}, \& {Vale Asari}}]{CidFernandes.etal.2011a}
 {Cid Fernandes}, R., {Stasi{\'n}ska}, G., {Mateus}, A., \& {Vale Asari}, N.
   2011, \mnras, 413, 1687
 
-\bibitem[{{Cid Fernandes} {et~al.}(2010){Cid Fernandes}, {Stasi{\'n}ska},
-  {Schlickmann}, {Mateus}, {Vale Asari}, {Schoenell}, \&
-  {Sodr{\'e}}}]{CidFernandes.etal.2010a}
-{Cid Fernandes}, R., {Stasi{\'n}ska}, G., {Schlickmann}, M.~S., {Mateus}, A.,
-  {Vale Asari}, N., {Schoenell}, W., \& {Sodr{\'e}}, L. 2010, \mnras, 403, 1036
+\bibitem[{{de Amorim} {et~al.}(2017){de Amorim}, {Garc{\'{\i}}a-Benito}, {Cid
+  Fernandes}, {Cortijo-Ferrero}, {Gonz{\'a}lez Delgado}, {Lacerda}, {L{\'o}pez
+  Fern{\'a}ndez}, {P{\'e}rez}, \& {Vale Asari}}]{deAmorim.etal.2017}
+{de Amorim}, A.~L., {Garc{\'{\i}}a-Benito}, R., {Cid Fernandes}, R.,
+  {Cortijo-Ferrero}, C., {Gonz{\'a}lez Delgado}, R.~M., {Lacerda}, E.~A.~D.,
+  {L{\'o}pez Fern{\'a}ndez}, R., {P{\'e}rez}, E. {et~al.} 2017, \mnras, 471,
+  3727
 
-\bibitem[{{Draine}(2003)}]{Draine.2003a}
-{Draine}, B.~T. 2003, \araa, 41, 241
-
-\bibitem[{{Gallazzi} {et~al.}(2005){Gallazzi}, {Charlot}, {Brinchmann},
-  {White}, \& {Tremonti}}]{Gallazzi.etal.2005a}
-{Gallazzi}, A., {Charlot}, S., {Brinchmann}, J., {White}, S.~D.~M., \&
-  {Tremonti}, C.~A. 2005, \mnras, 362, 41
-
-\bibitem[{{Garc{\'{\i}}a-Benito} {et~al.}(2015){Garc{\'{\i}}a-Benito},
-  {Zibetti}, {S{\'a}nchez}, {Husemann}, {de Amorim}, {Castillo-Morales}, {Cid
-  Fernandes}, {Ellis}, {Falc{\'o}n-Barroso}, {Galbany}, {Gil de Paz},
-  {Gonz{\'a}lez Delgado}, {Lacerda}, {L{\'o}pez-Fernandez}, {de
-  Lorenzo-C{\'a}ceres}, {Lyubenova}, {Marino}, {Mast}, {Mendoza}, {P{\'e}rez},
-  {Vale Asari}, {Aguerri}, {Ascasibar}, {Bekerait*error*{\.e}},
-  {Bland-Hawthorn}, {Barrera-Ballesteros}, {Bomans}, {Cano-D{\'{\i}}az},
-  {Catal{\'a}n-Torrecilla}, {Cortijo}, {Delgado-Inglada}, {Demleitner},
-  {Dettmar}, {D{\'{\i}}az}, {Florido}, {Gallazzi}, {Garc{\'{\i}}a-Lorenzo},
-  {Gomes}, {Holmes}, {Iglesias-P{\'a}ramo}, {Jahnke}, {Kalinova}, {Kehrig},
-  {Kennicutt}, {L{\'o}pez-S{\'a}nchez}, {M{\'a}rquez}, {Masegosa}, {Meidt},
-  {Mendez-Abreu}, {Moll{\'a}}, {Monreal-Ibero}, {Morisset}, {del Olmo},
-  {Papaderos}, {P{\'e}rez}, {Quirrenbach}, {Rosales-Ortega}, {Roth},
-  {Ruiz-Lara}, {S{\'a}nchez-Bl{\'a}zquez}, {S{\'a}nchez-Menguiano}, {Singh},
-  {Spekkens}, {Stanishev}, {Torres-Papaqui}, {van de Ven}, {Vilchez},
-  {Walcher}, {Wild}, {Wisotzki}, {Ziegler}, {Alves}, {Barrado}, {Quintana}, \&
-  {Aceituno}}]{GarciaBenito.etal.2015a}
-{Garc{\'{\i}}a-Benito}, R., {Zibetti}, S., {S{\'a}nchez}, S.~F., {Husemann},
-  B., {de Amorim}, A.~L., {Castillo-Morales}, A., {Cid Fernandes}, R., {Ellis},
-  S.~C. {et~al.} 2015, \aap, 576, A135
-
-\bibitem[{{Garnett}(2002)}]{Garnett.2002a}
-{Garnett}, D.~R. 2002, \apj, 581, 1019
+\bibitem[{{Garc{\'{\i}}a-Benito} {et~al.}(2017){Garc{\'{\i}}a-Benito},
+  {Gonz{\'a}lez Delgado}, {P{\'e}rez}, {Cid Fernandes}, {Cortijo-Ferrero},
+  {L{\'o}pez Fern{\'a}ndez}, {de Amorim}, {Lacerda}, {Vale Asari}, \&
+  {S{\'a}nchez}}]{RGB.etal.2017}
+{Garc{\'{\i}}a-Benito}, R., {Gonz{\'a}lez Delgado}, R.~M., {P{\'e}rez}, E.,
+  {Cid Fernandes}, R., {Cortijo-Ferrero}, C., {L{\'o}pez Fern{\'a}ndez}, R.,
+  {de Amorim}, A.~L., {Lacerda}, E.~A.~D. {et~al.} 2017, ArXiv e-prints
 
 \bibitem[{{Gonz{\'a}lez Delgado} {et~al.}(2014{\natexlab{a}}){Gonz{\'a}lez
   Delgado}, {Cid Fernandes}, {Garc{\'{\i}}a-Benito}, {P{\'e}rez}, {de Amorim},
@@ -137,6 +44,17 @@
   {P{\'e}rez}, E., {de Amorim}, A.~L., {Cortijo-Ferrero}, C., {Lacerda},
   E.~A.~D., {L{\'o}pez Fern{\'a}ndez}, R. {et~al.} 2014{\natexlab{a}}, \apjl,
   791, L16
+
+\bibitem[{{Gonz{\'a}lez Delgado} {et~al.}(2016){Gonz{\'a}lez Delgado}, {Cid
+  Fernandes}, {P{\'e}rez}, {Garc{\'{\i}}a-Benito}, {L{\'o}pez Fern{\'a}ndez},
+  {Lacerda}, {Cortijo-Ferrero}, {de Amorim}, {Vale Asari}, {S{\'a}nchez},
+  {Walcher}, {Wisotzki}, {Mast}, {Alves}, {Ascasibar}, {Bland-Hawthorn},
+  {Galbany}, {Kennicutt}, {M{\'a}rquez}, {Masegosa}, {Moll{\'a}},
+  {S{\'a}nchez-Bl{\'a}zquez}, \& {V{\'{\i}}lchez}}]{GonzalezDelgado.etal.2016a}
+{Gonz{\'a}lez Delgado}, R.~M., {Cid Fernandes}, R., {P{\'e}rez}, E.,
+  {Garc{\'{\i}}a-Benito}, R., {L{\'o}pez Fern{\'a}ndez}, R., {Lacerda},
+  E.~A.~D., {Cortijo-Ferrero}, C., {de Amorim}, A.~L. {et~al.} 2016, \aap, 590,
+  A44
 
 \bibitem[{{Gonz{\'a}lez Delgado} {et~al.}(2015){Gonz{\'a}lez Delgado},
   {Garc{\'{\i}}a-Benito}, {P{\'e}rez}, {Cid Fernandes}, {de Amorim},
@@ -163,137 +81,20 @@
   {Husemann}, B., {Cortijo-Ferrero}, C. {et~al.} 2014{\natexlab{b}}, \aap, 562,
   A47
 
-\bibitem[{{Guiderdoni} \& {Rocca-Volmerange}(1987)}]{Guiderdoni.Rocca.1987}
-{Guiderdoni}, B. \& {Rocca-Volmerange}, B. 1987, \aap, 186, 1
+\bibitem[{{Gonz{\'a}lez Delgado} {et~al.}(2017){Gonz{\'a}lez Delgado},
+  {P{\'e}rez}, {Cid Fernandes}, {Garc{\'{\i}}a-Benito}, {L{\'o}pez
+  Fern{\'a}ndez}, {Vale Asari}, {Cortijo-Ferrero}, {de Amorim}, {Lacerda},
+  {S{\'a}nchez}, {Lehnert}, \& {Walcher}}]{GonzalezDelgado.etal.2017}
+{Gonz{\'a}lez Delgado}, R.~M., {P{\'e}rez}, E., {Cid Fernandes}, R.,
+  {Garc{\'{\i}}a-Benito}, R., {L{\'o}pez Fern{\'a}ndez}, R., {Vale Asari}, N.,
+  {Cortijo-Ferrero}, C., {de Amorim}, A.~L. {et~al.} 2017, \aap, 607, A128
 
-\bibitem[{{Hubble}(1925)}]{Hubble.1925a}
-{Hubble}, E.~P. 1925, The Observatory, 48, 139
-
-\bibitem[{{Husemann} {et~al.}(2013){Husemann}, {Jahnke}, {S{\'a}nchez},
-  {Barrado}, {Bekerait*error*{\.e}}, {Bomans}, {Castillo-Morales},
-  {Catal{\'a}n-Torrecilla}, {Cid Fernandes}, {Falc{\'o}n-Barroso},
-  {Garc{\'{\i}}a-Benito}, {Gonz{\'a}lez Delgado}, {Iglesias-P{\'a}ramo},
-  {Johnson}, {Kupko}, {L{\'o}pez-Fernandez}, {Lyubenova}, {Marino}, {Mast},
-  {Miskolczi}, {Monreal-Ibero}, {Gil de Paz}, {P{\'e}rez}, {P{\'e}rez},
-  {Rosales-Ortega}, {Ruiz-Lara}, {Schilling}, {van de Ven}, {Walcher}, {Alves},
-  {de Amorim}, {Backsmann}, {Barrera-Ballesteros}, {Bland-Hawthorn}, {Cortijo},
-  {Dettmar}, {Demleitner}, {D{\'{\i}}az}, {Enke}, {Florido}, {Flores},
-  {Galbany}, {Gallazzi}, {Garc{\'{\i}}a-Lorenzo}, {Gomes}, {Gruel}, {Haines},
-  {Holmes}, {Jungwiert}, {Kalinova}, {Kehrig}, {Kennicutt}, {Klar}, {Lehnert},
-  {L{\'o}pez-S{\'a}nchez}, {de Lorenzo-C{\'a}ceres}, {M{\'a}rmol-Queralt{\'o}},
-  {M{\'a}rquez}, {Mendez-Abreu}, {Moll{\'a}}, {del Olmo}, {Meidt}, {Papaderos},
-  {Puschnig}, {Quirrenbach}, {Roth}, {S{\'a}nchez-Bl{\'a}zquez}, {Spekkens},
-  {Singh}, {Stanishev}, {Trager}, {Vilchez}, {Wild}, {Wisotzki}, {Zibetti}, \&
-  {Ziegler}}]{Husemann.etal.2013a}
-{Husemann}, B., {Jahnke}, K., {S{\'a}nchez}, S.~F., {Barrado}, D.,
-  {Bekerait*error*{\.e}}, S., {Bomans}, D.~J., {Castillo-Morales}, A.,
-  {Catal{\'a}n-Torrecilla}, C. {et~al.} 2013, \aap, 549, A87
-
-\bibitem[{{Kennicutt} {et~al.}(2011){Kennicutt}, {Calzetti}, {Aniano},
-  {Appleton}, {Armus}, {Beir{\~a}o}, {Bolatto}, {Brandl}, {Crocker}, {Croxall},
-  {Dale}, {Donovan Meyer}, {Draine}, {Engelbracht}, {Galametz}, {Gordon},
-  {Groves}, {Hao}, {Helou}, {Hinz}, {Hunt}, {Johnson}, {Koda}, {Krause},
-  {Leroy}, {Li}, {Meidt}, {Montiel}, {Murphy}, {Rahman}, {Rix}, {Roussel},
-  {Sandstrom}, {Sauvage}, {Schinnerer}, {Skibba}, {Smith}, {Srinivasan},
-  {Vigroux}, {Walter}, {Wilson}, {Wolfire}, \&
-  {Zibetti}}]{Kennicutt.etal.2011a}
-{Kennicutt}, R.~C., {Calzetti}, D., {Aniano}, G., {Appleton}, P., {Armus}, L.,
-  {Beir{\~a}o}, P., {Bolatto}, A.~D., {Brandl}, B. {et~al.} 2011, \pasp, 123,
-  1347
-
-\bibitem[{{Kennicutt}(1998)}]{Kennicutt.1998a}
-{Kennicutt}, Jr., R.~C. 1998, \araa, 36, 189
-
-\bibitem[{{Kennicutt} {et~al.}(2007){Kennicutt}, {Calzetti}, {Walter}, {Helou},
-  {Hollenbach}, {Armus}, {Bendo}, {Dale}, {Draine}, {Engelbracht}, {Gordon},
-  {Prescott}, {Regan}, {Thornley}, {Bot}, {Brinks}, {de Blok}, {de Mello},
-  {Meyer}, {Moustakas}, {Murphy}, {Sheth}, \& {Smith}}]{Kennicutt.etal.2007a}
-{Kennicutt}, Jr., R.~C., {Calzetti}, D., {Walter}, F., {Helou}, G.,
-  {Hollenbach}, D.~J., {Armus}, L., {Bendo}, G., {Dale}, D.~A. {et~al.} 2007,
-  \apj, 671, 333
-
-\bibitem[{{Kewley} {et~al.}(2001){Kewley}, {Dopita}, {Sutherland}, {Heisler},
-  \& {Trevena}}]{Kewley.etal.2001a}
-{Kewley}, L.~J., {Dopita}, M.~A., {Sutherland}, R.~S., {Heisler}, C.~A., \&
-  {Trevena}, J. 2001, \apj, 556, 121
-
-\bibitem[{{Kreckel} {et~al.}(2013){Kreckel}, {Groves}, {Schinnerer}, {Johnson},
-  {Aniano}, {Calzetti}, {Croxall}, {Draine}, {Gordon}, {Crocker}, {Dale},
-  {Hunt}, {Kennicutt}, {Meidt}, {Smith}, \& {Tabatabaei}}]{Kreckel.etal.2013a}
-{Kreckel}, K., {Groves}, B., {Schinnerer}, E., {Johnson}, B.~D., {Aniano}, G.,
-  {Calzetti}, D., {Croxall}, K.~V., {Draine}, B.~T. {et~al.} 2013, \apj, 771,
-  62
-
-\bibitem[{{Lada} {et~al.}(2013){Lada}, {Lombardi}, {Roman-Zuniga}, {Forbrich},
-  \& {Alves}}]{Lada.etal.2013a}
-{Lada}, C.~J., {Lombardi}, M., {Roman-Zuniga}, C., {Forbrich}, J., \& {Alves},
-  J.~F. 2013, \apj, 778, 133
-
-\bibitem[{{Leroy} {et~al.}(2012){Leroy}, {Bigiel}, {de Blok}, {Boissier},
-  {Bolatto}, {Brinks}, {Madore}, {Munoz-Mateos}, {Murphy}, {Sandstrom},
-  {Schruba}, \& {Walter}}]{Leroy.etal.2012a}
-{Leroy}, A.~K., {Bigiel}, F., {de Blok}, W.~J.~G., {Boissier}, S., {Bolatto},
-  A., {Brinks}, E., {Madore}, B., {Munoz-Mateos}, J.-C. {et~al.} 2012, \aj,
-  144, 3
-
-\bibitem[{{Leroy} {et~al.}(2011){Leroy}, {Bolatto}, {Gordon}, {Sandstrom},
-  {Gratier}, {Rosolowsky}, {Engelbracht}, {Mizuno}, {Corbelli}, {Fukui}, \&
-  {Kawamura}}]{Leroy.etal.2011a}
-{Leroy}, A.~K., {Bolatto}, A., {Gordon}, K., {Sandstrom}, K., {Gratier}, P.,
-  {Rosolowsky}, E., {Engelbracht}, C.~W., {Mizuno}, N. {et~al.} 2011, \apj,
-  737, 12
-
-\bibitem[{{Leroy} {et~al.}(2013){Leroy}, {Walter}, {Sandstrom}, {Schruba},
-  {Munoz-Mateos}, {Bigiel}, {Bolatto}, {Brinks}, {de Blok}, {Meidt}, {Rix},
-  {Rosolowsky}, {Schinnerer}, {Schuster}, \& {Usero}}]{Leroy.etal.2013a}
-{Leroy}, A.~K., {Walter}, F., {Sandstrom}, K., {Schruba}, A., {Munoz-Mateos},
-  J.-C., {Bigiel}, F., {Bolatto}, A., {Brinks}, E. {et~al.} 2013, \aj, 146, 19
-
-\bibitem[{{Lilly} {et~al.}(2013){Lilly}, {Carollo}, {Pipino}, {Renzini}, \&
-  {Peng}}]{Lilly.etal.2013a}
-{Lilly}, S.~J., {Carollo}, C.~M., {Pipino}, A., {Renzini}, A., \& {Peng}, Y.
-  2013, \apj, 772, 119
-
-\bibitem[{{Magdis} {et~al.}(2011){Magdis}, {Daddi}, {Elbaz}, {Sargent},
-  {Dickinson}, {Dannerbauer}, {Aussel}, {Walter}, {Hwang}, {Charmandaris},
-  {Hodge}, {Riechers}, {Rigopoulou}, {Carilli}, {Pannella}, {Mullaney},
-  {Leiton}, \& {Scott}}]{Magdis.etal.2011a}
-{Magdis}, G.~E., {Daddi}, E., {Elbaz}, D., {Sargent}, M., {Dickinson}, M.,
-  {Dannerbauer}, H., {Aussel}, H., {Walter}, F. {et~al.} 2011, \apjl, 740, L15
-
-\bibitem[{{Marino} {et~al.}(2013){Marino}, {Rosales-Ortega}, {S{\'a}nchez},
-  {Gil de Paz}, {V{\'{\i}}lchez}, {Miralles-Caballero}, {Kehrig},
-  {P{\'e}rez-Montero}, {Stanishev}, {Iglesias-P{\'a}ramo}, {D{\'{\i}}az},
-  {Castillo-Morales}, {Kennicutt}, {L{\'o}pez-S{\'a}nchez}, {Galbany},
-  {Garc{\'{\i}}a-Benito}, {Mast}, {Mendez-Abreu}, {Monreal-Ibero}, {Husemann},
-  {Walcher}, {Garc{\'{\i}}a-Lorenzo}, {Masegosa}, {Del Olmo Orozco},
-  {Mour{\~a}o}, {Ziegler}, {Moll{\'a}}, {Papaderos},
-  {S{\'a}nchez-Bl{\'a}zquez}, {Gonz{\'a}lez Delgado}, {Falc{\'o}n-Barroso},
-  {Roth}, {van de Ven}, \& {Califa Team}}]{Marino.etal.2013a}
-{Marino}, R.~A., {Rosales-Ortega}, F.~F., {S{\'a}nchez}, S.~F., {Gil de Paz},
-  A., {V{\'{\i}}lchez}, J., {Miralles-Caballero}, D., {Kehrig}, C.,
-  {P{\'e}rez-Montero}, E. {et~al.} 2013, \aap, 559, A114
-
-\bibitem[{{Mateus} {et~al.}(2006){Mateus}, {Sodr{\'e}}, {Cid Fernandes},
-  {Stasi{\'n}ska}, {Schoenell}, \& {Gomes}}]{Mateus.etal.2006a}
-{Mateus}, A., {Sodr{\'e}}, L., {Cid Fernandes}, R., {Stasi{\'n}ska}, G.,
-  {Schoenell}, W., \& {Gomes}, J.~M. 2006, \mnras, 370, 721
-
-\bibitem[{{Osterbrock} \& {Ferland}(2006)}]{Osterbrock.Ferland.2006a}
-{Osterbrock}, D.~E. \& {Ferland}, G.~J. 2006, {Astrophysics of gaseous nebulae
-  and active galactic nuclei}
-
-\bibitem[{{Pagel} {et~al.}(1979){Pagel}, {Edmunds}, {Blackwell}, {Chun}, \&
-  {Smith}}]{Pagel.etal.1979a}
-{Pagel}, B.~E.~J., {Edmunds}, M.~G., {Blackwell}, D.~E., {Chun}, M.~S., \&
-  {Smith}, G. 1979, \mnras, 189, 95
-
-\bibitem[{{Peng} \& {Maiolino}(2014)}]{Peng.Maiolino.2014a}
-{Peng}, Y. \& {Maiolino}, R. 2014, \mnras, 443, 3643
-
-\bibitem[{{Peng} {et~al.}(2015){Peng}, {Maiolino}, \&
-  {Cochrane}}]{Peng.Maiolino.Cochrane.2015a}
-{Peng}, Y., {Maiolino}, R., \& {Cochrane}, R. 2015, \nat, 521, 192
+\bibitem[{{Lacerda} {et~al.}(2017){Lacerda}, {Cid Fernandes}, {Couto},
+  {Stasinska}, {Garcia-Benito}, {Vale Asari}, {Perez}, {Gonzalez Delgado},
+  {Sanchez}, \& {de Amorim}}]{Lacerda.etal.2017}
+{Lacerda}, E.~A.~D., {Cid Fernandes}, R., {Couto}, G.~S., {Stasinska}, G.,
+  {Garcia-Benito}, R., {Vale Asari}, N., {Perez}, E., {Gonzalez Delgado}, R.~M.
+  {et~al.} 2017, ArXiv e-prints
 
 \bibitem[{{P{\'e}rez} {et~al.}(2013){P{\'e}rez}, {Cid Fernandes}, {Gonz{\'a}lez
   Delgado}, {Garc{\'{\i}}a-Benito}, {S{\'a}nchez}, {Husemann}, {Mast},
@@ -303,77 +104,24 @@
   {Garc{\'{\i}}a-Benito}, R., {S{\'a}nchez}, S.~F., {Husemann}, B., {Mast}, D.,
   {Rod{\'o}n}, J.~R. {et~al.} 2013, \apjl, 764, L1
 
-\bibitem[{{R{\'e}my-Ruyer} {et~al.}(2014){R{\'e}my-Ruyer}, {Madden},
-  {Galliano}, {Galametz}, {Takeuchi}, {Asano}, {Zhukovska}, {Lebouteiller},
-  {Cormier}, {Jones}, {Bocchio}, {Baes}, {Bendo}, {Boquien}, {Boselli},
-  {DeLooze}, {Doublier-Pritchard}, {Hughes}, {Karczewski}, \&
-  {Spinoglio}}]{RemyRuyer.etal.2014a}
-{R{\'e}my-Ruyer}, A., {Madden}, S.~C., {Galliano}, F., {Galametz}, M.,
-  {Takeuchi}, T.~T., {Asano}, R.~S., {Zhukovska}, S., {Lebouteiller}, V.
-  {et~al.} 2014, \aap, 563, A31
-
-\bibitem[{{Salpeter}(1955)}]{Salpeter.1955a}
-{Salpeter}, E.~E. 1955, \apj, 121, 161
-
-\bibitem[{{S{\'a}nchez} {et~al.}(2012{\natexlab{a}}){S{\'a}nchez}, {Kennicutt},
-  {Gil de Paz}, {van de Ven}, {V{\'{\i}}lchez}, {Wisotzki}, {Walcher}, {Mast},
-  {Aguerri}, {Albiol-P{\'e}rez}, {Alonso-Herrero}, {Alves}, {Bakos},
-  {Bart{\'a}kov{\'a}}, {Bland-Hawthorn}, {Boselli}, {Bomans},
-  {Castillo-Morales}, {Cortijo-Ferrero}, {de Lorenzo-C{\'a}ceres}, {Del Olmo},
-  {Dettmar}, {D{\'{\i}}az}, {Ellis}, {Falc{\'o}n-Barroso}, {Flores},
-  {Gallazzi}, {Garc{\'{\i}}a-Lorenzo}, {Gonz{\'a}lez Delgado}, {Gruel},
-  {Haines}, {Hao}, {Husemann}, {Igl{\'e}sias-P{\'a}ramo}, {Jahnke}, {Johnson},
-  {Jungwiert}, {Kalinova}, {Kehrig}, {Kupko}, {L{\'o}pez-S{\'a}nchez},
-  {Lyubenova}, {Marino}, {M{\'a}rmol-Queralt{\'o}}, {M{\'a}rquez}, {Masegosa},
-  {Meidt}, {Mendez-Abreu}, {Monreal-Ibero}, {Montijo}, {Mour{\~a}o},
-  {Palacios-Navarro}, {Papaderos}, {Pasquali}, {Peletier}, {P{\'e}rez},
-  {P{\'e}rez}, {Quirrenbach}, {Rela{\~n}o}, {Rosales-Ortega}, {Roth},
-  {Ruiz-Lara}, {S{\'a}nchez-Bl{\'a}zquez}, {Sengupta}, {Singh}, {Stanishev},
-  {Trager}, {Vazdekis}, {Viironen}, {Wild}, {Zibetti}, \&
-  {Ziegler}}]{Sanchez.etal.2012a}
+\bibitem[{{S{\'a}nchez} {et~al.}(2012){S{\'a}nchez}, {Kennicutt}, {Gil de Paz},
+  {van de Ven}, {V{\'{\i}}lchez}, {Wisotzki}, {Walcher}, {Mast}, {Aguerri},
+  {Albiol-P{\'e}rez}, {Alonso-Herrero}, {Alves}, {Bakos}, {Bart{\'a}kov{\'a}},
+  {Bland-Hawthorn}, {Boselli}, {Bomans}, {Castillo-Morales}, {Cortijo-Ferrero},
+  {de Lorenzo-C{\'a}ceres}, {Del Olmo}, {Dettmar}, {D{\'{\i}}az}, {Ellis},
+  {Falc{\'o}n-Barroso}, {Flores}, {Gallazzi}, {Garc{\'{\i}}a-Lorenzo},
+  {Gonz{\'a}lez Delgado}, {Gruel}, {Haines}, {Hao}, {Husemann},
+  {Igl{\'e}sias-P{\'a}ramo}, {Jahnke}, {Johnson}, {Jungwiert}, {Kalinova},
+  {Kehrig}, {Kupko}, {L{\'o}pez-S{\'a}nchez}, {Lyubenova}, {Marino},
+  {M{\'a}rmol-Queralt{\'o}}, {M{\'a}rquez}, {Masegosa}, {Meidt},
+  {Mendez-Abreu}, {Monreal-Ibero}, {Montijo}, {Mour{\~a}o}, {Palacios-Navarro},
+  {Papaderos}, {Pasquali}, {Peletier}, {P{\'e}rez}, {P{\'e}rez}, {Quirrenbach},
+  {Rela{\~n}o}, {Rosales-Ortega}, {Roth}, {Ruiz-Lara},
+  {S{\'a}nchez-Bl{\'a}zquez}, {Sengupta}, {Singh}, {Stanishev}, {Trager},
+  {Vazdekis}, {Viironen}, {Wild}, {Zibetti}, \& {Ziegler}}]{Sanchez.etal.2012a}
 {S{\'a}nchez}, S.~F., {Kennicutt}, R.~C., {Gil de Paz}, A., {van de Ven}, G.,
   {V{\'{\i}}lchez}, J.~M., {Wisotzki}, L., {Walcher}, C.~J., {Mast}, D.
-  {et~al.} 2012{\natexlab{a}}, \aap, 538, A8
-
-\bibitem[{{S{\'a}nchez} {et~al.}(2013){S{\'a}nchez}, {Rosales-Ortega},
-  {Jungwiert}, {Iglesias-P{\'a}ramo}, {V{\'{\i}}lchez}, {Marino}, {Walcher},
-  {Husemann}, {Mast}, {Monreal-Ibero}, {Cid Fernandes}, {P{\'e}rez},
-  {Gonz{\'a}lez Delgado}, {Garc{\'{\i}}a-Benito}, {Galbany}, {van de Ven},
-  {Jahnke}, {Flores}, {Bland-Hawthorn}, {L{\'o}pez-S{\'a}nchez}, {Stanishev},
-  {Miralles-Caballero}, {D{\'{\i}}az}, {S{\'a}nchez-Blazquez}, {Moll{\'a}},
-  {Gallazzi}, {Papaderos}, {Gomes}, {Gruel}, {P{\'e}rez}, {Ruiz-Lara},
-  {Florido}, {de Lorenzo-C{\'a}ceres}, {Mendez-Abreu}, {Kehrig}, {Roth},
-  {Ziegler}, {Alves}, {Wisotzki}, {Kupko}, {Quirrenbach}, {Bomans}, \& {Califa
-  Collaboration}}]{Sanchez.etal.2013a}
-{S{\'a}nchez}, S.~F., {Rosales-Ortega}, F.~F., {Jungwiert}, B.,
-  {Iglesias-P{\'a}ramo}, J., {V{\'{\i}}lchez}, J.~M., {Marino}, R.~A.,
-  {Walcher}, C.~J., {Husemann}, B. {et~al.} 2013, \aap, 554, A58
-
-\bibitem[{{S{\'a}nchez} {et~al.}(2012{\natexlab{b}}){S{\'a}nchez},
-  {Rosales-Ortega}, {Marino}, {Iglesias-P{\'a}ramo}, {V{\'{\i}}lchez},
-  {Kennicutt}, {D{\'{\i}}az}, {Mast}, {Monreal-Ibero}, {Garc{\'{\i}}a-Benito},
-  {Bland-Hawthorn}, {P{\'e}rez}, {Gonz{\'a}lez Delgado}, {Husemann},
-  {L{\'o}pez-S{\'a}nchez}, {Cid Fernandes}, {Kehrig}, {Walcher}, {Gil de Paz},
-  \& {Ellis}}]{Sanchez.etal.2012b}
-{S{\'a}nchez}, S.~F., {Rosales-Ortega}, F.~F., {Marino}, R.~A.,
-  {Iglesias-P{\'a}ramo}, J., {V{\'{\i}}lchez}, J.~M., {Kennicutt}, R.~C.,
-  {D{\'{\i}}az}, A.~I., {Mast}, D. {et~al.} 2012{\natexlab{b}}, \aap, 546, A2
-
-\bibitem[{{Santini} {et~al.}(2014){Santini}, {Maiolino}, {Magnelli}, {Lutz},
-  {Lamastra}, {Li Causi}, {Eales}, {Andreani}, {Berta}, {Buat}, {Cooray},
-  {Cresci}, {Daddi}, {Farrah}, {Fontana}, {Franceschini}, {Genzel}, {Granato},
-  {Grazian}, {Le Floc'h}, {Magdis}, {Magliocchetti}, {Mannucci}, {Menci},
-  {Nordon}, {Oliver}, {Popesso}, {Pozzi}, {Riguccini}, {Rodighiero}, {Rosario},
-  {Salvato}, {Scott}, {Silva}, {Tacconi}, {Viero}, {Wang}, {Wuyts}, \&
-  {Xu}}]{Santini.etal.2014a}
-{Santini}, P., {Maiolino}, R., {Magnelli}, B., {Lutz}, D., {Lamastra}, A., {Li
-  Causi}, G., {Eales}, S., {Andreani}, P. {et~al.} 2014, \aap, 562, A30
-
-\bibitem[{{Schmidt}(1959)}]{Schmidt.1959a}
-{Schmidt}, M. 1959, \apj, 129, 243
-
-\bibitem[{{Searle} \& {Sargent}(1972)}]{Searle.Sargent.1972a}
-{Searle}, L. \& {Sargent}, W.~L.~W. 1972, \apj, 173, 25
+  {et~al.} 2012, \aap, 538, A8
 
 \bibitem[{{Stasi{\'n}ska} {et~al.}(2006){Stasi{\'n}ska}, {Cid Fernandes},
   {Mateus}, {Sodr{\'e}}, \& {Asari}}]{Stasinska.etal.2006a}
@@ -386,26 +134,5 @@
 {Stasi{\'n}ska}, G., {Vale Asari}, N., {Cid Fernandes}, R., {Gomes}, J.~M.,
   {Schlickmann}, M., {Mateus}, A., {Schoenell}, W., {Sodr{\'e}}, Jr., L.
   {et~al.} 2008, \mnras, 391, L29
-
-\bibitem[{{Tacconi} {et~al.}(2013){Tacconi}, {Neri}, {Genzel}, {Combes},
-  {Bolatto}, {Cooper}, {Wuyts}, {Bournaud}, {Burkert}, {Comerford}, {Cox},
-  {Davis}, {F{\"o}rster Schreiber}, {Garc{\'{\i}}a-Burillo}, {Gracia-Carpio},
-  {Lutz}, {Naab}, {Newman}, {Omont}, {Saintonge}, {Shapiro Griffin}, {Shapley},
-  {Sternberg}, \& {Weiner}}]{Tacconi.etal.2013a}
-{Tacconi}, L.~J., {Neri}, R., {Genzel}, R., {Combes}, F., {Bolatto}, A.,
-  {Cooper}, M.~C., {Wuyts}, S., {Bournaud}, F. {et~al.} 2013, \apj, 768, 74
-
-\bibitem[{{Tremonti} {et~al.}(2004){Tremonti}, {Heckman}, {Kauffmann},
-  {Brinchmann}, {Charlot}, {White}, {Seibert}, {Peng}, {Schlegel}, {Uomoto},
-  {Fukugita}, \& {Brinkmann}}]{Tremonti.etal.2004a}
-{Tremonti}, C.~A., {Heckman}, T.~M., {Kauffmann}, G., {Brinchmann}, J.,
-  {Charlot}, S., {White}, S.~D.~M., {Seibert}, M., {Peng}, E.~W. {et~al.} 2004,
-  \apj, 613, 898
-
-\bibitem[{{Zahid} {et~al.}(2014){Zahid}, {Dima}, {Kudritzki}, {Kewley},
-  {Geller}, {Hwang}, {Silverman}, \& {Kashino}}]{Zahid.etal.2014a}
-{Zahid}, H.~J., {Dima}, G.~I., {Kudritzki}, R.-P., {Kewley}, L.~J., {Geller},
-  M.~J., {Hwang}, H.~S., {Silverman}, J.~D., \& {Kashino}, D. 2014, \apj, 791,
-  130
 
 \end{thebibliography}
