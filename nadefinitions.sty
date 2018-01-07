@@ -18,17 +18,47 @@
 \def\citneed{\textsuperscript{\bf \textcolor{red}{[citation needed]}}\xspace}
 \def\fixme{\textsuperscript{\bf \textcolor{red}{[FIXME]}}\xspace}
 \def\TODO{\textcolor{red}{\bf [TODO]}\xspace}
-\def\Halpha{\ifmmode \mathrm{H}\alpha \else H$\alpha$\xspace \fi}
-\def\WHa{\ifmmode W_{\mathrm{H}\alpha} \else $W_{\mathrm{H}\alpha}$\xspace \fi}
-\def\Hbeta{\ifmmode \mathrm{H}\beta \else H$\beta$\xspace \fi}
-\def\NII{\ifmmode [\mathrm{N}\textsc{ii}] \lambda 6584 \else [N\thinspace\textsc{ii}]$\lambda 6584$\xspace \fi}
-\def\nII{\ifmmode [\mathrm{N\,\textsc{ii}}] \else [N\thinspace\textsc{ii}]\xspace \fi}
-\def\WnII{W_{\mathrm{[N\,\textsc{ii}]}}}
-\def\OIII{\ifmmode [\mathrm{O}\textsc{iii}] \lambda 5007 \else [O\thinspace\textsc{iii}] $\lambda 5007$\xspace \fi}
-\def\oIII{\ifmmode [\mathrm{O\,\textsc{iii}}] \else [O\thinspace{\sc iii}]\xspace \fi}
+% \def\Halpha{\ifmmode \mathrm{H}\alpha \else H$\alpha$\xspace \fi}
+% \def\WHa{\ifmmode W_{\mathrm{H}\alpha} \else $W_{\mathrm{H}\alpha}$\xspace \fi}
+% \def\Hbeta{\ifmmode \mathrm{H}\beta \else H$\beta$\xspace \fi}
+% \def\NII{\ifmmode [\mathrm{N}\textsc{ii}] \lambda 6584 \else [N\thinspace\textsc{ii}]$\lambda 6584$\xspace \fi}
+% \def\nII{\ifmmode [\mathrm{N\,\textsc{ii}}] \else [N\thinspace\textsc{ii}]\xspace \fi}
+% \def\WnII{W_{\mathrm{[N\,\textsc{ii}]}}}
+% \def\OIII{\ifmmode [\mathrm{O}\textsc{iii}] \lambda 5007 \else [O\thinspace\textsc{iii}] $\lambda 5007$\xspace \fi}
+% \def\oIII{\ifmmode [\mathrm{O\,\textsc{iii}}] \else [O\thinspace{\sc iii}]\xspace \fi}
 %*******************************************************************
 
 %********************* Lacerda's definition ************************
+\newcommand{\msun}{M$_{\odot}$}
+\newcommand{\rsun}{R$_{\odot}$}
+\newcommand{\lsun}{L$_{\odot}$}
+\newcommand{\zsun}{Z$_{\odot}$}
+\newcommand{\Ha}{\ifmmode {\rm H}\alpha \else H$\alpha$\fi\xspace}
+\newcommand{\Hb}{\ifmmode {\rm H}\beta \else H$\beta$\fi\xspace}
+\newcommand{\Hba}{\ifmmode {\rm H}\beta^{\prime} \else H$\beta^{\prime}$\fi\xspace}
+\newcommand{\Hg}{\ifmmode {\rm H}\gamma \else H$\gamma$\fi\xspace}
+\newcommand{\Hd}{\ifmmode {\rm H}\delta \else H$\delta$\fi\xspace}
+\newcommand{\hi}{H\,{\sc i}\xspace}
+\newcommand{\hii}{H\,{\sc ii}\xspace}
+\newcommand{\Hi}{H\,{\sc i}\xspace}
+\newcommand{\Hii}{\ifmmode \rm{H}\,\textsc{ii} \else H\,{\sc ii}\fi}
+\newcommand{\Nii}{[N\,{\sc ii}]$\lambda$6584}
+\newcommand{\nii}{\ifmmode [\rm{N}\,\textsc{ii}] \else [N\,{\sc ii}]\fi\xspace}
+\newcommand{\Oi}{[O\,{\sc i}]$\lambda$6300}
+\newcommand{\oi}{\ifmmode [\rm{O}\,\textsc{i}] \else [O\,{\sc i}]\fi\xspace}
+\newcommand{\Oii}{[O\,{\sc ii}]$\lambda$3727}
+\newcommand{\neiii}{\ifmmode [\rm{Ne}\,\textsc{iii}] \else [Ne\,{\sc iii}]\fi}
+\newcommand{\Neiii}{[Ne\,{\sc iii}]$\lambda$3869}
+\newcommand{\hei}{\ifmmode [\rm{He}\,\textsc{i}] \else [He\,{\sc i}]\fi}
+\newcommand{\oii}{\ifmmode [\rm{O}\,\textsc{ii}] \else [O\,{\sc ii}]\fi\xspace}
+\newcommand{\Oiii}{[O\,{\sc iii}]$\lambda$5007}
+\newcommand{\Oiiit}{[O\,{\sc iii}]$\lambda$4363}
+\newcommand{\Oiiip}{[O\,{\sc iii}]$\lambda$4958,5007}
+\newcommand{\oiii}{\ifmmode [\rm{O}\,\textsc{iii}] \else [O\,{\sc iii}]\fi\xspace}
+\newcommand{\Sii}{[S\,{\sc ii}]$\lambda\lambda$6731,6716}
+\newcommand{\sii}{\ifmmode [\rm{S}\,\textsc{ii}] \else [S\,{\sc ii}]\fi\xspace}
+\newcommand{\siii}{\ifmmode [\rm{S}\,\textsc{iii}] \else [S\,{\sc iii}]\fi}
+\newcommand{\angstrom}{\mbox{\normalfont\AA}}
 \newcommand{\meanL}[1]{\relax\ifmmode \langle #1 \rangle_L \else $\langle #1
 \rangle_L$\xspace \fi}
 \newcommand{\meanM}[1]{\relax\ifmmode \langle #1 \rangle_M \else $\langle #1
@@ -59,7 +89,7 @@
 \def\O3N2{\textrm{O3N2}{}_{ratio}}
 \def\tO3N2{\textrm{O3N2}${}_{ratio}$}
 \def\LHalpha{\mathrm{L}_{\Halpha}}
-\def\Hii{H\textsc{ii}\xspace}
+\def\Hii{H\,{\sc ii}\xspace}
 \def\emldc{E\textsc{m}L\textsc{ines}D\textsc{ata}C\textsc{ube}\xspace}
 \def\pyt{\textsc{p}y\textsc{thon}\xspace}
 \def\ATT{\color{red}}                				% Marks new stuff!

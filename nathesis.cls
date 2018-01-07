@@ -43,7 +43,7 @@
 \usepackage{nadefinitions}
 
 %%%% André %%%%
-\usepackage{hyperref}
+\usepackage[colorlinks=true,pdfpagemode=FullScreen,bookmarks=true,linkcolor=blue,urlcolor=blue,citecolor=blue]{hyperref}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{pdfpages}
