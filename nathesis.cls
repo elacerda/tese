@@ -54,7 +54,7 @@
 \widowpenalty=1000
 \displaywidowpenalty=1000
 
-\usepackage{enumitem}
+\usepackage[inline]{enumitem}
 \setlist{nosep}
 
 % Used for code formatting.

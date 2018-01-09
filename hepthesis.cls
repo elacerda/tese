@@ -59,7 +59,7 @@
 \DeclareOption{bindnopdf}{
   \ifx\pdfoutput\undefined%
   \def\@bindmargins{yes}%
-  \else%  
+  \else%
   \def\@bindmargins{}%
   \fi%
 }
@@ -102,7 +102,7 @@
 
 % Use hyperref package (with decent options) only if output is PDF
 \DeclareOption{hyperpdf}{
-  \ifx\pdfoutput\undefined\else%  
+  \ifx\pdfoutput\undefined\else%
   \def\@requirehyper{yes}%
   \fi%
 }
@@ -177,7 +177,7 @@
 %% Use wide format if using A4 paper
 \ifx\@requireAFourWide\@empty\else\RequirePackage{a4wide}\fi
 %% Hyperlinks (optional, has to come early in the package list)
-\ifx\@requirehyper\@empty\else\RequirePackage[colorlinks=true,pdfpagemode=FullScreen,bookmarks=true]{hyperref}\fi
+\ifx\@requirehyper\@empty\else\RequirePackage[colorlinks=true,pdfpagemode=FullScreen,bookmarks=true,linkcolor=blue,urlcolor=blue,citecolor=blue]{hyperref}\fi
 %% AMS math package (optional)
 \ifx\@requireamsmath\@empty\else%
   \RequirePackage{amsmath}
@@ -421,7 +421,7 @@
   \if@twocolumn\hbox{}\newpage\fi\fi\fi}%
 
 %% Provide mixed-case versions of the Table of contents,
-%% List of tables, List of figures, Bibliography etc. header names 
+%% List of tables, List of figures, Bibliography etc. header names
 \DeclareRobustCommand{\contentsname}{Contents}
 \DeclareRobustCommand{\bibname}{Bibliography}
 \DeclareRobustCommand{\listfigurename}{List of Figures}
@@ -437,21 +437,21 @@
 %% ========================================================================
 
 %% Narrow environment (doesn't work)
-\DeclareRobustCommand{\@narrowbegin}[1]{% 
+\DeclareRobustCommand{\@narrowbegin}[1]{%
   \begin{list}
   %\begingroup
-  \setlength{\topsep}{0pt}% 
-  \setlength{\leftmargin}{#1}% 
-  \setlength{\rightmargin}{#1}% 
-  \setlength{\listparindent}{\parindent}% 
-  \setlength{\itemindent}{\parindent}% 
-  \setlength{\parsep}{\parskip}% 
+  \setlength{\topsep}{0pt}%
+  \setlength{\leftmargin}{#1}%
+  \setlength{\rightmargin}{#1}%
+  \setlength{\listparindent}{\parindent}%
+  \setlength{\itemindent}{\parindent}%
+  \setlength{\parsep}{\parskip}%
   \item[]%
 }
 \DeclareRobustCommand{\@narrowend}{%
   %\endgroup
   \end{list}%
-} 
+}
 \newenvironment{@narrow}[1]{\@narrowbegin{#1}}{\@narrowend}
 
 
@@ -539,7 +539,7 @@
 
 %% Environment for declaration rubrik page in frontmatter
 %% (flushright doesn't work in this macro for some reason,
-%% so you'll have to do that bit yourself like in the 
+%% so you'll have to do that bit yourself like in the
 %% example file)
 \newenvironment{declaration}{%
   \setlength{\textwidth}{\@frontmattertextwidth}%
@@ -580,9 +580,9 @@
 
 %% ** Natalia ** INICIO
 %% Front page tweaking
-%% 
+%%
 %% ** Andre **
-%% Added co-supervisor field and changed spacing. 
+%% Added co-supervisor field and changed spacing.
 
 %% Command for defining the title and author in the preamble
 %\DeclareRobustCommand{\definethesis}[2]{%
