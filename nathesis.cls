@@ -43,11 +43,13 @@
 \usepackage{nadefinitions}
 
 %%%% André %%%%
-\usepackage[colorlinks=true,pdfpagemode=FullScreen,bookmarks=true,linkcolor=blue,urlcolor=blue,citecolor=blue]{hyperref}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{pdfpages}
 \usepackage{xfrac}
+
+%%%% Lacerda %%%%
+\usepackage[colorlinks=true,bookmarks=true,linkcolor=blue,urlcolor=blue,citecolor=blue]{hyperref}
 
 % linhas orfans e viuvas
 \clubpenalty=1000
