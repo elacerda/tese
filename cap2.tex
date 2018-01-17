@@ -15,30 +15,26 @@
 %                                                               %
 %***************************************************************%
 
-\chapter{Amostra de galáxias}
-\label{sec:amostra}
+\chapter{Amostra}
+\label{sec:sample}
 
-Nem todas as regiões das galáxias que estudamos têm medidas das linhas espectrais necessárias para este estudo. Essa falta não é um defeito de observação e sim uma característica intrínseca de determinada região. As linhas em emissão geralmente estão ligadas ao gás e nem todas as partes da galáxia possuem gás. Nesse capítulo vamos descrever todas as características de nossa amostra, que faz parte do DR3 do CALIFA.
+Houveram dois lançamentos públicos de dados do CALIFA (DR2, \citealt{GarciaBenito.etal.2015a}, Apêndice \ref{apendice:DR2}; DR3, \citealt{SFSanchez.DR3.2016}) ao longo desse trabalho. Este último, o {\em data-release} final do {\em survey}, descreve uma amostra de 667 galáxias ($\sim 1,5$ milhões de espectros) com tipos morfológicos cobrindo toda a classificação de Hubble e redshifts variando entre 0.005 e 0.03 (distâncias de 20 a 130 Mpc). Nesse capítulo vamos descrever nossa amostra de regiões de galáxias presentes no DR3 do CALIFA e demais processos e produtos envolvidos neste estudo, entre eles, talvez o mais importante para nossa finalidade, o ajuste das linhas de emissão presentes nos espectros residuais.
 
-\section{CALIFA data-releases}
-\label{sec:amostra:DR2eDR3}
-
-Houveram dois lançamentos públicos de dados do CALIFA (DR2, \citealt{GarciaBenito.etal.2015a}; DR3, \citealt{SFSanchez.DR3.2016}) ao longo desse trabalho. Este último, o {\em data-release} final do {\em survey}, descreve uma amostra de 667 galáxias ($\sim 1,5$ milhões de espectros) com tipos morfológicos cobrindo toda a classificação de Hubble e redshifts variando entre 0.005 e 0.03 (distâncias de 20 a 130 Mpc). Nos encarregamos de escrever um pacote de análise da qualidade da síntese de populações estelares com o \starlight em ambas publicações, além de realizarmos comparações com os resultados para as amostras anteriores. Foi notável a melhora nos espectros resíduais desde a primeira versão. Um exemplo de figura produzida em nossa análise pode ser vista na Fig \ref{fig:DR3}.Esta mesma análise nos ajudou a melhorar a máscara de remoção de linhas telúricas\footnote{Linhas provenientes de fenômenos que ocorrem na Terra.} dos espectros. Também verificamos que os erros relacionados aos espectros observados possuem uma distribuição muito próxima a uma gaussiana.
+%descrever a fonte empírica do nosso trabalho, os espectros observados todas as características da amostra utilizada para nosso estudo, que faz parte do DR3 do CALIFA.
 
 \section{Definição da amostra deste trabalho}
-\label{sec:amostra:definicao}
+\label{sec:sample:definicao}
 
-A amostra de galáxias deste trabalho faz parte da amostra total de galáxias do CALIFA. Os dados
-passaram pelos mesmos pré-processamento e controle de qualidade daqueles liberados pelo DR2, porém
-possui dados que ainda não foram disponibilizados publicamente, abarcando 226176 regiões (zonas) de
-305 galáxias espirais. Cada uma dessas zonas é composta por um ou mais pixels, com um espectro
-resultante da soma dos espectros destes, para que tenhamos relação sinal-ruído maior ou igual a 20
-na janela de normalização deste espectro. Esse procedimento, conhecido como {\em Voronoi binning},
-está detalhado, juntamente com o procedimento de derivação das propriedades estelares através do
-código \starlight para cada uma das regiões destas galáxias, em \citet{CidFernandes.etal.2013a}.
+A confiança na qualidade do arcabouço observacional é primordial para o desenvolvimento de qualquer estudo empírico. Nos encarregamos de escrever um pacote de análise da qualidade da síntese de populações estelares com o \starlight, que, em muitos casos, acaba também funcionando como sensor da qualidade dos espectros observados. Esse processo ficou descrito e publicado no artigo \citet[][DR1]{Husemann.etal.2013a} e foi repetido no DR2. Para o último {\em data-release}, essa análise foi feita através de outro grupo dentro do projeto CALIFA, porém, seguindo a linha dos dois primeiros, nós também o fizemos como controle de qualidade dos ajustes espectrais. Comparações com os resultados das amostras anteriores mostram uma importante e gradual melhora nos espectros resíduais.
+
+A Figura \ref{fig:DR2} exemplifica parte de nossa análise. Essa figura, aqui reproduzida, está publicada no artigo \citet{GarciaBenito.etal.2015a}. Nela vemos
+
+Esta mesma análise nos ajudou a melhorar a máscara de remoção de linhas telúricas\footnote{Linhas provenientes de fenômenos que ocorrem na Terra.} dos espectros. Também verificamos que os erros relacionados aos espectros observados possuem uma distribuição muito próxima a uma gaussiana.
+
+A amostra de galáxias deste trabalho faz parte da amostra total de galáxias do CALIFA. Os dados passaram pelos mesmos pré-processamento e controle de qualidade daqueles liberados pelo DR2, porém possui dados que ainda não foram disponibilizados publicamente, abarcando 226176 regiões (zonas) de 305 galáxias espirais. Cada uma dessas zonas é composta por um ou mais pixels, com um espectro resultante da soma dos espectros destes, para que tenhamos relação sinal-ruído maior ou igual a 20 na janela de normalização deste espectro. Esse procedimento, conhecido como {\em Voronoi binning}, está detalhado, juntamente com o procedimento de derivação das propriedades estelares através do código \starlight para cada uma das regiões destas galáxias, em \citet{CidFernandes.etal.2013a}.
 
 \subsection{Mascarando elementos e removendo {\em outliers}}
-\label{sec:amostra:mask}
+\label{sec:sample:mask}
 
 Para que possamos focar nossos estudos nas regiões de formação estelar, aplicamos uma máscara nos
 dados selecionando as regiões que possuam:
@@ -94,7 +90,7 @@ máximo e mínimo de cada distribuição.}
 \end{figure}
 
 \subsection{Classificação Morfológica}
-\label{sec:amostra:morf}
+\label{sec:sample:morf}
 
 Com tipos morfológicos variando entre Sa e Sd, massas estelares entre $10^9$ e $10^{11.5}\ M_\odot$
 e populações estelares com idades médias entre $10^8$ e $10^{10}$ anos, podemos ver na Fig.
@@ -128,6 +124,27 @@ $3\sigma$. Valores que ficam fora do intervalo de $3\sigma$ são marcados por um
 Estamos em fase de finalização de um artigo em que comparamos a relação entre a taxa de formação
 estelar e a massa para diferentes classes morfológicas. Esse artigo já foi submetido e deve sair
 logo agora no início de 2016.
+
+
+\subsection{Linhas de emissão}
+\label{sec:intro:UFSCeIAA:EmLines}
+
+Nem todas as regiões das galáxias que estudamos têm medidas das linhas espectrais necessárias para este estudo. Essa falta não é um defeito de observação e sim uma característica intrínseca de determinada região. As linhas em emissão geralmente estão ligadas ao gás e nem todas as partes da galáxia possuem gás.
+
+Esse processo foi feito utilizando o {\sc sherpa} IFU line fitting software \citep[SHIFU;][]{RGB.etal.2017}, baseado no pacote {\sc ciao's sherpa} \citep{Freeman.etal.2001, Doe.etal.2007}. Esse programa ajusta perfis gaussianos nas linhas de emissão presentes nos espectros residuais, além de estimar os erros envolvidos neste processo. Um exemplo pode ser observado na Fig.\ \ref{fig:rgbline}. Nela vemos a linha de \Hb na zona central do objeto UGC00148 e o ajuste feito pelo programa.
+
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.4]{figuras/K0012-zone0-Hb.pdf}
+	\caption[Exemplo de ajuste de linha de emissão]
+	{Espectro na região da linha de \Hbeta em emissão para a zona central da galáxia UGC00148 (objeto
+CALIFA 12) juntamente com o melhor ajuste utilizando uma gaussiana. Em destaque a amplitude (A), o
+comprimento de onda central (x) e o desvio padrão neste ajuste (\sigma).}
+	\label{fig:rgbline}
+\end{figure}
+
+
+
 
 \section{Perfis radiais}
 \label{sec:amostra:rad}
