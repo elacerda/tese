@@ -26,7 +26,29 @@ Houveram dois lançamentos públicos de dados do CALIFA (DR2, \citealt{GarciaBen
 \section{Definição da amostra deste trabalho}
 \label{sec:sample:definicao}
 
-A confiança na qualidade dos dados observacionais é primordial para o desenvolvimento de qualquer estudo empírico. Nos encarregamos de escrever um pacote de análise da qualidade da síntese de populações estelares com o \starlight, que, em muitos casos, acaba também funcionando como sensor da qualidade dos espectros observados. Esse processo ficou descrito e publicado no artigo de \citet[][DR1]{Husemann.etal.2013a} e foi repetido no DR2 e DR3. Para o último {\em data-release}, essa análise foi feita através de outro grupo dentro do projeto CALIFA, porém, seguindo a linha dos dois primeiros, nós também a produzimos com o \starlight como controle de qualidade dos nossos ajustes espectrais. Comparações com os resultados das amostras anteriores mostram uma importante e gradual melhora nos espectros resíduais.
+A amostra de galáxias deste trabalho faz parte do DR3 CALIFA. Escolhemos 391 galáxias com dados disponíveis no formato COMBO, formado pela união entre as duas configurações de observação do CALIFA, onde os espectros cobrem de 3650--6850 \AA. A resolução espectral é $\sim 6$ \AA\ em largura à meia altura ({\em full width at half maximum}; FWHM) com um campo de observação ({\em field-of-view}; FoV) um pouco maior que 1 arcmin${}^2$, e {\em spaxels} com área de $1 \times 1$ arcsec$^2$, porém a resolução espacial é de cerca de $\sim 2.5$ arcsec. Isso corresponde a 0.2--1.5 kpc (0.8 kpc na mediana) no intervalo de distâncias que se encontram nossos objetos (20--123 Mpc). \edu{Fig ?}.
+
+Essas galáxias se distribuem morfologicamente como segue: 57 elípticas, 47 S0--S0a, 62 Sa--Sab, 67 Sb, 70 Sbc e 88 Sc ou mais tardias. Essas classes morfológicas serão utilizadas neste trabalho para avaliar como as componentes de nossa classificação (hDIG, mDIG e SF) variam através da sequência de Hubble. Sistemas irregulares (morfológicamente distorcidos como aqueles estudados por \citealt{Wild.etal.2014, BB.etal.2015b, BB.etal.2015a, CortijoFerrero.etal.2017b, CortijoFerrero.etal.2017a}) foram removidos de nossa análise. Além da diversidade de tipos morfológicos, a amostra também abarca objetos com inclinações desde {\em edge-on} até {\em face-on}.
+
+Como comentamos na Seção \ref{sec:intro:UFSCeIAA:SLCAL}, todos os cubos de dados foram pré-processados através do \pycasso, descrito em \citet{CidFernandes.etal.2013a} e \citet{deAmorim.etal.2017}. De forma resumida, após mascararmos dados espúrios e regiões de muito baixo sinal-ruído ({\em signal-to-noite}; SN), os spaxels são reamostrados em zonas de Voronoi, onde espectros de regiões vizinhas são somados de forma que obtenhamos SN de 20 em uma janela de 90 \AA\ no contínuo ao redor de 5635 \AA. Nossa amostra engloba $307\,958$ zonas ($\sim$ 800 por galáxia). Os espectros das zonas são processado pelo código \starlight \citep{CidFernandes.etal.2005a} modelando um espectro $M_\lambda$ para o contínuo estelar de cada zona. Trabalhos anteriores utilizaram essa {\em pipeline} para estudos das populações estelares \citep{Perez.etal.2013, GonzalezDelgado.etal.2014b, GonzalezDelgado.etal.2015a, GonzalezDelgado.etal.2016a, GonzalezDelgado.etal.2017}. O artigo base desta tese utiliza os espectros residuais para estudar propriedades de linhas de emissão.
+
+Nem todas as regiões das galáxias que estudamos têm medidas das linhas espectrais necessárias para este estudo. Essa falta não é um defeito de observação e sim uma característica intrínseca de determinada região. As linhas em emissão geralmente estão ligadas ao gás e nem todas as partes da galáxia possuem gás. O processo de ajuste das linhas de emissão foi feito utilizando o {\sc sherpa} IFU line fitting software \citep[SHIFU;][]{RGB.etal.2017}, baseado no pacote {\sc ciao's sherpa} \citep{Freeman.etal.2001, Doe.etal.2007}. Esse programa ajusta perfis gaussianos nas linhas de emissão presentes nos espectros residuais, além de estimar os erros envolvidos neste processo. Um exemplo pode ser observado na Fig.\ \ref{fig:rgbline}. Nela vemos a linha de \Hb na zona central do objeto UGC00148 e o ajuste feito pelo programa.
+
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.4]{figuras/K0012-zone0-Hb.pdf}
+	\caption[Exemplo de ajuste de linha de emissão]
+	{Espectro na região da linha de \Hbeta em emissão para a zona central da galáxia UGC00148 (objeto
+CALIFA 12) juntamente com o melhor ajuste utilizando uma gaussiana. Em destaque a amplitude (A), o
+comprimento de onda central (x) e o desvio padrão neste ajuste (\sigma).}
+	\label{fig:rgbline}
+\end{figure}
+
+
+ \section{Laboratório de análises}
+\label{sec:sample:definicao}
+
+A confiança na qualidade dos dados observacionais é primordial para o desenvolvimento de qualquer estudo empírico. Nos encarregamos de escrever um pacote de análise da qualidade da síntese de populações estelares com o \starlight, que, em muitos casos, acaba também funcionando como sensor da qualidade dos espectros observados. Esse processo ficou descrito e publicado no artigo de \citet[][DR1]{Husemann.etal.2013a} e foi repetido no DR2 e DR3. Para o último {\em data-release}, essa análise foi feita através de outro grupo dentro do projeto CALIFA, porém, seguindo a linha dos dois primeiros, nós também a produzimos com o \starlight como controle de qualidade dos nossos ajustes espectrais. Comparações com os resultados das amostras anteriores mostram uma importante e gradativa melhora nos espectros resíduais.
 
 %---------------------------- Figure ----------------------------
 \begin{figure}
@@ -38,11 +60,17 @@ A confiança na qualidade dos dados observacionais é primordial para o desenvol
 \end{figure}
 %---------------------------- Figure ----------------------------
 
-A Figura \ref{fig:fres_norm_error_distrib}, que também está publicada no artigo \citet{GarciaBenito.etal.2015a}, põe à prova a qualidade dos ajuste espectrais e também dos erros formais estimados para cada comprimento de onda. Supondo que um espectro residual seja inteiramente formado por ruído, ou seja, modelos estelares e ajustes tão bons quanto se possam ter, sua distribuição deveria ser gaussiana e centrada em zero. Além disso, quando temos um erro formal no fluxo perfeitamente estimado, a distribuição do espectro residual normalizado pelo erro formal no fluxo deveria ser centrada em zero e com $\sigma = 1$. Nessa figura vemos o histograma do resíduo reduzido, ou seja, a diferença entre o fluxo observado ($O_{\lambda,k}$) e o modelado ($M_{\lambda,k}$), obtido através da síntese com o \starlight, dividida pelo erro associado ($\epsilon_{\lambda,k}$). Os índices $\lambda$ e $k$ representam um certo comprimento de onda de um certo espectro respectivamente. Dessa análise são excluídos intervalos em $\lambda$ que representam linhas de emissão, assim como removemos também dados espúrios. A distribuição é muito bem descrita por uma gaussiana com centro 0.03 e $\sigma = 0.87$, ambos muito próximos dos valores óptimos.
+A Figura \ref{fig:fres_norm_error_distrib}, que também está publicada no artigo \citet{GarciaBenito.etal.2015a}, põe à prova a qualidade dos ajuste espectrais e também dos erros formais estimados para cada comprimento de onda. Supondo que um espectro residual seja inteiramente formado por ruído, ou seja, modelos estelares e ajustes tão bons quanto se possam ter, sua distribuição deveria ser gaussiana e centrada em zero. Além disso, quando temos um erro formal no fluxo perfeitamente estimado, a distribuição do espectro residual normalizado pelo erro formal no fluxo deveria ser formada basicamente de ruído, por isso, centrada em zero e com $\sigma \sim 1$. Nessa figura vemos o histograma do resíduo reduzido, ou seja, a diferença entre o fluxo observado ($O_{\lambda,k}$) e o modelado ($M_{\lambda,k}$), obtido através da síntese com o \starlight, dividida pelo erro associado ($\epsilon_{\lambda,k}$). Os índices $\lambda$ e $k$ representam um certo comprimento de onda de um certo espectro respectivamente. Dessa análise são excluídos intervalos em $\lambda$ que representam linhas de emissão e dados espúrios. A distribuição é muito bem descrita por uma gaussiana com centro 0.03 e $\sigma = 0.87$, ambos muito próximos dos valores óptimos.
 
-Esta mesma análise nos ajudou a melhorar a máscara de remoção de linhas telúricas\footnote{Linhas provenientes de fenômenos que ocorrem na Terra.} dos espectros. Também
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.5]{figuras/DR2_stacked_residuals.pdf}
+	\caption[Espectros residuais nucleares das galáxias do DR2.]
+	{NOMNOMNONMNOMNONM. Retirado de \citet{GarciaBenito.etal.2015a}.}
+	\label{fig:fnuc_stack}
+\end{figure}
 
-A amostra de galáxias deste trabalho faz parte da amostra total de galáxias do CALIFA. Os dados passaram pelos mesmos pré-processamento e controle de qualidade daqueles liberados pelo DR2, porém possui dados que ainda não foram disponibilizados publicamente, abarcando 226176 regiões (zonas) de 305 galáxias espirais. Cada uma dessas zonas é composta por um ou mais pixels, com um espectro resultante da soma dos espectros destes, para que tenhamos relação sinal-ruído maior ou igual a 20 na janela de normalização desse espectro. Esse procedimento, conhecido como {\em Voronoi binning}, está detalhado, juntamente com o procedimento de derivação das propriedades estelares através do código \starlight para cada uma das regiões destas galáxias, em \citet{CidFernandes.etal.2013a}.
+Esta mesma análise nos ajudou a melhorar a máscara de remoção de linhas telúricas\footnote{Linhas provenientes de fenômenos que ocorrem na Terra.} e linhas de emissão dos espectros. A Figura \ref{fig:fnuc_stack} é formada pelos espectros nucleares ajustado para o referencial de laboratóriodas das 200 galáxias presentes no DR2 e ordenados por {\em redshift}. As cores codificam o desvio relativo entre o fluxo observado e o modelado $(O_\lambda - M_\lambda)/O_\lambda$, sem nenhuma máscara espectral.
 
 % \subsection{Mascarando elementos e removendo {\em outliers}}
 % \label{sec:sample:mask}
@@ -137,22 +165,6 @@ A amostra de galáxias deste trabalho faz parte da amostra total de galáxias do
 % logo agora no início de 2016.
 %
 %
-% \subsection{Linhas de emissão}
-% \label{sec:intro:UFSCeIAA:EmLines}
-%
-% Nem todas as regiões das galáxias que estudamos têm medidas das linhas espectrais necessárias para este estudo. Essa falta não é um defeito de observação e sim uma característica intrínseca de determinada região. As linhas em emissão geralmente estão ligadas ao gás e nem todas as partes da galáxia possuem gás.
-%
-% Esse processo foi feito utilizando o {\sc sherpa} IFU line fitting software \citep[SHIFU;][]{RGB.etal.2017}, baseado no pacote {\sc ciao's sherpa} \citep{Freeman.etal.2001, Doe.etal.2007}. Esse programa ajusta perfis gaussianos nas linhas de emissão presentes nos espectros residuais, além de estimar os erros envolvidos neste processo. Um exemplo pode ser observado na Fig.\ \ref{fig:rgbline}. Nela vemos a linha de \Hb na zona central do objeto UGC00148 e o ajuste feito pelo programa.
-%
-% \begin{figure}
-% 	\centering
-% 	\includegraphics[scale=0.4]{figuras/K0012-zone0-Hb.pdf}
-% 	\caption[Exemplo de ajuste de linha de emissão]
-% 	{Espectro na região da linha de \Hbeta em emissão para a zona central da galáxia UGC00148 (objeto
-% CALIFA 12) juntamente com o melhor ajuste utilizando uma gaussiana. Em destaque a amplitude (A), o
-% comprimento de onda central (x) e o desvio padrão neste ajuste (\sigma).}
-% 	\label{fig:rgbline}
-% \end{figure}
 %
 %
 %
