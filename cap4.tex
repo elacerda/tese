@@ -17,6 +17,7 @@
 
 \chapter{Discussão}
 \label{sec:DIGdisc}
+
 Nosso método de classificação é inspirado em argumentos teóricos e empíricos possui diversos propósitos. Neste capítulo vamos aplicar nosso méotodo para nossa amostra do CALIFA cobrindo alguns objetivos específicos:
 \begin{enumerate*}[label=(\roman*)]
     \item estimar a relevância do hDIG, mDIG e SFc sobre galáxias cobrindo toda a sequência de Hubble;
@@ -114,5 +115,68 @@ Trabalhos anteriores de utilizando dados do CALIFA por \citet{Kehrig.etal.2012},
 
 \section{O DIG pode ser identificado por razões de linha sensíveis à densidade do meio?}
 \label{sec:DIGdisc:nSii}
+
+%---------------------------- Figure ----------------------------
+\begin{figure}
+ \includegraphics{figuras/fig_SII_logWHa_SNR3.pdf}
+ \caption{Razão do fluxo de [S\,{\sc ii}]$\lambda\lambda$6731/6716 para $111\,760$ zonas em nossa amostra nas quais essa razão tem relação SN $\ge 3$. Pontos estão coloridos por $W_{\Ha}$ como nas figuras anteriores. A linha sólida representa a curva mediana, enquanto linhas tracejadas mostram os intervalos equivalentes a 1 e $2\sigma$ respectivamente.}
+ \label{fig:S2_WHa}
+\end{figure}
+%---------------------------- Figure ----------------------------
+
+As densidades eletrônicas do DIG na Via Láctea, obtidas através da combinação de medidas de dispersão e emissão e das colunas de densidade de \hi na direção de pulsares com distâncias conhecidas, são tipicamente abaixo de $10^{-1}$ cm$^{-3}$ \citep{Berk.and.Fletcher.2008}, ordens de magnitude menores que aqueles para regiões \hii. Poderíamos então pensar que uma estudo espacialmente resolvido da razão de linhas \Sii\ indicaria uma menor densidade nas regiões de DIG do que nos SFc. Nesse caso, tal razão mostraria uma tendência com $W_{\Ha}$. As linhas do \sii resultam da população através de excitação colisional de níveis muito próximos energeticamente e a razão da população dos níveis energéticos é proporcional à densidade do meio. Restringimos nossa amostra àquelas zonas onde SN $\ge 3$ na razão de linha \sii e mostramos na Figura \ref{fig:S2_WHa} a razão \sii 6731/6716 em função de $W_{\Ha}$. Nela vemos a curva mediana e os intervalos de 1 e 2$\sigma$ plotados. Não pudemos encontrar nenhuma relação entre a razão \sii 6731/6716 e $W_{\Ha}$. O aumento no espalhamento de pontos na direção de baixos $W_{\Ha}$ é consistente com a queda na relação SN das linhas. Mesmo nas regiões onde essa razão pode ser medida com segurança seu valor é $\sim 0.7$, limite inferior (baixa densidade) do intervalo sensível à densidade eletrônica através da razão \sii. Claro que essa figura não pode falar nada para as regiões onde SN < 3.
+
+Nossa interpretação é que a razão de linhas \sii não nos mostra uma diferença quantitativa entre regiões DIG que puderam ter \sii medido e aquelas sob regime SFc por duas razões:
+\begin{enumerate*}[label=(\roman*)]
+    \item na resolução de nossos dados, as regiões SFc contém uma quantidade significativa de gás difuso;
+    \item a razão de linhas \sii não é sensitiva à densidades menores de $\sim 50$\,cm$^{-3}$.
+\end{enumerate*}
+
+Poderíamos imaginar que um cenário diferente se formaria com estudos utilizando um dubleto sensitivo a baixas densidades, como o \Nii presente no infravermelho distante. Observações recentes mapearam essa razão na Via Láctea e outras galáxias \citep{Goldsmith.etal.2015, HerreraCamus.etal.2016}. As densidades derivadas estão no intervalo de 1 a 300 cm$^{-3}$ com um valor mediano de 30 cm$^{-3}$. Esses valores não chegam perto das densidades do DIG obtidas por medidas através de pulsares.
+
+Portanto concluímos que estimadores clássicos de densidade não são hábeis para detectar o DIG, pelo menos não na resolução do CALIFA ou {\em surveys} simliares. Entretanto, não é bem certo se eles farão um melhor trabalho sob resolução espacial melhor pois, como percebido por \citet{Rubin.1989} sob outro contexto, inomogeneidades na densidade dificultam profundamente qualquer interpretação qualitativa de tais razões de linhas sensitivas à densidade do meio.
+
+
+\section{$W_{{\rm H}\alpha}$ e o diagrama BPT}
+\label{sec:DIGdisc:BPT}
+
+%---------------------------- Figure ----------------------------
+\begin{figure}
+ \includegraphics[scale=0.85]{figuras/fig_BPT_per_R.pdf}
+ \caption[Diagramas BPT]
+ {Diagrama BPT para nossa amostra. A primeira linha mostra todas as regiões em nossa amostra. Demais linhas dividem a amostra entre regiões SFc ($W_{\Ha} > 14$ \AA), mDIG ($W_{\Ha} = 3$--14 \AA), e hDIG ($W_{\Ha} < 3$ \AA). Em todos os painéis os pontos coloridos por $W_{\Ha}$ como indicado. Enquanto na primeira coluna temos os pontos para todas as posições das galáxias, nas seguintes os pontos são classificados de acordo com suas distâncias radiais, $R$, como na Figura \ref{fig:WHaDistrib_ALLgals}. Em todos os casos, plotamos apenas zonas com $SN \ge 3$ nas quatro linhas envolvidas. As curvas divisoras vêm de \citet[S06]{Stasinska.etal.2006a}, \citet[K03]{Kauffmann.etal.2003a}, e \citet[K01]{Kewley.etal.2001a} respectivamente.}
+ \label{fig:BPT}
+\end{figure}
+%---------------------------- Figure ----------------------------
+
+Diferentes processos de aquecimento e regimes de ionização no hDIG, mDIG e SFc devem resultar em diferentes razões entre fluxos de linhas colisionais e de recombinação, portanto distintas posições em diagramas de excitação como o  \Oiii/\Hb versus\ \Nii/\Ha. Esse famoso diagrama BPT \citep*[após][]{Baldwin.Phillips.Terlevich.1981a} é amplamente utilizado para separar galáxias SF daquelas onde uma fonte de ionização mais dura contribui de forma significante para a ionização do gás. Uma maneira de caracterizar regimes nebulares de forma independente serve de palco ideal para um teste de consistência da nossa classificação baseada em $W_{\Ha}$.
+
+A Figura \ref{fig:BPT} mostra o diagrama BPT obtido para todas as zonas onde SN $\ge 3$ nas quatro linhas envolvidas. Os dados estão distribuídos de forma em que na coluna mais à esquerda estejam presentes regiões espalhadas em todas as partes das galáxias. Demais colunas separam regiões em três intervalos de distância radial como na Figura \ref{fig:WHaDistrib_ALLgals}. Na primeira linha vemos toda a amostra e, nas seguintes, os dados divididos entre hDIG/mDIG/SFc. Em todos os painéis os pontos são coloridos por $W_{\Ha}$ seguindo o mesmo esquema utilizado nos painéis da coluna da direita na Figura \ref{fig:ExampleMaps}. As curvas plotadas são aquelas propostas por \citet[S06]{Stasinska.etal.2006a}, \citet[K03]{Kauffmann.etal.2003a}, e \citet[K01]{Kewley.etal.2001a}. Essas curvas, teóricas ou empíricas, servem como divisórias demarcando distintos regimes de ionização no plano BPT -- veja \citet{CidFernandes.etal.2011a} para uma discussão sobre o significado dessas curvas.
+
+A forte correspondência entre $W_{\Ha}$ e as coordenadas no BPT é evidente, como foi previamente percebida por \citet{Morisset.etal.2016} com dados do CALIFA e \citet{Belfiore.etal.2016} com o MaNGA. A asa esquerda é predominantemente populada por regiões SFc, enquanto o hDIG se distribui pela a asa direita, principalmente na ponta. Podemos notar que cada uma de nossas classes de regime de ionização preserva a área no plano BPT onde exerce uma predominância relativa, mesmo para diferentes intervalos de distância radial. Os pontos atípicos que aparecem nos dois painéis mais à esquerda na última linha, situados na região do plano BPT que é ocupado particularmente por regiões hDIG, se concentram nas regiões mais internas das galáxias. São regiões de nossa amostra onde $W_{\Ha}$ é alto mas são dominadas por ionização proveniente de um AGN, como será discutido na Seção \ref{sec:DIGdisc:caveats}.
+
+Restringindo nossa análise para pontos onde $R > 1$ HLR (coluna mais à direita) para mitigar contaminação por regiões ionizadas por núcleos ativos, verificamos que 58\% (92\%) de nossas zonas com $W_{\Ha}$ > 14 \AA\ são classificadas como SF de acordo com o critério proposto por S06 (K03). O número relativamente grande de regiões SF que ultrapassam a linha de S06 não é surpreendente, já que a mesma foi traçada utilizando modelos de fotoionização desenvolvidos para estabelecer um limite para regiões puramente ionizadas por formação estelar. Como já argumentamos diversas vezes nesta tese, na resolução do CALIFA nossas regiões SFc não chegam nem perto de serem regiões \hii puras, por isso possuem bastante emissão difusa, o que acaba inflando ambas razões de linhas no diagrama BPT.
+
+Concluímos portanto que nosso esquema de separação hDIG/mDIG/SFc leva a razões de linhas qualitativamente compatíveis com as quais deveríamos esperar em regiões sob tais regimes nebulares. Juntamente com os argumentos conceituais e empíricos apresentados na Seção \ref{sec:DIGclass:WHa}, essa análise utilizando o diagrama BPT adiciona força à nossa metodologia.
+
+
+\section{O mDIG como uma mistura de SF+hDIG}
+\label{sec:DIGdisc:mDIG}
+
+%---------------------------- Figure ----------------------------
+\begin{figure}
+ \includegraphics{figuras/fig_BPT_mixed.pdf}
+ \caption{BPT diagram for mDIG regions only (i.e., those with $W_{\Ha}$ in the 3--14 \AA\ range), coloured according to $W_{\Ha}$, and excluding zones inwards of $R = 1$ HLR.}
+ \label{fig:BPT_mDIG}
+\end{figure}
+%---------------------------- Figure ----------------------------
+
+Esta seção surge como um {\em addendum} à anterior, com a finalidade de explorar a natureza de emissão das regiões mDIG. Na Figura \ref{fig:BPT}, vemos que as regiões mDIG (penúltima linha) se distribuem entre a asa clássica das regiões SF e o local predominantemente populado por regiões hDIG, levando a uma interpretação em termos de uma mistura. Esse comportamento, por si só, já nos estimula a evocar um cenário de mistura, porém podemos dizer mais utilizando tal análise. A Figura \ref{fig:BPT_mDIG} destaca o painel mais à direita da penúltima linha da Figura \ref{fig:BPT}. Nela vemos os pontos associados às regiões mDIG situadas em $R\ > 1$ HLR (= 5.3 kpc na média), coloridos por $W_{\Ha}$ como indicado.
+
+A mesma progressão regular de $W_{\Ha}$ observada no painel do topo à esquerda na Figura \ref{fig:BPT} é observada na Figura \ref{fig:BPT_mDIG}, sugerindo fortemente um cenário composto pela mistura de emissão SFc e hDIG. A grande população de regiões mDIG com $W_{\Ha}$ se aproximando do limite de 14 \AA provavelmente correspondem a um cenário ionização devido ao escape de fótons de regiões SFc. De fato esses pontos se sobrepõem sobre às coordenadas do BPT dominada por SFc. Acima da asa SF do BPT, o processo de ionização continua sendo principalmente por estrelas jovens e massivas, porém a influência do aquecimento por HOLMES aumenta gradativamente enquando $W_{\Ha}$ diminui. Quando $W_{\Ha}$ chega próximo ao limite de 3 \AA, o campo de radiação ionizante gerado por HOLMES começa a dominar o processo de fotoionização.
+
+
+%\section{AGN e outros {\em caveats}}
+\section{AGN e outras prováveis adversidades}
 
 %% End of this chapter
