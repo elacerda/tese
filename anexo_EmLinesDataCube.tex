@@ -10,40 +10,63 @@
 %***************************************************************%
 
 \chapter{Organizando os ajustes nebulares}
-\label{apendice:organeb}
+\label{apendice:EmLinesDataCube}
+
+Quero iniciar esse Apêndice dizendo que esse ensaio foi feito antes do artigo \citet{Lacerda.etal.2018} e por isso engloba uma amostra diferentes escolhida com outros objetivos, porém, por ser um estudo de grande importância, vale o detalhamento dele nesta tese.
+
 
 \section{EmLinesDataCube}
-\label{apendice:organeb:EmLinesDataCube}
+\label{apendice:EmLinesDataCube:EMLDC}
 
-Feitas as medidas, temos o arcabouço para calcularmos várias propriedades nebulares. Escrevemos um
-objeto em \pyt (cujo nome titula esta seção) que, além de organizar os resultados provenientes do
-programa de medida das linhas de emissão, também calcula a abundância de oxigênio nebular, índice
-que usamos como metalicidade nebular ($\log\ O/H$), o coeficiente de extinção para as regiões
-nebulares ($\tauVN$), larguras equivalentes das linhas, assim como os erros propagados em cada
-cálculo. Esse objeto foi adicionado ao \pycasso\footnote{{\em Python CALIFA Stellar Synthesys
-Organizer} -
-\href{http://minerva.ufsc.br/~andre/PyCASSO-0.9.3/intro.html}
-{http://minerva.ufsc.br/$\sim$andre/PyCASSO-0.9.3/intro.html}} \citep{CidFernandes.etal.2013a} para
-que os demais membros do projeto possam utilizá-lo. Nele também encontram-se as medidas dos fluxos
-em diversas linhas de emissão, a posição central das linhas medidas, amplitudes, desvios padrão,
-coeficientes para reconstrução do contínuo em cada linha de emissão, os erros nestas medidas, além
-das propriedades mencionadas anteriormente e seus erros propagados.
+Feitas as medidas, temos o arcabouço para calcularmos várias propriedades nebulares. Escrevemos um objeto em \pyt (cujo nome titula esta seção) que, além de organizar os resultados provenientes do programa de medida das linhas de emissão, também calcula a abundância de oxigênio nebular, índice que usamos como metalicidade nebular ($\log {\rm O}/{\rm H}$), o coeficiente de extinção para as regiões nebulares ($\tauVN$), larguras equivalentes das linhas, assim como os erros propagados em cada cálculo. Esse objeto foi adicionado ao PyCASSO para facilitar a utilização dos demais membros do projeto. Com esse módulo fica fácil acessar as medidas dos fluxos integrados, a posição central, amplitudes e $\sigma$ das principais linhas de emissão, coeficientes para reconstrução do contínuo ao redor de cada linha de emissão, os erros nestas medidas, as propriedades mencionadas anteriormente e seus erros propagados.
+
+\subsection{Ensaio}
+\label{apendice:EmLinesDataCube:EMLDC:ensaio}
+Um programa feito da união entre o PyCASSO e o EmLineDataCube nos instiga a comparar medidas nebulares com as propriedades estelares. O gás é o combustível da formação estelar. As nuvens de gás molecular, formadas pelo esfriamento de gás do meio interestelar, se fragmentam formando estruturas menores e cada vez mais densas, que são chamadas {\em clumps}. A formação estelar acontece quando o centro dessas massas de gás colapsam devido ao desbalanceamento entre pressão e gravidade. Essas regiões, que podem ser pequenas ou se estenderem a gigantes berçários estelares, estão geralmente cobertas por uma densa camada de poeira. No
+final do ciclo de vida das estrelas, diversos elementos são jogados no meio interestelar através das explosões de supernovas, alterando assim a composição química do gás disponível para produção de novas estrelas.
+
+\citet{Schmidt.1959a} foi o primeiro a propor a existência de uma lei de potências que liga a taxa de formação estelar ({\em star formation rate}; SFR) e o gás. Anos depois, \citet{Kennicutt.1998a} estuda essa relação observacionalmente, utilizando diversos indicadores de formação estelar em diferentes faixas espectrais. Em seu trabalho, Kennicutt estabelece a ligação entre a densidade superficial do gás e da SFR. Hoje em dia essa é comumente chamada de relação de Kennicut-Schmidt (KS) ou lei de formação estelar. A
+equação parametrizada por \citeauthor{Kennicutt.1998a} foi:
+\begin{equation}
+	\Sigma_{\mathrm{SFR}}\ =\ (2.5\pm0.7)\times 10^{-4} \left(\frac{\Sigma_{\mathrm{gas}}}{
+M_\odot\ \mathrm{pc}^{-2}}\right)^{1.4 \pm 0.15}\ M_\odot\ \mathrm{yr}^{-1}\ \mathrm{kpc}^{-2}.
+	\label{eq:SFRKennicutt}
+\end{equation}
+
+Diferentemente da área típica das regiões que estamos observando (regiões de galáxias com tamanhos típicos de $\sim 0.8 $ kpc, ver Seção \ref{sec:sample:definicao}), essa equação foi parametrizada para valores integrados de galáxias e representa basicamente que a escala de depleção do gás é constante. Discute-se se essa é uma relação global \citep{Bigiel.etal.2008a, Blanc.etal.2009, Leroy.etal.2013a} ou local \citep[e.g., dependente da densidade superficial de gás; ][]{Kennicutt.etal.2007a, Liu.etal.2011a, Calzetti.etal.2012a, Shetty.etal.2013} em galáxias e, por isso diversos estudos resolvidos espacialmente discutem sua aplicação sob tal resolução espacial. Diferentes manifestações dessa relação entre gás e estrelas sempre figuraram entre os objetivos da astronomia moderna. O número de fótons que podem excitar \Ha deve ser proporcional a quantidade de estrelas que os produzem (estrelas jovens e massivas). Dessa forma podemos ter uma ideia da taxa recente com que se formam estrelas utilizando a luz que é emitida dessas estrelas mais massivas, dominantes da emissão em \Ha, com escala de tempo de vida bem conhecido ($\sim 10^7$ anos). Utilizando os modelos da síntese podemos calcular teoricamente a relação entre a SFR e a luminosidade de \Ha, $\LHalpha$ (ver Seção \ref{apendice:EmLinesDataCube:props:SFR}). Também com a síntese é possível obter a história de formação estelar, contudo através da fração de populações estelares com distintas idades \citep{Asari.etal.2007a}, não necessitando assim prender-se às zonas das galáxias onde o espectro tenha relação sinal ruído suficiente para a medida de todas as linhas espectrais necessárias para os cálculos sobre o gás e poeira. Uma comparação entre essas duas formas independentes de estimar a mesma propriedade é importante por diversas razões, além de ser um {\em sanity-check} para a síntese. Talvez a mais importante razão seja que calibrando uma parametrização de SFR recente baseado na síntese proporciona a avaliação dessa propriedade em regiões onde a emissão de \Ha não é regida pela a formação estelar e sim por outros regimes de ionização (e.g., AGN, HOLMES).
+
+%---------------------------- Figure ----------------------------
+\begin{figure}
+	\centering
+	\includegraphics[width=0.99\textwidth]{figuras/histosample.pdf}
+	\caption[Histogramas: densidade superficial de massa, idade média, fração de populações jovens e
+	relação axial.]
+	{Histogramas da densidade superficial de massa ({\em painel a}), idade média das populações
+estelares ({\em painel b}), fração em luz proveniente de populações jovens ($x_Y \equiv x_Y(t_\star <
+31.62$ milhões de anos, {\em painel c}) e relação axial ({\em painel d}). Em vermelho temos a
+distribuição de valores de 226176 regiões em 305 galáxias e, em azul, a de 16479 zonas de 184
+galáxias resultantes da seleção. Em cada gráfico temos os valores da média, mediana, desvio padrão,
+máximo e mínimo de cada distribuição.}
+	\label{fig:histosample}
+\end{figure}
+%---------------------------- Figure ----------------------------
+
+Neste apêndice, desenvolvo alguns cálculos de propriedades que estão presentes no módulo \emldc graças às medidas de linhas de emissão, para uma amostra do CALIFA com os dados preparados pela {\em pipeline} de redução utilizada no DR2. Começamos com uma amostra de 226176 regiões de 305 galáxias espirais. Nos estudos que envolvem linhas de emissão, neste e no Apêndice \ref{apendice:synvsneb}, fixamos um limite SN > 3 para cada linha presente em cada cálculo. Além dessa censura, mascaramos todas as regiões presentes nos bojos ($R$ > 0.7 HLR) de maneira a nos assegurarmos da influência majoraritária de formação estelar em nossas regiões. Ainda dentro dessas limitamos todas as regiões onde não pudemos nos assegurar que 5\% da luz seja proveniente de populações jovens ($x_Y$). Esse parâmetro é produto da síntese, onde podemos saber qual a fração de luz provém de cada população estelar de diferentes idades e metalicidades.
+
+Na Figura \ref{fig:histosample}, os histogramas normalizados (a integral dentro do intervalo do histograma é 1) de algumas propriedades evidenciam os efeitos da máscara que forma esta amostra. Em vermelho temos as 226176 regiões em 305 galáxias e, em azul, as 16479 zonas de 184 galáxias (19 Sa, 38 Sb, 59 Sbc, 55 Sc e 13 Sd) restantes após a censura dos dados. É notável que nossa seleção busca zonas mais densas e mais jovens (maior fração de populações jovens diminuindo a idade média).
+
+
+\section{Propriedades calculadas no EmLinesDataCube}
+\label{apendice:EmLinesDataCube:props}
 
 \subsection{Extinção estimada através do decremento de Balmer}
-\label{apendice:organeb:datacube:tauvneb}
-
-Em um modelo que assume que entre o observador e a fonte de energia existe uma camada difusa, como
-uma cortina, que extingue a luz diferentemente em cada comprimento de onda, temos:
+\label{apendice:EmLinesDataCube:props:tauvneb}
+Em um modelo que assume que entre o observador e a fonte de energia existe uma camada difusa, como uma cortina, que extingue a luz diferentemente em cada comprimento de onda, temos:
 \begin{equation}
 	F_\lambda^{obs} = F_\lambda^{int} e^{-\tau_\lambda}
     \label{eq:extin}
 \end{equation}
-\noindent onde $F_\lambda^{int}$ é o fluxo intrínseco ($F_\lambda^{obs}$, o observado) em cada
-comprimento de onda, $\tau_\lambda$ é a profundidade óptica para o comprimento de
-onda $\lambda$ (neste trabalho também o chamamos de coeficiente de extinção). O modelo de extinção
-de \citet{CCM1989a} nos dá uma calibração empírica da razão entre os coeficientes de extinção em um
-comprimento de onda e na banda V, e com isso podemos desenvolver \eqref{eq:extin} de maneira que
-possamos escrever uma equação para $\tau_V$:
+\noindent onde $F_\lambda^{int}$ é o fluxo intrínseco ($F_\lambda^{obs}$, o observado) em cada comprimento de onda, $\tau_\lambda$ é a profundidade óptica para o comprimento de onda $\lambda$ (neste trabalho também o chamamos de coeficiente de extinção). O modelo de extinção de \citet{CCM1989a} nos dá uma calibração empírica da razão entre os coeficientes de extinção em um comprimento de onda e na banda V. Com isso podemos desenvolver \eqref{eq:extin} de maneira que possamos escrever uma equação para $\tau_V$:
 \begin{eqnarray}
    F_\lambda^{obs} &=& F_\lambda^{int} e^{-(\frac{\tau_\lambda}{\tauV}) \tauV} \\
    q_\lambda &\equiv& \frac{\tau_\lambda}{\tauV} \\
@@ -59,69 +82,46 @@ possamos escrever uma equação para $\tau_V$:
 \end{eqnarray}
 \noindent Nessa equação, os $q_\lambda$ são provenientes da curva de extinção adotada.
 
-Utilizando \eqref{eq:tauV} podemos calcular qual o coeficiente de extinção para essas regiões
-nebulares. Para este cálculo utilizamos o fato de que a razão entre os fluxos intrínsecos das duas
-primeiras linhas da série de Balmer, \Halpha e \Hbeta, varia muito um pouco com a metalicidade, a
-densidade e a temperatura. Usamos aqui esse valor como constante e igual a $2.86$
-\citep[densidade eletrônica de $n = 100\ cm^{-3}$ e temperatura eletrônica $T_e = 10^4$ K;
-][]{Osterbrock.Ferland.2006a}. Tambem utilizamos $q_{\Halpha}  = 0.81775$ e $q_{\Hbeta} = 1.16427$
-(valores da calibração empírica feita por \citeauthor{CCM1989a}). Com isso temos:
+Utilizando \eqref{eq:tauV} podemos calcular qual o coeficiente de extinção para essas regiões nebulares. Para este cálculo utilizamos o fato de que a razão entre os fluxos intrínsecos das duas primeiras linhas da série de Balmer, \Ha e \Hb, varia muito um pouco com a metalicidade, a densidade e a temperatura. Usamos aqui esse valor como constante e igual a $2.86$ \citep[densidade eletrônica de $n = 100\ cm^{-3}$ e temperatura eletrônica $T_e = 10^4$ K; ][]{Osterbrock.Ferland.2006a}. Tambem utilizamos $q_{\Ha}  = 0.81775$ e $q_{\Hb} = 1.16427$ (valores da calibração empírica feita por \citeauthor{CCM1989a}). Com isso temos:
 \begin{equation}
-	\tauVN = 2.886\ \ln \left( \frac{F_{\Halpha}^{obs}/F_{\Hbeta}^{obs}}{2.86} \right).
+	\tauVN = 2.886\ \ln \left( \frac{F_{\Ha}^{obs}/F_{\Hb}^{obs}}{2.86} \right).
 \end{equation}
 
-Como veremos mais adiante $\tauVN$ varia tipicamente entre 0.6 e 0.65 (média e mediana) nas regiões aqui
-estudadas (Sec.\ \ref{sec:synvsneb:tauv} e também Fig.\ \ref{fig:HistoRadProfProps}
-- {\em painel i}). O erro propagado para $\tauVN$ é:
+O valor de $\tauVN$ varia tipicamente entre 0.6 e 0.65 (média e mediana) nas regiões aqui estudadas (ver também Seção \ref{apendice:synvsneb:tauv}).
+O erro propagado para $\tauVN$ é:
 \begin{eqnarray}
-	\tauVN &\equiv& \tauVN(F_{\Halpha}^{obs}, F_{\Hbeta}^{obs}) \\
-	\epsilon (\tauVN) &=& \sqrt{\left(\del{\tauVN}{F_{\Halpha}^{obs}}\right)^2 \
-\epsilon (F_{\Halpha}^{obs})^2 + \left(\del{\tauVN}{F_{\Hbeta}^{obs}}\right)^2 \
-\epsilon (F_{\Hbeta}^{obs})^2 } \\
-	\del{\tauVN}{F_{\Halpha}^{obs}} &=& \frac{1}{F_{\Halpha}^{obs} (q_{\Hbeta} - q_{\Halpha})} \\
-	\del{\tauVN}{F_{\Hbeta}^{obs}} &=& - \frac{1}{F_{\Hbeta}^{obs} (q_{\Hbeta} - q_{\Halpha})} \\
-	\epsilon (\tauVN) &=& \frac{1}{(q_{\Hbeta} - q_{\Halpha})} \
-\sqrt{\left(\frac{\epsilon (F_{\Halpha}^{obs})}{F_{\Halpha}^{obs}}\right)^2 + \
-\left(\frac{\epsilon (F_{\Hbeta}^{obs})}{F_{\Hbeta}^{obs}}\right)^2 }
+	\tauVN &\equiv& \tauVN(F_{\Ha}^{obs}, F_{\Hb}^{obs}) \\
+	\epsilon (\tauVN) &=& \sqrt{\left(\del{\tauVN}{F_{\Ha}^{obs}}\right)^2 \
+\epsilon (F_{\Ha}^{obs})^2 + \left(\del{\tauVN}{F_{\Hb}^{obs}}\right)^2 \
+\epsilon (F_{\Hb}^{obs})^2 } \\
+	\del{\tauVN}{F_{\Ha}^{obs}} &=& \frac{1}{F_{\Ha}^{obs} (q_{\Hb} - q_{\Ha})} \\
+	\del{\tauVN}{F_{\Hb}^{obs}} &=& - \frac{1}{F_{\Hb}^{obs} (q_{\Hb} - q_{\Ha})} \\
+	\epsilon (\tauVN) &=& \frac{1}{(q_{\Hb} - q_{\Ha})} \
+\sqrt{\left(\frac{\epsilon (F_{\Ha}^{obs})}{F_{\Ha}^{obs}}\right)^2 + \
+\left(\frac{\epsilon (F_{\Hb}^{obs})}{F_{\Hb}^{obs}}\right)^2 }
 	\label{eq:etauneb}
 \end{eqnarray}
-\noindent Os termos de dentro da raiz em \eqref{eq:etauneb} são o inverso das relações sinal-ruído
-($S/N$) de \Halpha e \Hbeta. Como \Hbeta é sempre a mais ruidosa das duas, podemos aproximar a
-incerteza em $\tauVN$ por:
+\noindent Os termos de dentro da raiz em \eqref{eq:etauneb} são o inverso das relações sinal-ruído ($S/N$) de \Ha e \Hb. Como \Hb é sempre a mais ruidosa das duas, podemos aproximar a incerteza em $\tauVN$ por:
 \begin{equation}
-	\epsilon (\tauVN) \approx \frac{2.886}{(S/N)_{\Hbeta}}
+	\epsilon (\tauVN) \approx \frac{2.886}{(S/N)_{\Hb}}
 	\label{eq:etaunebaprox}
 \end{equation}
 \noindent com valor típico \sim 0.14.
 
 \subsection{Metalicidade Nebular}
-\label{apendice:organeb:datacube:Zneb}
-
-Todos os elementos, além do hidrogênio e do hélio, são considerados metais em astrofísica. O cálculo
-dos indicadores de metalicidade nebular geralmente é baseado em algum método empírico indireto que
-utiliza linhas fortes \citep[\emph{strong-line methods}; ][]{Pagel.etal.1979a}. Dentre estes, os
-mais utilizados são aqueles que exploram razões das linhas de \OIII e \NII buscando correlações com
-a abundância relativa de oxigênio nebular. Essa abundância também pode ser calculada diretamente
-utilizando os coeficientes de emissão dos íons de $O$ e $H$ e medidas de algumas linhas observadas.
-Esses coeficientes são dependentes da temperatura eletrônica e da densidade, que geralmente
-dependem de medidas de linhas muito fracas que só podem ser observadas em regiões \Hii. As
-calibrações destes indicadores de metalicidade nebular que estão sendo utilizadas pelo CALIFA foram
-feitas por \citet[][M13 daqui em diante]{Marino.etal.2013a} de forma empírica utilizando medidas de
-temperatura eletrônica de 603 regiões \Hii e mais medidas nebulares de 3423 regiões \Hii mapeadas
-por \citet{Sanchez.etal.2013a}. O indicador que estamos utilizando para esse projeto é aquele que
-calibra a fração relativa de oxigênio utilizando a razão entre as linhas de \oIII e \nII. A
+\label{apendice:EmLinesDataCube:props:Zneb}
+Todos os elementos, além do hidrogênio e do hélio, são considerados metais em astrofísica. O cálculo dos indicadores de metalicidade nebular geralmente é baseado em algum método empírico indireto que utiliza linhas fortes \citep[\emph{strong-line methods}; ][]{Pagel.etal.1979a}. Dentre estes, os mais utilizados são aqueles que exploram razões das linhas de \Oiii e \Nii buscando correlações com a abundância relativa de oxigênio nebular. Essa abundância também pode ser calculada diretamente utilizando os coeficientes de emissão dos íons de O e H e medidas de algumas linhas observadas. Tais coeficientes são dependentes da temperatura eletrônica e da densidade, que geralmente dependem de medidas de linhas muito fracas que só podem ser observadas em regiões \Hii. As calibrações destes indicadores de metalicidade nebular com os espectros do CALIFA foram feitas por \citet{Marino.etal.2013a} de forma empírica utilizando medidas de temperatura eletrônica de 603 regiões \Hii e mais medidas nebulares de 3423 regiões \Hii mapeadas por \citet{Sanchez.etal.2013a}. O indicador que estamos utilizando para este ensaio é aquele que calibra a fração relativa de oxigênio utilizando a razão entre as linhas de \oiii e \nii. A
 parametrização encontrada pelos autores foi:
 \begin{equation}
-	12 + \log (O/H) = 8.533[\pm0.012] - 0.214[\pm0.012]\times \textrm{O3N2}
+	12 + \log ({\rm O}/{\rm H}) = 8.533[\pm0.012] - 0.214[\pm0.012]\times \textrm{O3N2}
 \end{equation}
-\noindent onde O3N2 vem da razão entre os fluxos intrínsecos de \oIII, \Hbeta, \nII e \Halpha:
+\noindent onde O3N2 vem da razão entre os fluxos intrínsecos de \oiii, \Hb, \nii e \Ha:
 \begin{equation}
-	\textrm{O3N2}\ \equiv\ \log \left(\frac{\OIII}{\Hbeta} \times \frac{\Halpha}{\NII}\right).
+	\textrm{O3N2}\ \equiv\ \log \left(\frac{\OIII}{\Hb} \times \frac{\Ha}{\NII}\right).
 \end{equation}
-A Fig.\ \ref{fig:Marino2013_O3N2} mostra o resultado da calibração por M13. As regiões estudadas
-nesse trabalho possuem abundâncias relativas de oxigênio nebular com média (mediana) $0.60\
-(O/H)_\odot$ ($0.58\ (O/H)_\odot$).
+A Figura \ref{fig:Marino2013_O3N2} mostra o resultado da calibração por M13. As regiões estudadas nesse trabalho possuem abundâncias relativas de oxigênio nebular com média (mediana) $0.60\ ({\rm O}/{\rm H})_\odot$ ($0.58\ ({\rm O}/{\rm H})_\odot$).
 
+%---------------------------- Figure ----------------------------
 \begin{figure}
 	\centering
 	\includegraphics[scale=0.7, trim=2cm 13cm 2cm 3cm, clip]{figuras/O3N2_CALIFA.pdf}
@@ -130,29 +130,102 @@ nesse trabalho possuem abundâncias relativas de oxigênio nebular com média (m
 	\citet{Marino.etal.2013a}}
 	\label{fig:Marino2013_O3N2}
 \end{figure}
+%---------------------------- Figure ----------------------------
+
+\subsection{Cálculo da taxa de formação estelar}
+\label{apendice:EmLinesDataCube:props:SFR}
+Um dos métodos mais utilizados para medida da SFR recente utiliza a linha de emissão de \Ha. Nesse método assume-se que a formação estelar é constante nos últimos $t$ anos, que deve englobar pelo menos o tempo de vida das estrelas massivas ionizantes, as quais produzem basicamente todos os fótons que geram as linhas de emissão em \Ha.
+
+Nós queremos calibrar $\LHalpha$ como um indicador de SFR usando uma relação linear:
+\begin{equation}
+	\mathrm{SFR}_{\Ha} = k \times \LHalpha.
+	\label{eq:SFRHa}
+\end{equation}
+\noindent Portanto, nosso trabalho é encontrar $k$. Faremos isso investigando a natureza dos
+fótons H-ionizantes.
+
+Chamamos $\Lambda$ o valor total de luz ($l$) que recebemos de estrelas que se formaram $t$ anos atrás. $l(t)$ pode ser qualquer função que descreve a evolução temporal de qualquer fonte radiativa genérica \emph{por unidade de massa formada} de uma população estelar simples ({\em simple stellar population}; SSP). Como depende da massa formada fica claro que essa quantidade é dependente da Função de Massa Inicial ({\em Initial Mass Function}; IMF):
+\begin{equation}
+	\Lambda(t) = \int_0^t l(t')\ \textrm{d}\textrm{M}(t').
+	\label{eq:dLambda}
+\end{equation}
+\noindent Para obter $\Lambda$ nos falta saber como a massa em estrelas cresce no tempo, ou seja, saber como a SFR varia no tempo:
+\begin{equation}
+	\mathrm{d}\mathrm{M}(t)\ =\ \mathrm{SFR}(t)\ \mathrm{d}t
+	\label{eq:dM_t}
+\end{equation}
+
+%---------------------------- Figure ----------------------------
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.62]{figuras/Nh_logt_metBase_Padova2000_salp.pdf}
+	\caption[Evolução temporal do número e da taxa de fótons H-ionizantes em unidades da massa
+	formada.]
+	{\emph{Painel superior esquerdo}: A	evolução no tempo do número de fótons ($\mathcal{N}_H$) para 6
+metalicidades (de 0.02 $Z_\odot$ até 1.58 $Z_\odot$) que compoem nossos modelos de SSP. A linha
+preta grossa representa a evolução utilizando metalicidade solar. \emph{Painel superior direito}:
+O mesmo que o \emph{painel superior esquerdo} mas normalizado pelo valor total de $\mathcal{N}_H$.
+A linha pontilhada representa 95\% do total de $\mathcal{N}_H$. Em destaque a região ao redor de 10
+milhões de anos. \emph{Painel inferior}: Evolução da taxa de fótons H-ionizantes em unidades da
+massa formada.
+Também mostra o valor seguindo o código de cores para as mesmas metalicidades.}
+	\label{fig:Nh_qh}
+\end{figure}
+%---------------------------- Figure ----------------------------
+
+Utilizando \eqref{eq:dM_t} em \eqref{eq:dLambda} e integrando dentro do tempo do Universo ($T_U\ \sim$ 14 bilhões de anos) teremos hoje um total de luz:
+\begin{eqnarray}
+	\Lambda(t = T_U) &=& \int_0^{T_U} l(t)\ \textrm{d}\textrm{M}(t) \\
+	&=& \int_0^{T_U} \mathrm{SFR}(t)\ l(t)\ \textrm{d}t
+	\label{eq:Lambda}
+\end{eqnarray}
+\noindent Assumindo o caso B de recombinação do hidrogênio, um em cada 2.226 fótons ionizantes produzem um fóton de \Ha \citep{Osterbrock.Ferland.2006a}. Esse número não varia muito em função da temperatura e da densidade nas regiões \Hii. Portanto:
+\begin{equation}
+	\LHalpha = h \nu_{\Ha} \frac{\mathrm{Q}_H}{2.226},
+	\label{eq:LHa_recomb_theory}
+\end{equation}
+\noindent onde $\mathrm{Q}_H$ é a taxa de fótons H-ionizantes. Em todo este processo assume-se que nenhuma radiação ionizante escapa da nuvem e, apesar de $\LHalpha$ estar corrigido por extinção, também assume-se que a poeira não absorve muito os fótons com $h\nu\ > 13.6$ eV. Escrevemos $dQ_H$ como a equação \eqref{eq:dLambda}.
+\begin{equation}
+	Q_H(t)\ =\ \int dQ_H = \int q_H(t)\ \mathrm{d}\mathrm{M}(t)
+	\label{eq:QH_t}
+\end{equation}
+\noindent Nas equações acima, $q_H$ (que assume o mesmo papel de $l(t)$ na Equação \ref{eq:dLambda}) é a taxa de fótons H-ionizantes por unidade de massa formada. Considerando os fótons que possam ionizar o hidrogênio ($h\nu\ \geq\ 13.6$ eV ou $\lambda\ \leq\ 912\AA$) escrevemos:
+\begin{equation}
+	q_H(t) = \int_0^{912\AA} \frac{l_\lambda\ \lambda}{h c} d\lambda.
+	\label{eq:qH}
+\end{equation}
+\noindent Nesta equação, $l_\lambda$ é a luminosidade por unidade de massa formada e comprimento de onda em unidades solares $[\textrm{L}_\odot/\AA\textrm{M}_\odot]$ para uma SSP\footnote{Apesar de não escritas aqui, existem dependências com Z, IMF e isócronas em $l_\lambda$ (portanto, também em $q_H$ e todos os seus produtos)}. Com isso, nós ainda precisamos analisar como a integração de $q_H$ evolui com o tempo, para então obter a SFR. Integrando $q_H$ de hoje até $T_U$ nós obtemos o número de fótons H-ionizantes produzidos pelas fontes que emitem a luz $l$:
+\begin{equation}
+	\mathcal{N}_H = \int_0^{T_U} q_H(t)\ dt
+	\label{eq:Nh}
+\end{equation}
+
+Utilizamos a base de populações estelares de \citet{Bruzual.Charlot.2003} com as isócronas de Padova 2000, juntamente com a IMF de \citet{Salpeter.1955a}. Neste caso, podemos ver na Figura \ref{fig:Nh_qh} a evolução temporal de $\mathcal{N}_H$ em valores absolutos (painel superior esquerdo) e relativamente ao total de $\mathcal{N}_H$ (painel superior direito). Em \citet[Figura 2b]{CidFernandes.etal.2011a} nós podemos ver a evolução temporal de $q_H$ sob todas as idades e metalicidades\footnote{Naquele estudo, o grupo \href{http://starlight.ufsc.br}{SEAGal/\STARLIGHT} utilizou as isócronas de Padova 1994 com a IMF de \citet{Chabrier.2003a}.}. A mesma figura é reproduzida no painel inferior. É notável que o número de fótons H-ionizantes rapidamente converge ao máximo perto de $t = 10^7$ anos. Deste mesmo gráfico mostramos que $q_H$ atinge um valor mínimo constante depois de uma certa idade. Nessa escala de tempo, dominam o regime de ionização estrelas velhas e quentes (ver Capítulo \ref{sec:DIGclass}). Também conclui-se que $\mathcal{N}_H$ é dependente da metalicidade, portanto o valor de $k$ em \eqref{eq:SFRHa} também\footnote{O valor de $k$ em nossa análise varia de 2.00 até 3.13 de acordo com a metalicidade indo de $0.02 Z_\odot@ até @1.58 Z_\odot$.}. Utilizando \eqref{eq:dM_t} em \eqref{eq:QH_t} e com uma simplificação graças a SFR constante dentro desta escala temporal ($\mathrm{SFR}(t)\rightarrow \mathrm{SFR}$), podemos reescrever \eqref{eq:QH_t} usando \eqref{eq:Nh}:
+\begin{equation}
+	Q_H = \mathrm{SFR}\ \mathcal{N}_H(t\ =\ 10^7\ \textrm{anos, IMF, Z}{}_\star).
+	\label{eq:QH_converge}
+\end{equation}
+\noindent Substituindo \eqref{eq:QH_converge} em \eqref{eq:LHa_recomb_theory} podemos escrever:
+\begin{equation}
+	\mathrm{SFR}_{\Ha} = \frac{2.226}{\mathcal{N}_H\ h \nu_{\Ha}} \times \LHalpha
+	\label{eq:SFR_theoric}
+\end{equation}
+\noindent Este método resulta em uma SFR recente, em termos de que usamos o valor de $\mathcal{N}_H$ para $t = 10^7$ anos. Finalmente, resolvendo \eqref{eq:SFR_theoric} encontramos o valor para $k$ em \eqref{eq:SFRHa}:
+\begin{equation}
+	\mathrm{SFR}_{\Ha}\ [\mathrm{M}_\odot\ \mathrm{yr}^{-1}] = 3.13 \times
+	\left(\frac{\LHalpha}{10^8\ \mathrm{L}_\odot}\right) = 8.1 \times 10^{-42}\ \LHalpha\ [ergs\ s^{-1}]
+	\label{eq:SFRNeb}
+\end{equation}
+
+Em \citet{Kennicutt.1998a} esse coeficiente é calculado utilizando diferentes modelos estelares mas utilizando a mesma IMF. Nosso valor é bem próximo daquele obtido no artigo ($7.9 \times 10^{-42}$).
 
 \subsection{Exemplo de utilização}
-\label{apendice:organeb:datacube:exemple}
+\label{apendice:EmLinesDataCube:props:example}
+Com a criação do objeto \emldc e sua adição ao PyCASSO, o processo de análise e produção de gráficos torna-se extremamente simples. Um exemplo de programa para produzir um gráfico BPT \citep{Baldwin.Phillips.Terlevich.1981a} utilizando os fluxos de quatro linhas de emissão (\Ha, \Hb, \oiii e \nii) pode ser visto na Figura \ref{fig:BPTprog}. Primeiro carregam-se os arquivos de dados utilizando o PyCASSO e o \emldc então todas as informações já estão prontas para serem utilizadas. Calculam-se então as razões entre as linhas e, por último, o gráfico é feito utilizando a biblioteca gráfica M\textsc{atplotlib} \footnote{\href{http://matplotlib.org/}{http://matplotlib.org/}}.
 
-Com a criação do objeto \emldc e sua adição ao \pycasso, o processo de análise e produção de
-gráficos torna-se extremamente simples. Um exemplo de programa para produzir um gráfico BPT
-\citep{Baldwin.Phillips.Terlevich.1981a} utilizando os fluxos de quatro linhas de emissão (\Halpha,
-\Hbeta, \OIII e \NII) pode ser visto na Fig.\ \ref{fig:BPTprog}. Primeiro carregam-se os arquivos de
-dados utilizando o \pycasso e o \emldc então todas as informações já estão prontas para serem
-utilizadas. Calculam-se então as razões entre as linhas e, por último, o gráfico é feito utilizando
-a biblioteca gráfica M\textsc{atplotlib} \footnote{
-	\href{http://matplotlib.org/}{http://matplotlib.org/}
-}.
+Na Figura \ref{fig:BPTfig} podemos ver uma imagem produzida por um programa como o do exemplo anterior. Neste caso utilizamos os dados da galáxia NGC 2916 (objeto CALIFA 277). Classificada com tipo morfológico Sb, é considerad uma galáxia azul e com massa intermediária ($\sim 10^{11}\ M_\odot$). Todas as zonas neste gráfico possuem SN > 3 em todas as quatro linhas do BPT (\Hb, \oiii, \Ha e \nii). Podemos ver que as zonas mais próximas ao núcleo da galáxia estão distribuídas na ponta da asa direita no plano BPT, lado associado às regiões geralmente ionizadas por HOLMES ou por núcleos ativos (para uma discussão acerca ver Seção \ref{sec:DIGdisc:BPT}). Já do outro lado do gráfico, local associado às regiões de formação estelar, se encontram as zonas pertencentes ao disco da galáxia ($R$ > 1 HLR).
 
-Na Fig.\ \ref{fig:BPTfig} podemos ver uma imagem produzida por um programa como o do exemplo
-anterior. Neste caso utilizamos os dados da galáxia NGC2916 (objeto CALIFA 277).
-Classificada com tipo morfológico Sb, é considerad uma galáxia azul e com massa intermediária ($\sim
-10^{11}\ M_\odot$). Todas as zonas neste gráfico possuem $S/N$ maior que 3 em todas as quatro linhas
-do BPT (\Hbeta, \oIII, \Halpha e \nII). Podemos ver que as zonas mais próximas ao núcleo da galáxia
-estão distribuídas na ponta da asa direita no plano BPT, lado associado aos núcleos ativos. Já do
-outro lado do gráfico, local associado às regiões de formação estelar, se encontram as zonas
-pertencentes ao disco da galáxia (R > 0.7HLR).
-
+%---------------------------- Figure ----------------------------
 \begin{figure}
 	\begin{python}
 import numpy as np
@@ -191,146 +264,26 @@ plt.axis([-0.6, 0.3, -1.5, 1])
 f.savefig('%s-BPT.pdf' % K.califaID)
 	\end{python}
 	\caption[Exemplo de programa utilizando o EmLinesDataCube]
-	{Exemplo de programa utilizando os fluxos de \Halpha, \Hbeta, \OIII e \NII
-para construção de um gráfico BPT utilizando o objeto \emldc juntamente com o \pycasso.}
+	{Exemplo de programa utilizando os fluxos de \Ha, \Hb, \OIII e \NII
+para construção de um gráfico BPT utilizando o objeto \emldc juntamente com o PyCASSO.}
 	\label{fig:BPTprog}
 \end{figure}
+%---------------------------- Figure ----------------------------
 
+%---------------------------- Figure ----------------------------
 \begin{figure}
 	\centering
 	%\includegraphics[scale=0.8, trim=2cm 13cm 2cm 3cm, clip]{figuras/O3N2_CALIFA.pdf}
 	\includegraphics[scale=0.6]{figuras/K0277-BPT.pdf}
 	\caption[Diagrama BPT da galáxia NGC2916]
-	{Diagrama BPT para as regiões com $S/N > 3$ nas linhas \Hbeta, \OIII, \Halpha e \NII, da galáxia
-NGC2916 (objeto CALIFA 277) produzida por um programa como o do exemplo da Fig.\ \ref{fig:BPTprog}.
+	{Diagrama BPT para as regiões com $S/N > 3$ nas linhas \Hb, \OIII, \Ha e \NII, da galáxia
+NGC2916 (objeto CALIFA 277) produzida por um programa como o do exemplo da Figura \ref{fig:BPTprog}.
 As cores marcam a distância ao centro da galáxia em unidades do raio que contém metade da luz (HLR). As
 linhas são definidas por \citet[][K01]{Kewley.etal.2001a}, \citet[][S06]{Stasinska.etal.2006a} e
 \citet[][CF10]{CidFernandes.etal.2010a}.}
 	\label{fig:BPTfig}
 \end{figure}
+%---------------------------- Figure ----------------------------
 
-\section{Taxa de formação estelar}
-\label{apendice:organeb:SFR}
-
-Um dos métodos mais utilizados para medida de taxa de formação estelar ({\em Star Formation Rate} -
-SFR) recente utiliza a linha de emissão de \Halpha. Nesse método assume-se que a formação estelar é
-constante nos últimos $t$ anos, que deve englobar pelo menos o tempo de vida das estrelas massivas
-ionizantes, que produzem basicamente todos os fótons que geram a linha de emissão de \Halpha.
-
-Nós queremos calibrar a luminosidade da linha de \Halpha ($\LHalpha$) como um indicador
-de SFR usando uma relação linear:
-\begin{equation}
-	\mathrm{SFR}_{\Halpha} = k \times \LHalpha.
-	\label{eq:SFRHa}
-\end{equation}
-\noindent Portanto, nosso trabalho é encontrar $k$. Faremos isso investigando a natureza dos
-fótons H-ionizantes.
-
-Chamamos $\Lambda$ o valor total de luz ($l$) que recebemos de estrelas que se formaram $t$ anos
-atrás. $l(t)$ pode ser qualquer função que descreve a evolução temporal de qualquer fonte radiativa
-genérica \emph{por unidade de massa formada} de uma população estelar simples ({\em Simple Stellar
-Population} - SSP). Como depende da massa formada fica claro que essa quantidade é dependente da
-Função de Massa Inicial ({\em Initial Mass Function} - IMF):
-\begin{equation}
-	\Lambda(t) = \int_0^t l(t')\ \textrm{d}\textrm{M}(t').
-	\label{eq:dLambda}
-\end{equation}
-\noindent Para obter $\Lambda$ nos falta saber como a massa em estrelas cresce no tempo, ou seja,
-saber como a SFR varia no tempo:
-\begin{equation}
-	\mathrm{d}\mathrm{M}(t)\ =\ \mathrm{SFR}(t)\ \mathrm{d}t
-	\label{eq:dM_t}
-\end{equation}
-
-Utilizando \eqref{eq:dM_t} em \eqref{eq:dLambda} e integrando dentro do tempo do Universo ($T_U\
-\sim$ 14 bilhões de anos) teremos hoje um total de luz:
-\begin{eqnarray}
-	\Lambda(t = T_U) &=& \int_0^{T_U} l(t)\ \textrm{d}\textrm{M}(t) \\
-	&=& \int_0^{T_U} \mathrm{SFR}(t)\ l(t)\ \textrm{d}t
-	\label{eq:Lambda}
-\end{eqnarray}
-\noindent Assumindo o caso B de recombinação do hidrogênio, um em cada 2.226 fótons
-ionizantes produzem um fóton de \Halpha \citep{Osterbrock.Ferland.2006a}. Esse número não varia
-muito em função da temperatura e da densidade nas regiões \Hii. Portanto:
-\begin{equation}
-	\LHalpha = h \nu_{\Halpha} \frac{\mathrm{Q}_H}{2.226},
-	\label{eq:LHa_recomb_theory}
-\end{equation}
-\noindent onde $\mathrm{Q}_H$ é a taxa de fótons H-ionizantes. Em todo este processo assume-se que
-nenhuma radiação ionizante escapa da nuvem e, apesar de $\LHalpha$ estar corrigido por
-extinção, também assume-se que a poeira não absorve muito os fótons com $h\nu\ > 13.6$ eV.
-Escrevemos $dQ_H$ como a equação \eqref{eq:dLambda}.
-\begin{equation}
-	Q_H(t)\ =\ \int dQ_H = \int q_H(t)\ \mathrm{d}\mathrm{M}(t)
-	\label{eq:QH_t}
-\end{equation}
-\noindent Nas equações acima, $q_H$ (que assume o mesmo papel de $l(t)$ na Eq.\ \ref{eq:dLambda}) é
-a taxa de fótons H-ionizantes por unidade de massa formada. Considerando os fótons que possam ionizar
-o hidrogênio ($h\nu\ \geq\ 13.6$ eV ou $\lambda\ \leq\ 912\AA$) escrevemos:
-\begin{equation}
-	q_H(t) = \int_0^{912\AA} \frac{l_\lambda\ \lambda}{h c} d\lambda.
-	\label{eq:qH}
-\end{equation}
-\noindent Nesta equação, $l_\lambda$ é a luminosidade por unidade de massa formada e comprimento de
-onda em unidades solares $[\textrm{L}_\odot/\AA\textrm{M}_\odot]$ para uma SSP\footnote{Apesar de
-não escritas aqui, existem dependências com Z, IMF e isócronas em $l_\lambda$ (portanto, também em
-$q_H$ e todos os seus produtos)}. Com isso, nós ainda precisamos analisar como a integração de
-$q_H$ evolui com o tempo, para então obter a SFR. Integrando $q_H$ de hoje até $T_U$ nós
-obtemos o número de fótons H-ionizantes produzidos pelas fontes que emitem a luz $l$:
-\begin{equation}
-	\mathcal{N}_H = \int_0^{T_U} q_H(t)\ dt
-	\label{eq:Nh}
-\end{equation}
-
-Utilizamos a base de populações estelares de \citet{BC03a} com as isócronas de Padova 2000,
-juntamente com a IMF de \citet{Salpeter.1955a}. Neste caso, podemos ver na Fig.\ \ref{fig:Nh_qh} a
-evolução temporal de $\mathcal{N}_H$ em valores absolutos (painel superior esquerdo) e relativamente
-ao total de $\mathcal{N}_H$ (painel superior direito). Em \citet[Fig. 2b]{CidFernandes.etal.2011a}
-nós podemos ver a evolução temporal de $q_H$ sob todas as idades e metalicidades\footnote{Naquele
-estudo, o grupo \href{http://starlight.ufsc.br}{SEAGal/\STARLIGHT} utilizou as isócronas de Padova
-1994 com a IMF de \citet{Chabrier.2003a}.}. A mesma figura é reproduzida no painel inferior. É
-notável que o número de fótons H-ionizantes rapidamente converge ao máximo perto de $t = 10^7$ anos.
-Também fica claro que $\mathcal{N}_H$ é dependente da metalicidade, portanto o valor de $k$ em
-\eqref{eq:SFRHa} também\footnote{O valor de $k$ em nossa análise varia de 2.00 até 3.13 de
-acordo com a metalicidade indo de $0.02 Z_\odot@ até @1.58 Z_\odot$.}. Utilizando \eqref{eq:dM_t}
-em \eqref{eq:QH_t} e com uma simplificação graças a SFR constante dentro desta escala temporal
-($\mathrm{SFR}(t)\rightarrow \mathrm{SFR}$), podemos reescrever \eqref{eq:QH_t} usando
-\eqref{eq:Nh}:
-\begin{equation}
-	Q_H = \mathrm{SFR}\ \mathcal{N}_H(t\ =\ 10^7\ \textrm{anos, IMF, Z}{}_\star).
-	\label{eq:QH_converge}
-\end{equation}
-\noindent Substituindo \eqref{eq:QH_converge} em \eqref{eq:LHa_recomb_theory} podemos escrever:
-\begin{equation}
-	\mathrm{SFR}_{\Halpha} = \frac{2.226}{\mathcal{N}_H\ h \nu_{\Halpha}} \times \LHalpha
-	\label{eq:SFR_theoric}
-\end{equation}
-\noindent Este método resulta em uma SFR recente, em termos de que usamos o valor de $\mathcal{N}_H$
-para $t = 10^7$ anos. Finalmente, resolvendo \eqref{eq:SFR_theoric} encontramos o valor para $k$ em
-\eqref{eq:SFRHa}:
-\begin{equation}
-	\mathrm{SFR}_{\Halpha}\ [\mathrm{M}_\odot\ \mathrm{yr}^{-1}] = 3.13 \times
-	\left(\frac{\LHalpha}{10^8\ \mathrm{L}_\odot}\right) = 8.1 \times 10^{-42}\ \LHalpha\ [ergs\ s^{-1}]
-	\label{eq:SFRNeb}
-\end{equation}
-
-Em \citet{Kennicutt.1998a} esse coeficiente é calculado utilizando diferentes modelos estelares mas
-utilizando a mesma IMF. Nosso valor é bem próximo daquele obtido no artigo ($7.9 \times 10^{-42}$).
-
-\begin{figure}
-	\centering
-	\includegraphics[scale=0.62]{figuras/Nh_logt_metBase_Padova2000_salp.pdf}
-	\caption[Evolução temporal do número e da taxa de fótons H-ionizantes em unidades da massa
-	formada.]
-	{\emph{Painel superior esquerdo}: A	evolução no tempo do número de fótons ($\mathcal{N}_H$) para 6
-metalicidades (de 0.02 $Z_\odot$ até 1.58 $Z_\odot$) que compoem nossos modelos de SSP. A linha
-preta grossa representa a evolução utilizando metalicidade solar. \emph{Painel superior direito}:
-O mesmo que o \emph{painel superior esquerdo} mas normalizado pelo valor total de $\mathcal{N}_H$.
-A linha pontilhada representa 95\% do total de $\mathcal{N}_H$. Em destaque a região ao redor de 10
-milhões de anos. \emph{Painel inferior}: Evolução da taxa de fótons H-ionizantes em unidades da
-massa formada.
-Também mostra o valor seguindo o código de cores para as mesmas metalicidades.}
-	\label{fig:Nh_qh}
-\end{figure}
 
 % End of this chapter

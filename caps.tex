@@ -93,7 +93,7 @@ Independentemente da fonte que alimenta o DIG, seu regime nebular é diferente d
 
 \subsection{Como separar regiões DIG e SF}
 \label{sec:intro:DIG:class}
-As regiões de DIG e SF são separadas geralmente utilizando como base o brilho superficial de \Ha ($\Sigma_{\Ha}$) por sua relação direta com a densidade do gás ionizado. \citet{Zhang.etal.2017a}, por exemplo, usa $\Sigma_{\Ha} > 10^{39}$ erg$\,$s$^{-1}\,$kpc$^{-2}$ como critério para selecionar {\em spaxels} ({\em spectral pixels}) confiantemente dominados por regiões \hii. Outros estudos não utilizam apenas um valor limite, mas ainda sim embasados em $\Sigma_{\Ha}$ (veja a discussão em \citealt{Zurita.etal.2000}, \citealt{Oey.etal.2007} e \citealt{Vogt.etal.2017a}). No entanto, esse {\em approuch} não é totalmente adequado, como veremos no Capítulo \ref{sec:DIGclass}. A separação utilizando como base $\Sigma_{\Ha}$ é conceitualmente incorreta, podendo levar a inconsistências nos resultados sob certas circunstâncias. Além do mais, $\Sigma_{\Ha}$ não nos dá pista alguma sobre a natureza da emissão no DIG.
+As regiões de DIG e SF são separadas geralmente utilizando como base o brilho superficial de \Ha ($\Sigma_{\Ha}$) por sua relação direta com a densidade do gás ionizado. \citet{Zhang.etal.2017a}, por exemplo, usa $\Sigma_{\Ha} > 10^{39}$ erg$\,$s$^{-1}\,$kpc$^{-2}$ como critério para selecionar {\em spaxels} ({\em spectral píxeis}) confiantemente dominados por regiões \hii. Outros estudos não utilizam apenas um valor limite, mas ainda sim embasados em $\Sigma_{\Ha}$ (veja a discussão em \citealt{Zurita.etal.2000}, \citealt{Oey.etal.2007} e \citealt{Vogt.etal.2017a}). No entanto, esse {\em approuch} não é totalmente adequado, como veremos no Capítulo \ref{sec:DIGclass}. A separação utilizando como base $\Sigma_{\Ha}$ é conceitualmente incorreta, podendo levar a inconsistências nos resultados sob certas circunstâncias. Além do mais, $\Sigma_{\Ha}$ não nos dá pista alguma sobre a natureza da emissão no DIG.
 
 A fim de solucionar esse problema levamos em conta o papel do contínuo espectral utilizando a largura equivalente de \Ha, $W_{\Ha}$, em nosso sistema de classificação. Como mostramos no artigo \citet[][Apêndice \ref{apendice:DIGpaper0}]{Lacerda.etal.2018}, linha principal desta tese, $W_{\Ha}$ consegue com sucesso diferenciar qualitativamente regimes SF e DIG. Seguindo a linha traçada por \citet{Binette.etal.1994a}, \citet{Stasinska.etal.2008a} e \citet{CidFernandes.etal.2011a} na identificação de HOLMES como fonte de ionização de galáxias elípticas e de \citet{FloresFajardo.etal.2011a} identificando esses como a provável fonte de ionização do DIG extraplanar, somos capazes de identificar elegantemente o gás presente no DIG que é ionizado por HOLMES, o hDIG. As regiões remasnescentes (nem ionizadas apenas por HOLMES nem por SF) são provavelmente uma mistura de processos, e serão classificadas como DIG misto, o mDIG ({\em mixed} DIG).
 
@@ -105,7 +105,13 @@ Regiões \hii possuem alguns {\em parsecs} de extensão, com algumas chegando at
 
 %Essa tese tem como cerne o artigo \é um apanhado de alguns dos trabalhos no qual participei durante o tempo do doutorado, que tem como cerne o artigo sobre
 %Essa tese tem como cerne o artigo sobre a natureza das linhas de emissão nas regiões das galáxias do CALIFA.
-Essa tese tem como cerne o artigo sobre o DIG nas regiões de galáxias de todos os tipos de Hubble presentes no CALIFA  \citep[][Apêndice \ref{apendice:DIGpaper0}]{Lacerda.etal.2018}, sobre o qual trabalhei nos dois últimos anos sob orientação do Prof. Dr. Roberto Cid Fernandes Jr \edu{\ojo e coorientação da Natalia?}. Nele separamos regiões com o regime de ionização dominado por formação estelar (SF) daquelas com gás ionizado difuso (DIG). Anteriormente a esse trabalho, porém durante o doutorado, trabalhei em fragmentos de diversos artigos, além da construção de um módulo que possibilitou unir os resultados da síntese com as medidas nebulares, parte técnica fundamental para o estudo principal desta tese. No Capítulo \ref{sec:sample} descrevo a amostra de galáxias utilizadas neste trabalho, minha participação no artigo de \citet[][Apêndice \ref{apendice:GBetal2015a}]{GarciaBenito.etal.2015a} e a construção da classe EmLinesDataCube. O artigo sobre o DIG será dividido em dois capítulos. Nele fiz toda a parte de programação, figuras e participei de todas as discussões e análises envolvendo o tema, além de apresentá-lo em duas conferências. A exposição dos argumentos teóricos e empíricos no qual se embasam o nosso método de classificação aparece no Capítulo \ref{sec:DIGclass}, e no próximo (Capítulo \ref{sec:DIGdisc}) discutimos diversos temas acerca da aplicação de nossa classificação nas zonas de galáxias do CALIFA. No capítulo \ref{sec:concl} Por fim, demais artigos e trabalhos são apresentados no Cap.\ \ref{sec:more}.
+Essa tese tem como cerne o artigo sobre o DIG nas regiões de galáxias de todos os tipos de Hubble presentes no CALIFA  \citep[][Apêndice \ref{apendice:DIGpaper0}]{Lacerda.etal.2018}, sobre o qual trabalhei nos dois últimos anos sob orientação do Prof. Dr. Roberto Cid Fernandes Jr \edu{\ojo e coorientação da Natalia?}. Nele separamos regiões com o regime de ionização dominado por formação estelar (SF) daquelas com gás ionizado difuso (DIG).
+
+Durante o doutorado trabalhei em fragmentos de diversos artigos, além de construir um módulo que possibilitou unir os resultados da síntese com as medidas nebulares, parte técnica fundamental para o estudo principal desta tese. No Capítulo \ref{sec:sample} descrevo a amostra de galáxias utilizadas neste trabalho, minha participação no artigo de \citet[][Apêndice \ref{apendice:GBetal2015a}]{GarciaBenito.etal.2015a} e a construção da classe EmLinesDataCube.
+
+O artigo sobre o DIG será dividido em dois capítulos. Nele fiz toda a parte de programação para análise (figuras, cálculos e experimentos, com mais de 20 mil linhas programadas) e participei de todas as discussões e análises envolvendo o tema, além de apresentá-lo em duas conferências. A exposição dos argumentos teóricos e empíricos no qual se embasam o nosso método de classificação aparece no Capítulo \ref{sec:DIGclass}, e no próximo (Capítulo \ref{sec:DIGdisc}) diversos temas discutidos acerca da aplicação de nossa classificação nas zonas de galáxias do CALIFA.
+
+\edu{No capítulo \ref{sec:concl} Por fim, demais artigos e trabalhos são apresentados no Cap.\ \ref{sec:more}.}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Lacerda@CórregoGrande - Jan/2018                              %
@@ -126,10 +132,51 @@ Essa tese tem como cerne o artigo sobre o DIG nas regiões de galáxias de todos
 \chapter{Amostra e detalhes técnicos}
 \label{sec:sample}
 
-Houveram dois lançamentos públicos de dados do CALIFA (DR2, \citealt{GarciaBenito.etal.2015a}, Apêndice \ref{apendice:DR2}; DR3, \citealt{SFSanchez.DR3.2016}) ao longo deste trabalho. Este último, o {\em data-release} final do {\em survey}, descreve uma amostra de 667 galáxias ($\sim 1,5$ milhões de espectros) com tipos morfológicos cobrindo toda a classificação de Hubble e redshifts variando entre 0.005 e 0.03 (distâncias de 20 a 130 Mpc). Neste capítulo apresento minha participação no artigo \citep{GarciaBenito.etal.2015a} o qual descreve o segundo {\em data-release} do CALIFA. Também descrevo a amostra de regiões de galáxias, todas presentes no DR3 do CALIFA, presentes no estudo do DIG. Permeio o texto com alguns detalhes técnicos, como a criação de um módulo em {\em python} que adicionou ao \pycasso as medidas de linhas de emissão, permitindo, sob o mesmo formato e organização, estudos comparativos entre propriedades estelares e nebulares.
+Houveram três lançamentos públicos de dados do CALIFA (DR1, \citealt{Husemann.etal.2013a}; DR2, \citealt{GarciaBenito.etal.2015a}, Apêndice \ref{apendice:DR2}; DR3, \citealt{SFSanchez.DR3.2016}). Este último, o {\em data-release} final do {\em survey}, descreve uma amostra de 667 galáxias ($\sim 1,5$ milhões de espectros) com tipos morfológicos cobrindo toda a classificação de Hubble e redshifts variando entre 0.005 e 0.03 (distâncias de 20 a 130 Mpc). Neste capítulo apresento minha participação no artigo \citep[][Apêndice \ref{apendice:GBetal2015a}]{GarciaBenito.etal.2015a} o qual descreve o segundo {\em data-release} do CALIFA. Também descrevo a amostra de regiões de galáxias, todas presentes no DR3 do CALIFA, presentes no estudo do DIG. Permeio o texto com alguns detalhes técnicos, como a criação de um módulo em \pyt que adicionou ao PyCASSO as medidas de linhas de emissão sob o mesmo formato e organização da síntese, permitindo estudos comparativos entre propriedades estelares e nebulares de maneira ágil e intuitiva.
 %, entre eles, talvez o mais importante para nossa finalidade, o ajuste das linhas de emissão presentes nos espectros residuais.
 % descrever a fonte empírica do nosso trabalho, os espectros observados
 % todas as características da amostra utilizada para nosso estudo, que faz parte do DR3 do CALIFA.
+
+
+\section{Participação no segundo {\em data-release} do CALIFA}
+\label{sec:sample:DR2}
+
+A confiança na qualidade dos dados observacionais é primordial para o desenvolvimento de qualquer estudo empírico. Sempre que um conjunto de dados tão grande passa por um processo complexo, como a síntese de populações estelares, a análise espectro por espectro se torna impossível, necessitando um arcabouço de programas que checam a qualidade da síntese. Esse ensaio, em muitos casos, acaba também funcionando como sensor da qualidade dos espectros observados. O processo ficou descrito e publicado no artigo do DR1 e foi repetido nos conseguintes. No primeiro {\em data-release} nosso grupo de populações estelares se encarregou dessa tarefa, utilizando a síntese com o \starlight. No segundo eu escrevi os programas da análise da qual as discussões, e três figuras, entremeiam o artigo \citep{GarciaBenito.etal.2015a}. Para o último, a análise publicada foi feita através de outro grupo dentro do projeto CALIFA, contudo, seguindo a linha dos dois primeiros, a repeti utilizando os resultados do \starlight como controle de qualidade dos nossos ajustes espectrais. Comparações com os resultados das amostras anteriores mostram uma importante e gradativa melhora nos espectros residuais.
+
+%---------------------------- Figure ----------------------------
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.6]{figuras/DR2_spectral_residuals.pdf}
+	\caption[DR2: Espectros médios: observado, sintétio e residual]
+	{Retirado de \citet{GarciaBenito.etal.2015a}.}
+  \label{fig:obs_syn_res}
+\end{figure}
+%---------------------------- Figure ----------------------------
+
+O espectro observado médio de $170\,670$ zonas presentes no DR2 aparece no primeiro painel da Figura \ref{fig:obs_syn_res}. Antes, cada espectro de cada zona é normalizado pelo fluxo da janela de 90 \AA\ ao redor de 5635 \AA. Na mesma figura temos os espectros sintético médio (linha laranja) e residual médio (linha roxa). No painel central vemos um {\em zoom} do espectro residual e, em destaque pintado de azul, o intervalo entre $\pm 3$\%. Nele as linhas de emissão e píxeis defeituosos mascarados durante o processo da síntese estão removidos. Finalmente, no último painel, a fração de píxeis não mascarados para cada $\lambda$. Essa figura deve ser comparada com a Figura 13 do artigo \citet{CidFernandes.etal.2014a}, mostrando que a nova versão do pacote de redução dos dados leva a menores resíduos, principalmente na parte azul do espectro ($\lambda <$ 5000 \AA).
+
+%---------------------------- Figure ----------------------------
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.4]{figuras/DR2_hist_error.pdf}
+	\caption[DR2: Distribuição dos resíduos reduzidos]
+	{Distribuição do resíduo reduzido, $(O_{\lambda,k} - M_{\lambda,k})/\epsilon_{\lambda,k}$, para todos os comprimentos de onda $\lambda$ e todos os espectros $k$ de todas as galáxias presentes no DR2 ($209\,151\,086$ pontos no total). A linha laranja mostra o melhor ajuste Gaussiano para a distribuição (média $= 0.03$; $\sigma = 0.87$). Retirado de \citet{GarciaBenito.etal.2015a}.}
+	\label{fig:fres_norm_error_distrib}
+\end{figure}
+%---------------------------- Figure ----------------------------
+
+A Figura \ref{fig:fres_norm_error_distrib} põe à prova a qualidade dos ajuste espectrais e também dos erros formais estimados para cada comprimento de onda. Supondo que um espectro residual seja inteiramente formado por ruído, ou seja, modelos estelares e ajustes tão bons quanto se possam ter, sua distribuição deveria ser gaussiana e centrada em zero. Além disso, quando temos um erro formal no fluxo perfeitamente estimado, a distribuição do espectro residual normalizado pelo erro formal no fluxo deveria ser formada basicamente de ruído, por isso, centrada em zero e com $\sigma \sim 1$. Nessa figura vemos o histograma do resíduo reduzido, ou seja, a diferença entre o fluxo observado ($O_{\lambda,k}$) e o modelado ($M_{\lambda,k}$), obtido através da síntese com o \starlight, dividida pelo erro associado ($\epsilon_{\lambda,k}$). Os índices $\lambda$ e $k$ representam um certo comprimento de onda de um certo espectro respectivamente. Dessa análise são excluídos intervalos em $\lambda$ que representam linhas de emissão e dados espúrios. A distribuição é muito bem descrita por uma gaussiana com centro 0.03 e $\sigma = 0.87$, ambos muito próximos dos valores óptimos.
+
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.5]{figuras/DR2_stacked_residuals.pdf}
+	\caption[DR2: Espectros residuais nucleares]
+	{NOMNOMNONMNOMNONM. Retirado de \citet{GarciaBenito.etal.2015a}.}
+	\label{fig:fnuc_stack}
+\end{figure}
+
+A Figura \ref{fig:fnuc_stack} é formada pelos espectros nucleares ajustado para o referencial de laboratóriodas das 200 galáxias presentes no DR2 e ordenados por {\em redshift}. As cores codificam o desvio relativo entre o fluxo observado e o modelado $(O_\lambda - M_\lambda)/O_\lambda$, sem nenhuma máscara espectral. As linhas verticais mostram os desvios sistemáticos dos modelos do \starlight, presentes no refericial de laboratório (e.g., modelos estelares imperfeitos, linhas de emissão). Já as linhas inclinadas mostram desajustes no referencial de observação (e.g., modelo imperfeito do céu). Esta análise nos ajudou a melhorar a máscara de remoção de linhas telúricas\footnote{Linhas provenientes de fenômenos que ocorrem na Terra.} e linhas de emissão dos espectros.
+
 
 \section{Definição da amostra deste trabalho}
 \label{sec:sample:definicao}
@@ -138,9 +185,7 @@ A amostra de galáxias deste trabalho faz parte do DR3 CALIFA. Escolhemos 391 ga
 
 Essas galáxias se distribuem morfologicamente como segue: 57 elípticas, 47 S0--S0a, 62 Sa--Sab, 67 Sb, 70 Sbc e 88 Sc ou mais tardias. Essas classes morfológicas serão utilizadas neste trabalho para avaliar como as componentes de nossa classificação (hDIG, mDIG e SF) variam através da sequência de Hubble. Sistemas irregulares (morfológicamente distorcidos como aqueles estudados por \citealt{Wild.etal.2014, BB.etal.2015b, BB.etal.2015a, CortijoFerrero.etal.2017a, CortijoFerrero.etal.2017b}) foram removidos de nossa análise. Além da diversidade de tipos morfológicos, a amostra também abarca objetos com inclinações desde {\em edge-on} até {\em face-on}.
 
-Como comentamos na Seção \ref{sec:intro:UFSCeIAA:SLCAL}, todos os cubos de dados foram pré-processados através do \pycasso, descrito em \citet{CidFernandes.etal.2013a} e \citet{deAmorim.etal.2017}. De forma resumida, após mascararmos dados espúrios e regiões de muito baixo sinal-ruído ({\em signal-to-noise}; SN), os spaxels são reamostrados em zonas de {\em Voronoi}. Nesse tipo de agrupamento espacial, espectros de regiões vizinhas são somados de forma que obtenhamos SN 20 em uma janela de 90 \AA\ no contínuo ao redor de 5635 \AA. Nossa amostra engloba $307\,958$ zonas ($\sim$ 800 por galáxia). Os espectros das zonas são processado pelo código \starlight \citep{CidFernandes.etal.2005a} modelando um espectro $M_\lambda$ para o contínuo estelar de cada zona. Trabalhos anteriores utilizaram essa {\em pipeline} para estudos das populações estelares \citep{Perez.etal.2013, GonzalezDelgado.etal.2014b, GonzalezDelgado.etal.2015a, GonzalezDelgado.etal.2016a, GonzalezDelgado.etal.2017}. O artigo base desta tese utiliza os espectros residuais para estudar propriedades de linhas de emissão.
-
-Nem todas as regiões das galáxias que estudamos têm medidas das linhas espectrais necessárias para este estudo. Essa falta não é um defeito de observação e sim uma característica intrínseca de determinada região. As linhas em emissão geralmente estão ligadas ao gás e nem todas as partes da galáxia possuem gás. O processo de ajuste das linhas de emissão foi feito utilizando o {\sc sherpa} IFU line fitting software \citep[SHIFU;][]{RGB.etal.2017}, baseado no pacote {\sc ciao's sherpa} \citep{Freeman.etal.2001, Doe.etal.2007}. Esse programa ajusta perfis gaussianos nas linhas de emissão presentes nos espectros residuais, além de estimar os erros envolvidos neste processo. Um exemplo pode ser observado na Fig.\ \ref{fig:rgbline}. Nela vemos a linha de \Hb na zona central do objeto UGC00148 e o ajuste feito pelo programa.
+Como mencionado na Seção \ref{sec:intro:UFSCeIAA:SLCAL}, todos os cubos de dados foram pré-processados através do PyCASSO, descrito em \citet{CidFernandes.etal.2013a}, \citet{CidFernandes.etal.2014a} e \citet{deAmorim.etal.2017}. De forma resumida, após dados espúrios e regiões de muito baixo sinal-ruído ({\em signal-to-noise}; SN) serem mascaradas, os spaxels são reamostrados em zonas de {\em Voronoi}. Nesse tipo de agrupamento espacial, espectros de regiões vizinhas são somados de forma que obtenhamos SN 20 em uma janela de 90 \AA\ no contínuo ao redor de 5635 \AA. Os espectros das zonas são processado pelo código \starlight \citep{CidFernandes.etal.2005a} modelando um espectro $M_\lambda$ para o contínuo estelar de cada zona. Esta amostra engloba $307\,958$ zonas ($\sim$ 800 por galáxia). O módulo/{\em pipeline} PyCASSO fez parte da vanguarda em estudos de populações estelares resolvidas espacialmente \citep{Perez.etal.2013, GonzalezDelgado.etal.2014b, GonzalezDelgado.etal.2015a, GonzalezDelgado.etal.2016a, GonzalezDelgado.etal.2017}. O artigo base desta tese se vale da intersecção entre o gás e as populações estelares que o permeiam.
 
 %---------------------------- Figure ----------------------------
 \begin{figure}
@@ -154,7 +199,11 @@ comprimento de onda central (x) e o desvio padrão neste ajuste (\sigma).}
 \end{figure}
 %---------------------------- Figure ----------------------------
 
-Essas medidas podem ser muito sensíveis no caso das linhas serem fracas, como é o caso de \Hb. Nosso estudo usa basicamente o fluxo de \Ha, que é muito menos afetado por incertezas. De fato, a mediana de SN$_{\Ha}$ para todas as zonas é 16 e apenas em 5\% dos casos SN$_{\Ha} < 1$. No Apêndice \ref{apendice:organeb} apresentamos o programa criado para organizar os resultados dos ajustes das linhas de emissão bem como alguns exemplos de utilização.
+%Nem todas as regiões das galáxias que estudamos têm medidas das linhas espectrais necessárias para este estudo. Essa falta não é um defeito de observação e sim uma característica intrínseca de determinada região.
+%e nem todas as partes da galáxia possuem gás.
+As linhas em emissão geralmente estão ligadas a processos de ionização do gás. O processo de ajuste das linhas de emissão foi feito utilizando o {\sc sherpa} IFU line fitting software (SHIFU; García-Benito et al. em prep.), baseado no pacote {\sc ciao's sherpa} \citep{Freeman.etal.2001, Doe.etal.2007}. Esse programa ajusta perfis gaussianos nas linhas de emissão presentes nos espectros residuais, além de estimar os erros envolvidos neste processo. Em um ajuste normal Gaussiano, os parâmetros geralmente são livres, todavia o ajuste leva em conta uma série de linhas de emissão que estão interligadas, regidas pela física de processos radiativos. Portanto, nessa tarefa alguns parâmetros são interligados e limitados de maneira conjunta. Por exemplo, nos ajustes utilizados neste trabalho as linhas do \nii têm suas amplitudes amarradas ($A_{6584}/A_{6548} = 2.9$). Também fixa-se a cinemática das linhas de mesmo íon.
+
+Um exemplo pode ser observado na Fig.\ \ref{fig:rgbline}. Nela vemos a linha de \Hb na zona central do objeto UGC00148 e o ajuste feito pelo programa. Essas medidas podem ser muito sensíveis no caso das linhas serem fracas, como é o caso de \Hb. Nosso estudo usa basicamente o fluxo de \Ha, que é muito menos afetado por incertezas. De fato, a mediana de SN$_{\Ha}$ para todas as zonas é 16 e apenas em 5\% dos casos SN$_{\Ha} < 1$. No Apêndice \ref{apendice:EmLinesDataCube} apresento o programa criado para organizar os resultados dos ajustes das linhas de emissão bem como alguns exemplos de utilização. Com essa classe em mãos, produzi estudos comparativos entre propriedades nebulares e estelares, expostos no Apêndice \ref{apendice:synvsneb}
 
 %---------------------------- Figure ----------------------------
 \begin{figure}
@@ -171,6 +220,11 @@ Nos mapas presentes na Figura \ref{fig:ExampleMaps} podemos notar algumas regiõ
 
 Parte de nossa análise que segue nos próximos capítulos foi baseada na estatística de $W_{\Ha}$ dos espectros de nossa amostra. É certo que o tamanho diferente das zonas introduz alguma distorção em nossos resultados. Seus efeitos serão discutidos mais adiante, porém podemos antecipar que não afetam os resultados principais apresentados nesta tese.
 
+\edu{\ojo Natalia, o parágrafo que segue escrevi pela transição de voz no texto. Será que isso é certo ou já fica implícito?
+
+Como mencionei anteriormente fiz toda a programação e participei ativamente de todas as discussões que resultaram nesta tese, contudo o texto dos Capítulos \ref{sec:DIGclass} e \ref{sec:DIGdisc} estão escritos em primeira pessoa do plural. Explico: (i) este é um estudo no qual todos os autores trabalharam, em maior ou menor intensidade porém sempre com relevância; (ii) o texto que segue é uma tradução do artigo \citet[][Apêndice \ref{apendice:DIGpaper0}]{Lacerda.etal.2018} entremeado com algumas informações e gráficos adicionais, o qual está escrito dessa forma; por tais razões essa será a linha dos dois próximos capítulos.
+}
+
 %:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::%
 %                                                               %
 %                          Capítulo 3                           %
@@ -185,6 +239,7 @@ Parte de nossa análise que segue nos próximos capítulos foi baseada na estat�
 
 \chapter{Classificação}
 \label{sec:DIGclass}
+
 Nosso objetivo neste trabalho é desenvolver uma maneira de caracterizar as regiões de galáxias pelo seu regime de ionização, ou seja, separar regiões SF e DIG, diferenciar componentes do DIG e ir além, servir de legado para futuros trabalhos que possam utilizar essa classificação no estudo do comportamento de diferentes propriedades estelares sob distintas componentes do ISM. Com isso poderemos, através de comparações com os espectros integrados, resolver o {\em conumdrum} envolvendo a espectroscopia de uma fibra (ver Seção \ref{sec:intro:partes}). Neste capítulo apresentaremos o processo de classificação e os estudos em que nos embasamos para tal propósito.
 % o víes causado pela mistura dessas diferentes componentes nas assinaturas espectrais,
 
@@ -195,13 +250,11 @@ Trabalhos anteriores utilizaram o brilho superficial de \Ha na intenção de sep
 
 Como dissemos anteriormente, nós preferimos classificar as regiões entre SF e DIG baseados em $W_{\Ha}$. Vemos na classificação utilizando $\Sigma_{\Ha}$ um erro conceitual que pode ser explicado com um pequeno experimento teórico.
 
-Imagine dois elementos de volume dominados por DIG, ambos com área superficial $A$ emitindo um fluxo $F_{\Ha}=A\times\Sigma_{\Ha}$, como na Figura \ref{fig:DIGDIG}. Assuma que o meio é opticamente translúcido para os fótons de \Ha (não há extinção), como é apropriado para regiões de DIG, de maneira que o volume inteiro seja visto. Obviamente uma operação de soma com duas regiões DIG não deve alterar a natureza da região observada. Quando vemos uma região ao lado da outra, medimos o mesmo brilho superficial, pois temos duas vezes o mesmo fluxo e duas vezes a mesma área, $\Sigma_{\Ha}=(2 \times F_{\Ha})/(2 \times A)$, mantendo uma possível classificação através de um limite no brilho superficial válida. Por outro lado, quando vemos os dois elementos sobrepostos (ambos sobre a mesma linha de visada) medimos o dobro do brilho superficial, $\Sigma_{\Ha}=(2 \times F_{\Ha})/A$, fazendo com que uma operação DIG+DIG possa resultar em SF, conceitualmente errada.
+Imagine dois elementos de volume dominados por DIG, ambos com área superficial $A$ emitindo um fluxo $F_{\Ha}=A\times\Sigma_{\Ha}$ \edu{\ojo Há necessidade de uma figura aqui como aquela que você criou para o referee e eu coloquei na minha apresentação em Puebla?}. Assuma que o meio é opticamente translúcido para os fótons de \Ha (não há extinção), como é apropriado para regiões de DIG, de maneira que o volume inteiro seja visto. Obviamente uma operação de soma com duas regiões DIG não deve alterar a natureza da região observada. Quando vemos uma região ao lado da outra, medimos o mesmo brilho superficial, pois temos duas vezes o mesmo fluxo e duas vezes a mesma área, $\Sigma_{\Ha}=(2 \times F_{\Ha})/(2 \times A)$, mantendo uma possível classificação através de um limite no brilho superficial válida. Por outro lado, quando vemos os dois elementos sobrepostos (ambos sobre a mesma linha de visada) medimos o dobro do brilho superficial, $\Sigma_{\Ha}=(2 \times F_{\Ha})/A$, fazendo com que uma operação DIG+DIG possa resultar em SF, conceitualmente errada.
 %Esse viés é conceitualmente errado, pois duas regiões DIG sobrepostas deveriam continuar sendo classificadas como DIG.
-Uma classificação utilizando $W_{\Ha}$ não carrega essa inconsistência por construção pois a largura equivalente final é a mesma independente da forma que os elementos são vistos.
+Uma classificação utilizando $W_{\Ha}$ não carrega essa inconsistência por construção pois a largura equivalente final é a mesma independente da forma que os elementos são vistos. Como veremos na Seção \ref{sec:DIGdisc:compSBHa}, nos bojos de galáxias, onde há um percurso óptico maior, essa diferença nos critérios de classificação tem particular importância, podendo levar $\Sigma_{\Ha} > \Sigma_{\Ha}^{\rm SF,min}$ mesmo em absência de formação estelar.
 
-Como veremos na Seção \ref{sec:DIGdisc:compare}, nos bojos de galáxias, onde há um percurso óptico maior, essa diferença nos critérios de classificação tem particular importância, podendo levar $\Sigma_{\Ha} > \Sigma_{\Ha}^{\rm SF,min}$ mesmo em absência de formação estelar.
-
-De forma independente, podemos argumentar também que propriedades que possuam uma dependência radial, como cor, densidade de massa estelar, quantidade de gás, entre outras, fazem com que uma classificação usando um limite constante não seja apropriada para todas as partes de uma galáxia. Particulamente, quando o regime de ionização do DIG é orquestrado por HOLMES, a razão do número de fótons que podem ionizar \Ha por massa estelar é basicamente constante, gerando $W_{\Ha} \sim 1$ \AA\ independentemente dos fluxos envolvidos (\citealt{Binette.etal.1994a}; \citealt{CidFernandes.etal.2011a}; \citealt{Belfiore.etal.2016}; ver também a Seção \ref{sec:more:kSFR}). Dessa forma é fácil entender que, quando o parâmetro é um limite constante em $\Sigma_{\Ha}$, regiões DIG ionizadas por HOLMES (hDIG) com \Ha muito brilhante possam ser erroneamente classificadas como SF. Da mesma forma podemos ter regiões SF fracas classificadas como DIG devido a um baixo $\Sigma_{\Ha}$.
+De forma independente, podemos argumentar também que propriedades que possuam uma dependência radial, como cor, densidade de massa estelar, quantidade de gás, entre outras, fazem com que uma classificação usando um limite constante não seja apropriada para todas as partes de uma galáxia. Particulamente, quando o regime de ionização do DIG é orquestrado por HOLMES, a razão do número de fótons que podem ionizar \Ha por massa estelar é basicamente constante, gerando $W_{\Ha} \sim 1$ \AA\ independentemente dos fluxos envolvidos (\citealt{Binette.etal.1994a}; \citealt{CidFernandes.etal.2011a}; \citealt{Belfiore.etal.2016}; -- ver também a Seção \ref{apendice:EmLinesDataCube:props:SFR} que discute o cálculo da taxa específica de fótons que ionizam H por unidade de massa formada, $q_h$). Dessa forma é fácil entender que, quando o parâmetro é um limite constante em $\Sigma_{\Ha}$, regiões DIG ionizadas por HOLMES (hDIG) com \Ha muito brilhante possam ser erroneamente classificadas como SF. Da mesma forma podemos ter regiões SF fracas classificadas como DIG devido a um baixo $\Sigma_{\Ha}$.
 
 \edu{\ojo should I write an extensive-intensive note?} %Usando a termodinâmica como analogia, em ambos os argumentos anteriores, é a natureza extensiva de $\Sigma_{\Ha}$ que faz com haja a propensão para classificação errada entre DIG e SF. $W_{\Ha}$, por outro lado, se comporta como uma grandeza intensiva. Em termodinâmica, propriedades intensivas são aquelas que dependem
 
@@ -210,12 +263,12 @@ De forma independente, podemos argumentar também que propriedades que possuam u
 \label{sec:DIGclass:WHaDistrib_hDIG}
 
 %---------------------------- Figure ----------------------------
-\begin{figure*}
+\begin{figure}
 \includegraphics[scale=0.9]{figuras/fig_WHa_histograms_per_morftype_and_radius_cumulFHa.pdf}
 \caption[Histogramas de $W_{{\rm H}\alpha}$]
 {Distribuição de $W_{\Ha}$ entre $307\,958$ zonas de 391 galáxias do CALIFA. A amostra está segmentada pela classificação de Hubble, de elípticas (segunda linha) até Sc ou mais tardias (última linha). Resultados para a amostra completa estão na primeira linha. Histogramas na primeira coluna identificam regiões de todas as partes das galáxias. Demais colunas selecionam diferentes intervalos em raio: os primeiros 0.5 HLR internos (segunda coluna), $R = 0.5$--1 HLR (terceira) e regiões exteriores com $R > 1$ HLR (quarta). Linhas tracejadas verticais marcam 3 e 14 \AA\,, as divisões entre hDIG/mDIG e mDIG/SFc respectivamente. Os números em cada gráfico representam a fração do fluxo de \Ha associada a cada componente (valor médio entre as zonas das galáxias apresentadas em cada painel).}
  \label{fig:WHaDistrib_ALLgals}
-\end{figure*}
+\end{figure}
 %---------------------------- Figure ----------------------------
 
 A Figura \ref{fig:WHaDistrib_ALLgals} mostra a distribução observada de $W_{\Ha}$ para $\sim$ 300 mil zonas de 391 galáxias. Na primeira linha temos a amostra inteira e nas linhas seguintes classificamos as zonas conforme a morfologia da galáxia de onde a zona pertence; (6 classes morfológicas: E, S0-S0a, Sa-Sab, Sb, Sbc e $\ge$ Sc). Na primeira coluna temos dados de todas as regiões das galáxias, nas demais colunas classificamos as zonas por intervalos de diferentes raios: $R$ $\le$ 0.5 HLR, 0.5 < $R$ $\le$ 1 HLR, $R$ > 1 HLR.
@@ -282,15 +335,6 @@ Devemos levar em conta uma assimetria conceitual nessa classificação. Enquanto
 
 Com nossas regiões classificadas podemos retornar ao painel mais à esquerda da Figura \ref{fig:ExampleMaps}. Nele vemos os mapas de $W_{\Ha}$ saturados pelos intervalos $< 3$ \AA\ (hDIG, vermelho) e $> 14$ \AA\ (SFc, azul). Cores intermediárias representam o intervalo de 3--14 \AA\ (mDIG). A galáxia S0 no topo da figura exemplifica o domínio do hDIG sobre as galáxias {\em early-type} como foi previamente inferido dos histogramas de $W_{\Ha}$ na Figura \ref{fig:WHaDistrib_ALLgals}. Através dos mapas da CALIFA 0886 (NGC 7311) e da 0010 (NGC 0036) observamos o domínio da componente hDIG nos bojos de galáxias. Como era esperado, a componente SFc se torna cada vez mais importante a medida que avançamos para tipos mais tardios na classificação de Hubble (seguindo de cima para baixo nas Figuras \ref{fig:ExampleMaps} e \ref{fig:WHaDistrib_ALLgals}).
 
-Finalizamos este capítulo referenciando aqui o trabalho de \citet{Sanchez.etal.2015MUSE}, um exemplo de estudo embasado em imagens com uma resolução espacial muito maior, obtidas com o MUSE. Podemos ver que o mapa de $W_{\Ha}$ da galáxia NGC 6754, reproduzido aqui na Figura \ref{fig:WHaSebasMUSE}, mostra um domínio completo de regiões SFc permeadas por emissão mDIG em todo disco.
-
-\begin{figure}
- \includegraphics[scale=0.45,angle=-90]{figuras/map_EW_Ha_HII.pdf}
- \caption[MUSE: Mapa de $W_{{\rm H}\alpha}$ da galáxia NGC 6754]
- {Mapa da galáxias NGC 6754 obtido por \citet{Sanchez.etal.2015MUSE} colorido por $\log\ W_{\Ha}$. Regiões com detecção de fluxo de \Ha abaixo de $\sim 3\sigma$ são mascaradas. Os circulos marcam regiões \hii detectadas.}
- \label{fig:WHaSebasMUSE}
-\end{figure}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Lacerda@CórregoGrande - Jan/2018                              %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -356,9 +400,9 @@ A contribuição relativa do DIG para a emissão em \Ha foi estimada em diversos
 \end{figure}
 %---------------------------- Figure ----------------------------
 
-Devido ao comportamento sistemático das propriedades de linhas de emissão, esses sistemas altamente inclinados são importantes para o estudo da emissão DIG nas regiões acima (e abaixo) do disco galáctico \citep{Tullmann.and.Dettmar.2000, Otte.etal.2002, Jones.etal.2017}. A galáxia protótipo utilizada nesses estudos é a NGC 891, extensivamente observada em diversos comprimentos de onda \citep{Rand.1998, Hodges.and.Bregman.2013, Seon.etal.2014, Hughes.etal.2015}. Esses estudos enfatizaram que as propriedades de linhas de emissão observadas no DIG extraplanar não podem ser explicadas puramente por fótons Lyman que escapam de regiões \hii presentes no disco. Uma variedade de fenômenos que pudessem gerar tal emissão foram sugeridos, como: dissipação de turbulência \citep{Minter.and.Spangler.1997}, reconexão magnética \citep{Raymond.1992}, choques \citep{Collins.and.Rand.2001}, raios cósmicos, aquecimento fotoelétrico proveniente de grãos de poeira do meio interestelar  \citep{Weingartner.and.Draine.2001}, e fótons Lyman vindos de estrelas velhas e quentes \citep{FloresFajardo.etal.2011a}.
+Devido ao comportamento sistemático das propriedades de linhas de emissão, esses sistemas altamente inclinados são importantes para o estudo da emissão DIG nas regiões acima (e abaixo) do disco galáctico \citep{Tullmann.and.Dettmar.2000, Otte.etal.2002, Jones.etal.2017}. A galáxia protótipo utilizada nesses estudos é a NGC 891, extensivamente observada em diversos comprimentos de onda \citep{Rand.1998, Hodges.and.Bregman.2013, Seon.etal.2014, Hughes.etal.2015}. Esses estudos enfatizaram que as propriedades de linhas de emissão observadas no DIG extraplanar não podem ser explicadas puramente por fótons Lyman que escapam de regiões \hii presentes no disco. Uma variedade de fenômenos que pudessem gerar tal emissão foram sugeridos, como: dissipação de turbulência \citep{Minter.and.Spangler.1997}, reconexão magnética \citep{Raymond.1992}, choques \citep{CollinsRand.2001}, raios cósmicos, aquecimento fotoelétrico proveniente de grãos de poeira do meio interestelar  \citep{Weingartner.and.Draine.2001}, e fótons Lyman vindos de estrelas velhas e quentes \citep{FloresFajardo.etal.2011a}.
 
-A Figura \ref{fig:ExampleMapsEdgeOn} nos mostra como os dados do CALIFA podem nos trazer um novo {\em insight} ao problema. Nela vemos cinco exemplos de galáxias {\em edge-on} dispostas da mesma forma que na Figura \ref{fig:ExampleMaps}. As quatro primeira possuem configuração muito parecida, onde temos o disco e arredores dominados por mDIG e SFc, enquanto a grandes distâncias do disco galácticos vemos uma completo predomínio de hDIG. Isso favorece o cenário proposto por \citet{FloresFajardo.eteal.2011a}, onde a ionização se torna dominada por HOLMES à medida que nos afastamos do plano galáctico. Essa conclusão é reforçada pelos mapas de diagnóstico de razões de linhas baseados em dados do MaNGA em \citet{Belfiore.etal.2016} e \citet{Zhang.etal.2017a}.
+A Figura \ref{fig:ExampleMapsEdgeOn} nos mostra como os dados do CALIFA podem nos trazer um novo {\em insight} ao problema. Nela vemos cinco exemplos de galáxias {\em edge-on} dispostas da mesma forma que na Figura \ref{fig:ExampleMaps}. As quatro primeira possuem configuração muito parecida, onde temos o disco e arredores dominados por mDIG e SFc, enquanto a grandes distâncias do disco galácticos vemos uma completo predomínio de hDIG. Isso favorece o cenário proposto por \citet{FloresFajardo.etal.2011a}, onde a ionização se torna dominada por HOLMES à medida que nos afastamos do plano galáctico. Essa conclusão é reforçada pelos mapas de diagnóstico de razões de linhas baseados em dados do MaNGA em \citet{Belfiore.etal.2016} e \citet{Zhang.etal.2017a}.
 
 Através de nossa experiência calculando $\xi$ (veja a Seção \ref{sec:DIGclass:WHaDistrib_hDIG}) podemos, pela primeira vez, relacionar a emissão DIG extraplanar com as populações estelares subjacentes. A mediana de $\xi$ nas regiões extraplanares das quatro primeiras galáxias na Figura \ref{fig:ExampleMapsEdgeOn} é 1.5 com interquartis 1.1--1.9. Dado um fator de $2 \sim 3$ nessa estimativa \citep{CidFernandes.etal.2011a} a conclusão principal aqui é que $\xi$ é da ordem de 1 e por isso consegue produzir fótons com $h\nu > 13.6$ suficientes para explicar a emissão extraplanar de \Ha.
 
@@ -512,6 +556,19 @@ O estudo de \citet{Davies.etal.2014} ilustra este ponto. Usando cubos de dados d
 
 \section{... acerca do estudo sobre o DIG em galáxias do CALIFA}
 \label{sec:concl:DIG}
+
+
+\section{O futuro próximo do IFS}
+\label{sec:concl:futIFS}
+
+Referencio aqui o trabalho de \citet{Sanchez.etal.2015MUSE}, um exemplo de estudo embasado em imagens com uma resolução espacial muito maior, obtidas com o MUSE. Podemos ver que o mapa de $W_{\Ha}$ da galáxia NGC 6754, reproduzido aqui na Figura \ref{fig:WHaSebasMUSE}, mostra um domínio completo de regiões SFc permeadas por emissão mDIG em todo disco.
+
+\begin{figure}
+ \includegraphics[scale=0.45,angle=-90]{figuras/map_EW_Ha_HII.pdf}
+ \caption[MUSE: Mapa de $W_{{\rm H}\alpha}$ da galáxia NGC 6754]
+ {Mapa da galáxias NGC 6754 obtido por \citet{Sanchez.etal.2015MUSE} colorido por $\log\ W_{\Ha}$. Regiões com detecção de fluxo de \Ha abaixo de $\sim 3\sigma$ são mascaradas. Os circulos marcam regiões \hii detectadas.}
+ \label{fig:WHaSebasMUSE}
+\end{figure}
 
 
 
