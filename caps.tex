@@ -107,11 +107,13 @@ Regiões \hii possuem alguns {\em parsecs} de extensão, com algumas chegando at
 %Essa tese tem como cerne o artigo sobre a natureza das linhas de emissão nas regiões das galáxias do CALIFA.
 Essa tese tem como cerne o artigo sobre o DIG nas regiões de galáxias de todos os tipos de Hubble presentes no CALIFA  \citep[][Apêndice \ref{apendice:DIGpaper0}]{Lacerda.etal.2018}, sobre o qual trabalhei nos dois últimos anos sob orientação do Prof. Dr. Roberto Cid Fernandes Jr \edu{\ojo e coorientação da Natalia?}. Nele separamos regiões com o regime de ionização dominado por formação estelar (SF) daquelas com gás ionizado difuso (DIG).
 
-Durante o doutorado trabalhei em fragmentos de diversos artigos, além de construir um módulo que possibilitou unir os resultados da síntese com as medidas nebulares, parte técnica fundamental para o estudo principal desta tese. No Capítulo \ref{sec:sample} descrevo a amostra de galáxias utilizadas neste trabalho, minha participação no artigo de \citet[][Apêndice \ref{apendice:GBetal2015a}]{GarciaBenito.etal.2015a} e a construção da classe EmLinesDataCube.
+Durante o doutorado trabalhei em fragmentos de diversos artigos, além de construir um módulo que possibilitou unir os resultados da síntese com as medidas nebulares, parte técnica fundamental para o estudo principal desta tese. No Capítulo \ref{sec:sample} descrevo a amostra de galáxias utilizadas neste trabalho e minha participação no artigo de \citet[][Apêndice \ref{apendice:GBetal2015a}]{GarciaBenito.etal.2015a}.
 
 O artigo sobre o DIG será dividido em dois capítulos. Nele fiz toda a parte de programação para análise (figuras, cálculos e experimentos, com mais de 20 mil linhas programadas) e participei de todas as discussões e análises envolvendo o tema, além de apresentá-lo em duas conferências. A exposição dos argumentos teóricos e empíricos no qual se embasam o nosso método de classificação aparece no Capítulo \ref{sec:DIGclass}, e no próximo (Capítulo \ref{sec:DIGdisc}) diversos temas discutidos acerca da aplicação de nossa classificação nas zonas de galáxias do CALIFA.
 
 \edu{No capítulo \ref{sec:concl} Por fim, demais artigos e trabalhos são apresentados no Cap.\ \ref{sec:more}.}
+
+No Apêndice \ref{apendice:EmLinesDataCube} apresento o módulo \emldc, escrito em \pyt, que adicionou ao PyCASSO as medidas de linhas de emissão sob o mesmo formato e organização da síntese, permitindo estudos comparativos entre propriedades estelares e nebulares de maneira ágil e intuitiva. Descrevo uma série de experimentos no Apêndice \ref{apendice:synvsneb} feitos utilizando o módulo apresentado no apêndice anterior. Ali comparo a taxa de formação estelar estimada de duas formas independentes (pela síntese e através de \Ha); e o coeficiente de extinção estimado pelo decremento de Balmer e pelo contínuo estelar.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Lacerda@CórregoGrande - Jan/2018                              %
@@ -132,7 +134,7 @@ O artigo sobre o DIG será dividido em dois capítulos. Nele fiz toda a parte de
 \chapter{Amostra e detalhes técnicos}
 \label{sec:sample}
 
-Houveram três lançamentos públicos de dados do CALIFA (DR1, \citealt{Husemann.etal.2013a}; DR2, \citealt{GarciaBenito.etal.2015a}, Apêndice \ref{apendice:DR2}; DR3, \citealt{SFSanchez.DR3.2016}). Este último, o {\em data-release} final do {\em survey}, descreve uma amostra de 667 galáxias ($\sim 1,5$ milhões de espectros) com tipos morfológicos cobrindo toda a classificação de Hubble e redshifts variando entre 0.005 e 0.03 (distâncias de 20 a 130 Mpc). Neste capítulo apresento minha participação no artigo \citep[][Apêndice \ref{apendice:GBetal2015a}]{GarciaBenito.etal.2015a} o qual descreve o segundo {\em data-release} do CALIFA. Também descrevo a amostra de regiões de galáxias, todas presentes no DR3 do CALIFA, presentes no estudo do DIG. Permeio o texto com alguns detalhes técnicos, como a criação de um módulo em \pyt que adicionou ao PyCASSO as medidas de linhas de emissão sob o mesmo formato e organização da síntese, permitindo estudos comparativos entre propriedades estelares e nebulares de maneira ágil e intuitiva.
+Houveram três lançamentos públicos de dados do CALIFA (DR1, \citealt{Husemann.etal.2013a}; DR2, \citealt{GarciaBenito.etal.2015a}, Apêndice \ref{apendice:DR2}; DR3, \citealt{SFSanchez.DR3.2016}). Este último, o {\em data-release} final do {\em survey}, descreve uma amostra de 667 galáxias ($\sim 1,5$ milhões de espectros) com tipos morfológicos cobrindo toda a classificação de Hubble e redshifts variando entre 0.005 e 0.03 (distâncias de 20 a 130 Mpc). Neste capítulo apresento minha participação no artigo \citep[][Apêndice \ref{apendice:GBetal2015a}]{GarciaBenito.etal.2015a} o qual descreve o segundo {\em data-release} do CALIFA. Também descrevo a amostra de regiões de galáxias, todas presentes no DR3 do CALIFA, presentes no estudo do DIG..
 %, entre eles, talvez o mais importante para nossa finalidade, o ajuste das linhas de emissão presentes nos espectros residuais.
 % descrever a fonte empírica do nosso trabalho, os espectros observados
 % todas as características da amostra utilizada para nosso estudo, que faz parte do DR3 do CALIFA.
@@ -557,9 +559,12 @@ O estudo de \citet{Davies.etal.2014} ilustra este ponto. Usando cubos de dados d
 \section{... acerca do estudo sobre o DIG em galáxias do CALIFA}
 \label{sec:concl:DIG}
 
+\edu{\ojo conclusões do paper}
 
 \section{O futuro próximo do IFS}
 \label{sec:concl:futIFS}
+
+\edu{\ojo Paper Guilherme...}
 
 Referencio aqui o trabalho de \citet{Sanchez.etal.2015MUSE}, um exemplo de estudo embasado em imagens com uma resolução espacial muito maior, obtidas com o MUSE. Podemos ver que o mapa de $W_{\Ha}$ da galáxia NGC 6754, reproduzido aqui na Figura \ref{fig:WHaSebasMUSE}, mostra um domínio completo de regiões SFc permeadas por emissão mDIG em todo disco.
 
