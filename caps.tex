@@ -242,7 +242,7 @@ Como mencionei anteriormente fiz toda a programação e participei ativamente de
 \chapter{Classificação}
 \label{sec:DIGclass}
 
-Nosso objetivo neste trabalho é desenvolver uma maneira de caracterizar as regiões de galáxias pelo seu regime de ionização, ou seja, separar regiões SF e DIG, diferenciar componentes do DIG e ir além, servir de legado para futuros trabalhos que possam utilizar essa classificação no estudo do comportamento de diferentes propriedades estelares sob distintas componentes do ISM. Com isso poderemos, através de comparações com os espectros integrados, resolver o {\em conumdrum} envolvendo a espectroscopia de uma fibra (ver Seção \ref{sec:intro:partes}). Neste capítulo apresentaremos o processo de classificação e os estudos em que nos embasamos para tal propósito.
+Nosso objetivo neste trabalho é desenvolver uma maneira de caracterizar as regiões de galáxias pelo seu regime de ionização, ou seja, separar regiões SF e DIG, diferenciar componentes do DIG e ir além, servir de legado para futuros trabalhos que possam utilizar essa classificação no estudo do comportamento de diferentes propriedades estelares sob distintas componentes do ISM. Com isso poderemos, através de comparações com os espectros integrados, dar umpasso importante na resolução do {\em conumdrum} envolvendo a espectroscopia de uma fibra (ver Seção \ref{sec:intro:partes}). Neste capítulo apresentaremos o processo de classificação e os estudos em que nos embasamos para tal propósito.
 % o víes causado pela mistura dessas diferentes componentes nas assinaturas espectrais,
 
 \section{O papel de $W_{H\alpha}$ na classificação das regiões: hDIG, mDIG e SFc}
@@ -556,6 +556,8 @@ O estudo de \citet{Davies.etal.2014} ilustra este ponto. Usando cubos de dados d
 \chapter{Conclusões e perspectivas}
 \label{sec:concl}
 
+\section{DIG no CALIFA: a classificação}
+\label{sec:concl:DIGCALIFA}
 No artigo principal desta tese utlizamos uma amostra de $307\,958$ zonas de 391 galáxias do CALIFA Survey dos mais variados tipos de Hubble. Estudos baseados em espectros integrados, como os do \SDSS, tiveram grande importância na determinação da existência ou não de núcleos ativos em galáxias. Em uma amostra espacialmente resolvida como a nossa, um questionamento mais relevante seria veririficar o regime de ionização de cada região é dominado por fótons que escapam de estrelas massivas (seja por regiões \hii ou pelo gás difuso que as circulam) ou por fótons criados por populações estelares velhas. E esta é a linha principal do artigo \citet[][Apêndice \ref{apendice:DIGpaper0} e desta tese.
 
 Nesse artigo mostramos que o método comumente adotado de seleção de regiões SF/DIG baseado no brilho sperficial de \Ha, $\Sigma_{\Ha}$ é conceitualmente falho. Mostramos que a através da largura equivalente de $W_{\Ha}$ esses dois regimes são diferenciados qualitativamente de uma maneira mais evidente. Além disso, talvez de forma mais importante, $W_{\Ha}$ consegue identificar os casos onde o regime de ionização é dominado por HOLMES, uma população estelar omnipresente que serve de nível mínimo de radiação ionizante em galáxias.
@@ -572,11 +574,27 @@ A seguir alguns dos principais resultados obtidos com este estudo motivado tanto
   \item As regiões SFc e hDIG ocupam locais bem definidos no diagrama BPT independentemente da distância radial ao núcleo da galáxia, $R$. As regiões mDIG, se espalham por todo o plano BPT, porém se concentrando mais na parte conhecida como composta (entre as linhas K01 e K03), formando uma sequência contínua entre as razões de linha SFc e hDIG, indicativo de um cenário de mistura mDIG = SFc + hDIG.
 \end{enumerate}
 
+
+\section{Outros trabalhos}
+\label{sec:concl:other}
+Antes do estudo sobre as regiões DIG no CALIFA participei de outros estudos envolvendo populações estelares e linhas de emissão. Como primeira etapa construí uma classe em \pyt que permitiu os ensaios descritos nos Apêndices \ref{apendice:EmLinesDataCube} e \ref{apendice:synvsneb}.
+
+%O valor do coeficiente de extinção calculado através do decremento de Balmer para regiões de 305 galáxias espirais do CALIFA indica que a extinção estelar estimada através da síntese com o \starlight
+
+%A síntese de populações estelares aplica um mesmo modelo de extinção estelar para todos os modelos utilizados, contrariando
+
+
 \section{O futuro próximo do IFS}
 \label{sec:concl:futIFS}
 
-Como visto, a contribuição fracional da luminosidade de \Ha para diferentes partes em galáxias expandido todos os tipos de Hubble não pode ser negligenciada. Porém os diferentes regimes de ionização alteram também outras linhas de emissão, fazendo com que a contribuição de cada região para cada linha seja diferente.
+\subsection{DIG no MaNGA: a fração relativa do fluxo de linhas de emissão referente ao DIG -- $f_\lambda^{\rm DIG}$}
+\label{sec:concl:futIFS:DIGMaNGA}
+Estudos que utilizam espectros integrados (i.e., não resolvidos espacialmente) como aqueles do \SDSS negligenciam a contribuição fracional de cada regime de ionização para o fluxo das linhas de emissão. Quando a intenção é calcular a taxa de formação estelar através da luminosidade de \Ha (ver Seção \ref{apendice:EmLinesDataCube:props:SFR}) temos que considerar apenas os fótons ionizantes provenientes de estrelas massivas. Similarmente, ao estimar a abundância relativa de oxigênio de galáxias SF, fica impossível descontar a contribuição do DIG para o fluxo das linhas de emissão necessárias para o cálculo de O/H (veja \citealt{Sanders.etal.2017a} e referências ali) utilizando dados integrados.
 
+Com uma amostra estatisticamente mais robusta, utilizando dados espacialmente resolvidos do MaNGA, nossa intenção é aplicar o mesmo método de classificação de \citet[][Apêndice \ref{apendice:DIGpaper0} de forma a analisar a contribuição relativa do DIG para os diferentes fluxos de linhas de emissão, $f_\lambda^{\rm DIG}$, e calibrar essas frações em função de propriedades integradas de galáxias de maneira que possamos usá-las para corrigir os espectros pela emissão DIG.
+
+
+\subsection{Estatística com melhor resolução espacial}
 Referencio aqui o trabalho de \citet{Sanchez.etal.2015MUSE}, um exemplo de estudo embasado em imagens com uma resolução espacial muito maior, obtidas com o MUSE. Podemos ver que o mapa de $W_{\Ha}$ da galáxia NGC 6754, reproduzido aqui na Figura \ref{fig:WHaSebasMUSE}, mostra um domínio completo de regiões SFc permeadas por emissão mDIG em todo disco.
 
 \begin{figure}
@@ -585,8 +603,6 @@ Referencio aqui o trabalho de \citet{Sanchez.etal.2015MUSE}, um exemplo de estud
  {Mapa da galáxias NGC 6754 obtido por \citet{Sanchez.etal.2015MUSE} colorido por $\log\ W_{\Ha}$. Regiões com detecção de fluxo de \Ha abaixo de $\sim 3\sigma$ são mascaradas. Os circulos marcam regiões \hii detectadas.}
  \label{fig:WHaSebasMUSE}
 \end{figure}
-
-
 
 % \subsection{Mascarando elementos e removendo {\em outliers}}
 % \label{sec:sample:mask}
