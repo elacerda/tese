@@ -12,7 +12,7 @@
 \chapter{Comparações entre propriedades estelares e propriedades nebulares}
 \label{apendice:synvsneb}
 
-As propriedades da síntese são relacionadas às populações estelares e comparações com as nebulares podem nos ajudar a entender melhor a história de formação estelar de cada região. Durante os últimos anos esses estudos cruzados entre propriedades sintéticas e nebulares de quase um milhão de galáxias do \SDSS renderam ótimos resultados para o GAS-UFSC. Neste Apêndice faço uso do \emldc e do PyCASSO para comparar a taxa de formação estelar e o coeficiente de extinção por poeira, estimados através de linhas de emissão e da síntese.
+As propriedades da síntese são relacionadas às populações estelares e comparações com as nebulares podem nos ajudar a entender melhor a história de formação estelar de cada região. Durante os últimos anos esses estudos cruzados entre propriedades sintéticas e nebulares de quase um milhão de galáxias do \SDSS renderam ótimos resultados para o GAS-UFSC. Neste Apêndice faço uso do \emldc e do PyCASSO para comparar a taxa de formação estelar e o coeficiente de extinção por poeira, estimados através de linhas de emissão e da síntese. Esses experimentos foram executados também, em um formato mais completo, porém com dados de espectroscopia integrada do \SDSS, em \citet{Mari2016}.
 
 
 \section{Comparação entre as taxas de formação estelar}
@@ -36,7 +36,7 @@ Com a síntese de populações estelares podemos calcular a história de formaç
 
 Como explicado na Sec. \ref{apendice:EmLinesDataCube:props:SFR}, podemos medir a taxa de formação estelar recente medindo a luminosidade intrínseca de \Ha. Na figura \ref{fig:aSFRSDsynvsaSFRSDneb} vemos as duas taxas de formação estelar, uma referente às estrelas com idade menor que 10 milhões de anos e estimada pela linha de emissão de \Ha (Equação \ref{eq:SFRNeb}), outra proveniente da síntese de populações estelares, que pode ser avaliada em diferentes tempos $t_\star$, modelada pela Equação \ref{eq:SFRSyn}. Essa calibração entre as taxas de formação estelar procura encontrar a idade que melhor relaciona as duas medidas ($t_{\rm SF}$, relativo à {\em star-forming}). Em todos os painéis vemos a comparação das duas densidades superficiais da taxa de formação estelar para diferentes valores de $t_\star$, além de um ajuste {\em OLS bisector} e os coeficiente de correlação de Spearmann e Pearson (números abaixo da idade no canto superior esquerdo). Os pontos representam médias azimutais em cada galáxia (bins em forma de anéis elipticos concêntricos de espessura 0.1 HLR). Vemos que entre 12 e 56 milhões de anos o coeficiente de correlação quase não muda (veja a Figura \ref{fig:SFRsynvsneb}, painel superior), chegando ao máximo (0.7880) em 31.62 milhões de anos, e por isso escolhemos este valor como $t_{\rm SF}$. Este tipo de análise utilizando as correlações entre densidades superficiais são mais confiáveis já que removem o termo $d^2$ existente no cálculo da SFR, que induz uma correlação direta entre $\mathrm{SFR}_\star$ e $\mathrm{SFR}_{\Ha}$. De fato o valor de $t_{\rm SF}$ não está muito distante da escala de tempo de vida das estrelas que produzem a maioria dos fótons capazes de produzirem a linha de \Ha ($\sim10^7$ anos).
 
-Esse estudo fez parte da pesquisa publicada no artigo \citep{GonzalezDelgado.etal.2016a} onde nosso grupo analisou as estruturas radiais de $\Sigma_{\rm SFR}$ em uma amostra de 416 galáxias do CALIFA, mostrando que as galáxias espirais possuem $\Sigma_{\rm SFR}$ basicamente constante com uma dispersão pequena. Anteriomente, tal procedimento de comparação foi feito por \citet{Asari.etal.2007a}, no qual os autores encontraram $t_{\rm SF}$ igual a 25 milhões de anos, para 82302 galáxias do \SDSS. A síntese de populações estelares foi realizada utilizando o \starlight, mas com uma diferente IMF. Apesar dessa diferença a concordância entre os resultados é boa.
+Esse estudo fez parte da pesquisa publicada no artigo \citep{GonzalezDelgado.etal.2016a} onde nosso grupo analisou as estruturas radiais de $\Sigma_{\rm SFR}$ em uma amostra de 416 galáxias do CALIFA, mostrando que as galáxias espirais possuem $\Sigma_{\rm SFR}$ basicamente constante com uma dispersão pequena. Anteriomente, tal procedimento de comparação foi feito por \citet{Asari.etal.2007a}, no qual os autores encontraram $t_{\rm SF}$ igual a 25 milhões de anos, para 82302 galáxias do \SDSS. A síntese de populações estelares foi realizada utilizando o \starlight, mas com uma diferente IMF. Apesar dessa diferença a concordância entre os resultados é boa. Além de figurar nesse artigo, esse estudo serviu de comparação nos artigos \citet{CortijoFerrero.etal.2017a, CortijoFerrero.etal.2017b, CortijoFerrero.etal.2017c} que dissecaram a história de formação estelar de diversos objetos em interação.
 
 % \begin{figure}
 % 	\centering
@@ -52,25 +52,39 @@ Esse estudo fez parte da pesquisa publicada no artigo \citep{GonzalezDelgado.eta
 \section{Comparação entre os coeficientes de extinção}
 \label{apendice:synvsneb:tauv}
 
-A síntese de populações estelares realizadas pelo \starlight adota o mesmo modelo de extinção por poeira explicado em \ref{apendice:EmLinesDataCube:props:tauvneb}, onde todas as populações são atenuadas pelo mesmo fator $e^{-\tau_\lambda}$. Essa simplificação contraria tanto evidências observacionais quanto estudos teóricos, que caminham para um cenário onde populações mais jovens são mais atenuadas pela poeira que populações mais velhas. \citet{Calzetti.etal.1994a} encontraram evidências diretas de que a extinção em regiões \Hii é aproximadamente duas vezes maior do que a das estrelas ($\tauVS \sim 0.44 \tauVN$). \citet{Charlot.Fall.2000a} propõem um modelo onde populações jovens são atenuadas por poeira na núvem de gás que a gerou e encontram que o coeficiente de extinção das {\em birth-clouds} (BC) é cerca de 3 vezes maior que  do meio interestelar (ISM). \citet{Kreckel.etal.2013a} através de dados de espectrografia de campo integrado do KINGFISH \citep{Kennicutt.etal.2011a} calculam a densidade superficial de poeira dessas galáxias e chegam a conclusão que o coeficiente de extinção derivados do contínuo estelar não correlaciona com a quantidade total de massa de poeira, diferentemente daquele derivado do decremento Balmer.
-
-Apesar do modelo de extinção ser o mesmo, o coeficiente calculado por cada um dos procedimentos é diferente, como podemos ver através dos resultados da Figura \ref{fig:tauVsynvsneb} para todas as regiões onde \Ha e \Hb puderam ser estimados. Esta figura apresenta a comparação entre os coeficientes de extinção para zonas e também para os perfis radiais. O coeficiente que vem do \starlight é calculado no processo de ajuste espectral, já o do decremento de Balmer só pode ser medido onde existam os observáveis necessários para seu cálculo. Verificamos que a medida que vamos sendo mais exigentes quanto aos valores mínimos $x_Y$, $\tauVS$, $\tauVN$ e raio para que uma zona seja considerada na comparação, as diferenças entre os dois coeficientes diminui. Vemos na Figura \ref{fig:tauVsynvsnebMask} esse efeito repetindo o mesmo experimento anterior porém contendo apenas as 16479 zonas que passaram pela máscara imposta e descrita na Seção \ref{apendice:EmLinesDataCube:EMLDC:ensaio}.
-
-\begin{figure}
-	\centering
-	\includegraphics[width=0.99\textwidth]{figuras/CompareTauV.pdf}
-	\caption[Comparação entre os coeficientes de extinção]
-	{Comparação entre os coeficientes de extinção por poeira provenientes da síntese ($\tauVS$) e do decremento de Balmer ($\tauVN$). Os contornos azul, amarelo e vermelho representam os intervalos de confiança ($1\sigma$, $2\sigma$ e $3\sigma$). A linha preta representa a mediana e as linhas pontilhadas representam o ajuste utilizando {\em OLS bisector} (vermelha) e mínimos quadrados (preta). Como em todos os gráficos com ajustes lineares, em detalhe temos o coeficiente angular, a interceptação da reta com o eixo vertical, e a média quadráticas dos desvios em relação a cada ajuste. Este gráfico não possui a máscara da definição da amostra aplicada.}
-	\label{fig:tauVsynvsneb}
-\end{figure}
-
 \begin{figure}
 	\centering
 	\includegraphics[width=0.99\textwidth]{figuras/CompareTauV_realsample.pdf}
-	\caption[Comparação entre os coeficientes de extinção da amostra selecionada]
-	{Igual a Figura \ref{fig:tauVsynvsneb} mas com a aplicação dos cortes definidos em \ref{apendice:EmLinesDataCube:EMLDC:ensaio}.}
-	\label{fig:tauVsynvsnebMask}
+%	\includegraphics[width=0.99\textwidth]{figuras/CompareTauV.pdf}
+	\caption[Comparação entre os coeficientes de extinção]
+	{Comparação entre os coeficientes de extinção por poeira provenientes da síntese ($\tauVS$) e do decremento de Balmer ($\tauVN$). Os contornos azul, amarelo e vermelho representam os intervalos de confiança ($1\sigma$, $2\sigma$ e $3\sigma$). A linha preta representa a mediana e as linhas pontilhadas representam o ajuste utilizando {\em OLS bisector} (vermelha) e mínimos quadrados (preta). Como em todos os gráficos com ajustes lineares, em detalhe temos o coeficiente angular, a interceptação da reta com o eixo vertical, e a média quadráticas dos desvios em relação a cada ajuste.}
+	% Este gráfico não possui a máscara da definição da amostra aplicada.}
+	\label{fig:tauVsynvsneb}
 \end{figure}
+
+% \begin{figure}
+% 	\centering
+% 	\includegraphics[width=0.99\textwidth]{figuras/CompareTauV_realsample.pdf}
+% 	\caption[Comparação entre os coeficientes de extinção da amostra selecionada]
+% 	{Igual a Figura \ref{fig:tauVsynvsneb} mas com a aplicação dos cortes definidos em \ref{apendice:EmLinesDataCube:EMLDC:ensaio}.}
+% 	\label{fig:tauVsynvsnebMask}
+% \end{figure}
+
+A síntese de populações estelares realizadas pelo \starlight adota o mesmo modelo de extinção por poeira explicado em \ref{apendice:EmLinesDataCube:props:tauvneb}, onde todas as populações são atenuadas pelo mesmo fator $e^{-\tau_\lambda}$. Essa simplificação contraria tanto evidências observacionais quanto estudos teóricos, que caminham para um cenário onde populações mais jovens são mais atenuadas pela poeira que populações mais velhas. \citet{Calzetti.etal.1994a} encontraram evidências diretas de que a extinção em regiões \Hii é aproximadamente duas vezes maior do que a das estrelas ($\tauVS \sim 0.44 \tauVN$). \citet{Charlot.Fall.2000a} propõem um modelo onde populações jovens são atenuadas por poeira na núvem de gás que a gerou e encontram que o coeficiente de extinção das {\em birth-clouds} (BC) é cerca de 3 vezes maior que  do meio interestelar (ISM). \citet{Kreckel.etal.2013a} através de dados de espectrografia de campo integrado do KINGFISH \citep{Kennicutt.etal.2011a} calculam a densidade superficial de poeira dessas galáxias e chegam a conclusão que o coeficiente de extinção derivados do contínuo estelar não correlaciona com a quantidade total de massa de poeira, diferentemente daquele derivado do decremento Balmer.
+
+Apesar do modelo de extinção ser o mesmo, o coeficiente calculado por cada um dos procedimentos é diferente, como podemos ver através dos resultados da Figura \ref{fig:tauVsynvsneb} contendo as 16479 zonas que passaram pela máscara imposta e descrita na Seção \ref{apendice:EmLinesDataCube:EMLDC:ensaio}. Essa figura apresenta a comparação entre os coeficientes de extinção para zonas e também para os perfis radiais. $\tauVS$, proveniente do \starlight, é calculado no processo de ajuste espectral, já $\tauVN$ só pode ser medido onde existam os observáveis necessários para seu cálculo. Apesar do espalhamento, resulta que $\tauVS$ e $\tauVN$ se correlacionam e a extinção de Balmer se mantém $\sim 2$ vezes maior que aquela proveniente do contínuo estelar. Trabalhos anteriores mostram essa correlação para espectros integrados de galáxias \citep{Stasinska.etal.2004a, CidFernandes.etal.2005a, Asari.etal.2007a}.
+
+\begin{figure}
+	\centering
+	\includegraphics{figuras/RtauVxY.pdf}
+	\caption[$\mathcal{R}_\tau \times x_Y$]
+	{Relação entre a razão dos coeficientes de extinção nebular (decremento de Balmer) e estelar (modelado pela síntese com o \starlight), $\mathcal{R}_\tau$, e a fração da luz na janela de normalização dos espectros que é proveniente das populações jovens, $x_Y$. No caso utilizamos $t_Y = t_{\rm SF} \equiv 31.62$ milhões de anos. A linha contínua marca a mediana e as tracejadas marcam os intervalos de 1 e 2$\sigma$. }
+	\label{fig:RtauVxY}
+\end{figure}
+
+Referencio aqui o trabalho de \citet{Mari2016}, que dentre outras comparações, verificou que a razão entre os coeficientes $\tauVN$ e $\tauVS$, $\mathcal{R}_\tau$, se aproxima de 1 quando nos aproximamos de regiões onde a fração de luz proveniente de populações estelares jovens ($x_Y$) é maior. Para nosso estudo espacialmente resolvido o resultado pode ser apreciado na Figura \ref{fig:RtauVxY}. A medida que as regiões são dominadas por populações jovens ($x_Y$ alto) vemos que os coeficientes se aproximam quantitativamente.
+
+Vemos que o cenário de extinção diferencial se confirma e que a medida que vamos para regiões mais com populações estelares mais jovens, o valor da extinção mode lada pela síntese se torna semelhante aquele estimado através do decremento de Balmer.
 
 % Figuras:
 % - Exemplo de diferenças entre mapas de tau_V

@@ -574,14 +574,12 @@ A seguir alguns dos principais resultados obtidos com este estudo motivado tanto
   \item As regiões SFc e hDIG ocupam locais bem definidos no diagrama BPT independentemente da distância radial ao núcleo da galáxia, $R$. As regiões mDIG, se espalham por todo o plano BPT, porém se concentrando mais na parte conhecida como composta (entre as linhas K01 e K03), formando uma sequência contínua entre as razões de linha SFc e hDIG, indicativo de um cenário de mistura mDIG = SFc + hDIG.
 \end{enumerate}
 
-
 \section{Outros trabalhos}
 \label{sec:concl:other}
-Antes do estudo sobre as regiões DIG no CALIFA participei de outros estudos envolvendo populações estelares e linhas de emissão. Como primeira etapa construí uma classe em \pyt que permitiu os ensaios descritos nos Apêndices \ref{apendice:EmLinesDataCube} e \ref{apendice:synvsneb}.
 
-%O valor do coeficiente de extinção calculado através do decremento de Balmer para regiões de 305 galáxias espirais do CALIFA indica que a extinção estelar estimada através da síntese com o \starlight
+Antes do estudo sobre as regiões DIG no CALIFA participei de outros estudos espacialmente resolvidos envolvendo populações estelares e linhas de emissão. Como primeira etapa construí uma classe em \pyt, descrita no Apêndice \ref{apendice:EmLinesDataCube}, que permitiu os estudos descritos no Apêndice \ref{apendice:synvsneb} onde comparamos propriedades estelares e nebulares. Esses estudos fizeram parte da discussão de diversos artigos no CALIFA. Parte dessa pesquisa, em particular das comparações entre da taxa de formação estelar proveniente da síntese e aquela estimada pela luminosidade de \Ha, foi publicada no artigo \citep{GonzalezDelgado.etal.2016a}, e também utilizado em comparações nos artigos \citet{CortijoFerrero.etal.2017a, CortijoFerrero.etal.2017b, CortijoFerrero.etal.2017c}.
 
-%A síntese de populações estelares aplica um mesmo modelo de extinção estelar para todos os modelos utilizados, contrariando
+Também participei dos estudos de controle de qualidade para o segundo lançamento público de dados do CALIFA  \citet[DR2; ][Apêndice \ref{apendice:GBetal2015a}]{GarciaBenito.etal.2015a}. Repetimos essa análise para o DR3 e comparações com os resultados das amostras anteriores mostraram uma gradativa melhora nos erros estimados pela pipeline de redução do CALIFA, resultando em melhores espectros residuais e máscaras de linhas de emissão utilizadas na síntese.
 
 
 \section{O futuro próximo do IFS}
@@ -595,14 +593,15 @@ Com uma amostra estatisticamente mais robusta, utilizando dados espacialmente re
 
 
 \subsection{Estatística com melhor resolução espacial}
-Referencio aqui o trabalho de \citet{Sanchez.etal.2015MUSE}, um exemplo de estudo embasado em imagens com uma resolução espacial muito maior, obtidas com o MUSE. Podemos ver que o mapa de $W_{\Ha}$ da galáxia NGC 6754, reproduzido aqui na Figura \ref{fig:WHaSebasMUSE}, mostra um domínio completo de regiões SFc permeadas por emissão mDIG em todo disco.
-
+\label{sec:concl:futIFS:MUSE}
 \begin{figure}
  \includegraphics[scale=0.45,angle=-90]{figuras/map_EW_Ha_HII.pdf}
  \caption[MUSE: Mapa de $W_{{\rm H}\alpha}$ da galáxia NGC 6754]
  {Mapa da galáxias NGC 6754 obtido por \citet{Sanchez.etal.2015MUSE} colorido por $\log\ W_{\Ha}$. Regiões com detecção de fluxo de \Ha abaixo de $\sim 3\sigma$ são mascaradas. Os circulos marcam regiões \hii detectadas.}
  \label{fig:WHaSebasMUSE}
 \end{figure}
+
+Referencio aqui o trabalho de \citet{Sanchez.etal.2015MUSE}, um exemplo de estudo embasado em imagens com uma resolução espacial muito maior, obtidas com o MUSE. São $\sim 200\,000$ espectros amostrando cada parte da galáxia até dois raios efetivos, cobrindo uma área de $\sim 2' \times 1'$ arcmin$^2$. A resolução espacial é muito melhor que a maioria dos {\em surveys} atuais de IFS, e com uma análise individual de cada espectro podemos construir mapas como o de $W_{\Ha}$ da galáxia NGC 6754, reproduzido aqui na Figura \ref{fig:WHaSebasMUSE}. Essa figura mostra um domínio completo de regiões SFc permeadas por emissão mDIG em todo disco.
 
 % \subsection{Mascarando elementos e removendo {\em outliers}}
 % \label{sec:sample:mask}
