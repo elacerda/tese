@@ -9,54 +9,13 @@
 %                                                               %
 %:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::%
 
-\chapter{Organizando os ajustes nebulares}
+\chapter{Organizando os ajustes nebulares com o EmLinesDataCube}
 \label{apendice:EmLinesDataCube}
-
-Quero iniciar esse Apêndice dizendo que esse ensaio foi feito antes do artigo \citet{Lacerda.etal.2018} e por isso engloba uma amostra diferentes escolhida com outros objetivos, porém, por ser um estudo de grande importância, vale seu detalhamento nesta tese.
-
-
-\section{EmLinesDataCube}
-\label{apendice:EmLinesDataCube:EMLDC}
 
 Feitas as medidas, temos o arcabouço para calcularmos várias propriedades nebulares. Escrevemos um objeto em \pyt (cujo nome titula esta seção) que, além de organizar os resultados provenientes do programa de medida das linhas de emissão, o coeficiente de extinção para as regiões nebulares ($\tauVN$), larguras equivalentes das linhas, assim como os erros propagados em cada cálculo. Esse objeto foi adicionado ao PyCASSO para facilitar a utilização dos demais membros do projeto. Com esse módulo fica fácil acessar as medidas dos fluxos integrados, a posição central, amplitudes e $\sigma$ das principais linhas de emissão, coeficientes para reconstrução do contínuo ao redor de cada linha de emissão, os erros nestas medidas, as propriedades mencionadas anteriormente e seus erros propagados.
 
-\subsection{Ensaio}
-\label{apendice:EmLinesDataCube:EMLDC:ensaio}
-Um programa feito da união entre o PyCASSO e o EmLineDataCube nos instiga a comparar medidas nebulares com as propriedades estelares. O gás é o combustível da formação estelar. As nuvens de gás molecular, formadas pelo esfriamento de gás do meio interestelar, se fragmentam formando estruturas menores e cada vez mais densas, que são chamadas {\em clumps}. A formação estelar acontece quando o centro dessas massas de gás colapsam devido ao desbalanceamento entre pressão e gravidade. Essas regiões, que podem ser pequenas ou se estenderem a gigantes berçários estelares, estão geralmente cobertas por uma densa camada de poeira. No
-final do ciclo de vida das estrelas, diversos elementos são jogados no meio interestelar através das explosões de supernovas, alterando assim a composição química do gás disponível para produção de novas estrelas.
 
-\citet{Schmidt.1959a} foi o primeiro a propor a existência de uma lei de potências que liga a taxa de formação estelar ({\em star formation rate}; SFR) e o gás. Anos depois, \citet{Kennicutt.1998a} estuda essa relação observacionalmente, utilizando diversos indicadores de formação estelar em diferentes faixas espectrais. Em seu trabalho, Kennicutt estabelece a ligação entre a densidade superficial do gás e da SFR. Hoje em dia essa é comumente chamada de relação de Kennicut-Schmidt (KS) ou lei de formação estelar. A
-equação parametrizada por \citeauthor{Kennicutt.1998a} foi:
-\begin{equation}
-	\Sigma_{\mathrm{SFR}}\ =\ (2.5\pm0.7)\times 10^{-4} \left(\frac{\Sigma_{\mathrm{gas}}}{
-M_\odot\ \mathrm{pc}^{-2}}\right)^{1.4 \pm 0.15}\ M_\odot\ \mathrm{yr}^{-1}\ \mathrm{kpc}^{-2}.
-	\label{eq:SFRKennicutt}
-\end{equation}
-
-Diferentemente da área típica das regiões que estamos observando (regiões de galáxias com tamanhos típicos de $\sim 0.8 $ kpc, ver Seção \ref{sec:sample:definicao}), essa equação foi parametrizada para valores integrados de galáxias e representa basicamente que a escala de depleção do gás é constante. Discute-se se essa é uma relação global \citep{Bigiel.etal.2008a, Blanc.etal.2009, Leroy.etal.2013a} ou local \citep[e.g., dependente da densidade superficial de gás; ][]{Kennicutt.etal.2007a, Liu.etal.2011a, Calzetti.etal.2012a, Shetty.etal.2013} em galáxias e, por isso diversos estudos resolvidos espacialmente discutem sua aplicação sob tal resolução espacial. Diferentes manifestações dessa relação entre gás e estrelas sempre figuraram entre os objetivos da astronomia moderna. O número de fótons que podem excitar \Ha deve ser proporcional a quantidade de estrelas que os produzem (estrelas jovens e massivas). Dessa forma podemos ter uma ideia da taxa recente com que se formam estrelas utilizando a luz que é emitida dessas estrelas mais massivas, dominantes da emissão em \Ha, com escala de tempo de vida bem conhecido ($\sim 10^7$ anos). Utilizando os modelos da síntese podemos calcular teoricamente a relação entre a SFR e a luminosidade de \Ha, $\LHalpha$ (ver Seção \ref{apendice:EmLinesDataCube:props:SFR}). Também com a síntese é possível obter a história de formação estelar, contudo através da fração de populações estelares com distintas idades \citep{Asari.etal.2007a}, não necessitando assim prender-se às zonas das galáxias onde o espectro tenha relação sinal ruído suficiente para a medida de todas as linhas espectrais necessárias para os cálculos sobre o gás e poeira. Uma comparação entre essas duas formas independentes de estimar a mesma propriedade é importante por diversas razões, além de ser um {\em sanity-check} para a síntese. Talvez a mais importante razão seja que calibrando uma parametrização de SFR recente baseado na síntese proporciona a avaliação dessa propriedade em regiões onde a emissão de \Ha não é regida pela a formação estelar e sim por outros regimes de ionização (e.g., AGN, HOLMES).
-
-%---------------------------- Figure ----------------------------
-\begin{figure}
-	\centering
-	\includegraphics[width=0.99\textwidth]{figuras/histosample.pdf}
-	\caption[Histogramas: densidade superficial de massa, idade média, fração de populações jovens e
-	relação axial.]
-	{Histogramas da densidade superficial de massa ({\em painel a}), idade média das populações
-estelares ({\em painel b}), fração em luz proveniente de populações jovens ($x_Y \equiv x_Y(t_\star <
-31.62$ milhões de anos, {\em painel c}) e relação axial ({\em painel d}). Em vermelho temos a
-distribuição de valores de 226176 regiões em 305 galáxias e, em azul, a de 16479 zonas de 184
-galáxias resultantes da seleção. Em cada gráfico temos os valores da média, mediana, desvio padrão,
-máximo e mínimo de cada distribuição.}
-	\label{fig:histosample}
-\end{figure}
-%---------------------------- Figure ----------------------------
-
-Neste apêndice, desenvolvo alguns cálculos de propriedades que estão presentes no módulo \emldc graças às medidas de linhas de emissão, para uma amostra do CALIFA com os dados preparados pela {\em pipeline} de redução utilizada no DR2. Começamos com uma amostra de 226176 regiões de 305 galáxias espirais. Nos estudos que envolvem linhas de emissão, neste e no Apêndice \ref{apendice:synvsneb}, fixamos um limite SN > 3 para cada linha presente em cada cálculo. Além dessa censura, mascaramos todas as regiões presentes nos bojos ($R$ > 0.7 HLR) de maneira a nos assegurarmos da influência majoraritária de formação estelar em nossas regiões. Ainda dentro dessas limitamos todas as regiões onde não pudemos nos assegurar que 5\% da luz seja proveniente de populações jovens ($x_Y$). Esse parâmetro é produto da síntese, onde podemos saber qual a fração de luz provém de cada população estelar de diferentes idades e metalicidades.
-
-Na Figura \ref{fig:histosample}, os histogramas normalizados (a integral dentro do intervalo do histograma é 1) de algumas propriedades evidenciam os efeitos da máscara que forma esta amostra. Em vermelho temos as 226176 regiões em 305 galáxias e, em azul, as 16479 zonas de 184 galáxias (19 Sa, 38 Sb, 59 Sbc, 55 Sc e 13 Sd) restantes após a censura dos dados. É notável que nossa seleção busca zonas mais densas e mais jovens (maior fração de populações jovens diminuindo a idade média).
-
-
-\section{Propriedades calculadas no EmLinesDataCube}
+\section{Propriedades calculadas}
 \label{apendice:EmLinesDataCube:props}
 
 \subsection{Extinção estimada através do decremento de Balmer}

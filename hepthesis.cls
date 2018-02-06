@@ -569,7 +569,7 @@
   \begin{center}%
     {\Large\chapfont #1}%
   \end{center}%
-  \vspace*{1cm}%
+  \vspace*{0.5cm}%
   %\larger{%
 }{%
   %}%
@@ -638,7 +638,7 @@
 		     {\textbullet\ \textbullet\ \textbullet\hspace{3cm}}\\
 	    \vspace{1.0cm}
 	{\frontfont \@institution\\}
-	    \vspace{2.0cm}
+	    \vspace{1.0cm}
       \end{flushright}
       \begin{flushleft}
 	\begin{minipage}{9cm}
