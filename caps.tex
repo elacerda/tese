@@ -211,14 +211,20 @@ Nosso objetivo neste trabalho é desenvolver uma maneira de caracterizar as regi
 \section{O papel de $W_{H\alpha}$ na classificação das regiões: hDIG, mDIG e SFc}
 \label{sec:DIGclass:WHa}
 
+%---------------------------- Figure ----------------------------
+\begin{figure}
+\includegraphics[scale=0.6]{figuras/cubo_com_fundo.pdf}
+\caption[Intensive $\times$ extensive]
+{A justaposição de dois elementos de volume identicos, emitindo o mesmo fluxo $F$, com a mesma densidade de fluxo $C$ no contínuo, sobre uma área $A$, resulta em uma largura equivalente $W = 2F/2C$. No caso do brilho superficial não, pois temos duas vezes o mesmo fluxo sobre a mesma área quando, $\Sigma = 2F/A$, que é igual a soma dos brilhos individuais. As qualificações `extensivas' e `intensivas' são usadas aqui em analogia à sua conotação termodinâmica: propriedades intensivas são aquelas que não dependem do tamanho ou da massa do sistema (um volume projetado em um {\em spaxel}, como é nosso caso), enquanto que as extensivas são aditivas. Nesse contexto o brilho superficial se comporta como uma propriedade extensiva.}
+ \label{fig:intensive_vs_extensive}
+\end{figure}
+%---------------------------- Figure ----------------------------
+
 Trabalhos anteriores utilizaram o brilho superficial de \Ha na intenção de separar regiões SF e DIG. Por exemplo \citet{Zhang.etal.2017a} argumenta que para os dados do MaNGA \citep{Bundy.etal.2015}, {\em spaxels} onde $\Sigma_{\Ha} > \Sigma_{\Ha}^{\rm SF,min} = 10^{39}$ erg$\,$s$^{-1}\,$kpc$^{-2}$ são confiavelmente dominados por SF.
 
 Como dissemos anteriormente, nós preferimos classificar as regiões entre SF e DIG baseados em $W_{\Ha}$. Vemos na classificação utilizando $\Sigma_{\Ha}$ um erro conceitual que pode ser explicado com um pequeno experimento teórico.
 
-Imagine dois elementos de volume dominados por DIG, ambos com área superficial $A$ emitindo um fluxo $F_{\Ha}=A\times\Sigma_{\Ha}$
-\edu{\ojo Fig + extensive-intensive note!!!}.
-%Usando a termodinâmica como analogia, em ambos os argumentos anteriores, é a natureza extensiva de $\Sigma_{\Ha}$ que faz com haja a propensão para classificação errada entre DIG e SF. $W_{\Ha}$, por outro lado, se comporta como uma grandeza intensiva. Em termodinâmica, propriedades intensivas são aquelas que dependem
-Assuma que o meio é opticamente translúcido para os fótons de \Ha (não há extinção), como é apropriado para regiões de DIG, de maneira que o volume inteiro seja visto. Obviamente uma operação de soma com duas regiões DIG não deve alterar a natureza da região observada. Quando vemos uma região ao lado da outra, medimos o mesmo brilho superficial, pois temos duas vezes o mesmo fluxo e duas vezes a mesma área, $\Sigma_{\Ha}=(2 \times F_{\Ha})/(2 \times A)$, mantendo uma possível classificação através de um limite no brilho superficial válida. Por outro lado, quando vemos os dois elementos sobrepostos (ambos sobre a mesma linha de visada) medimos o dobro do brilho superficial, $\Sigma_{\Ha}=(2 \times F_{\Ha})/A$, fazendo com que uma operação DIG+DIG possa resultar em SF, conceitualmente errada.
+Imagine dois elementos de volume dominados por DIG, ambos com área superficial $A$ emitindo um fluxo $F_{\Ha}=A\times\Sigma_{\Ha}$ como na Figura \ref{fig:intensive_vs_extensive}. Assuma que o meio é opticamente translúcido para os fótons de \Ha (não há extinção), como é apropriado para regiões de DIG, de maneira que o volume inteiro seja visto. Obviamente uma operação de soma com duas regiões DIG não deve alterar a natureza da região observada. Quando vemos uma região ao lado da outra (como no caso a na figura), medimos o mesmo brilho superficial, pois temos duas vezes o mesmo fluxo e duas vezes a mesma área, $\Sigma_{\Ha}=(2 \times F_{\Ha})/(2 \times A)$, mantendo uma possível classificação através de um limite no brilho superficial válida. Por outro lado, quando vemos os dois elementos sobrepostos (ambos sobre a mesma linha de visada como no caso b na figura) medimos o dobro do brilho superficial, $\Sigma_{\Ha}=(2 \times F_{\Ha})/A$, fazendo com que uma operação DIG+DIG possa resultar em SF, conceitualmente errada.
 %Esse viés é conceitualmente errado, pois duas regiões DIG sobrepostas deveriam continuar sendo classificadas como DIG.
 Uma classificação utilizando $W_{\Ha}$ não carrega essa inconsistência por construção pois a largura equivalente final é a mesma independente da forma que os elementos são vistos. Como veremos na Seção \ref{sec:DIGdisc:compSBHa}, nos bojos de galáxias, onde há um percurso óptico maior, essa diferença nos critérios de classificação tem particular importância, podendo levar $\Sigma_{\Ha} > \Sigma_{\Ha}^{\rm SF,min}$ mesmo em absência de formação estelar.
 
