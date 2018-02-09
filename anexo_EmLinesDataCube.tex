@@ -96,14 +96,7 @@ Chamamos $\Lambda$ o valor total de luz ($l$) que recebemos de estrelas que se f
 	\includegraphics[scale=0.62]{figuras/Nh_logt_metBase_Padova2000_salp.pdf}
 	\caption[Evolução temporal do número e da taxa de fótons H-ionizantes em unidades da massa
 	formada.]
-	{\emph{Painel superior esquerdo}: A	evolução no tempo do número de fótons ($\mathcal{N}_H$) para 6
-metalicidades (de 0.02 $Z_\odot$ até 1.58 $Z_\odot$) que compoem nossos modelos de SSP. A linha
-preta grossa representa a evolução utilizando metalicidade solar. \emph{Painel superior direito}:
-O mesmo que o \emph{painel superior esquerdo} mas normalizado pelo valor total de $\mathcal{N}_H$.
-A linha pontilhada representa 95\% do total de $\mathcal{N}_H$. Em destaque a região ao redor de 10
-milhões de anos. \emph{Painel inferior}: Evolução da taxa de fótons H-ionizantes em unidades da
-massa formada.
-Também mostra o valor seguindo o código de cores para as mesmas metalicidades.}
+	{\emph{Painel superior esquerdo}: A	evolução no tempo do número de fótons ($\mathcal{N}_H$) para 6 metalicidades (de 0.02 $Z_\odot$ até 1.58 $Z_\odot$) que compoem nossos modelos de SSP. A linha preta grossa representa a evolução utilizando metalicidade solar. \emph{Painel superior direito}: O mesmo que o \emph{painel superior esquerdo}, contudo normalizado pelo valor total de $\mathcal{N}_H$. A linha pontilhada representa 95\% do total de $\mathcal{N}_H$. Em destaque a região ao redor de 10 milhões de anos. \emph{Painel inferior}: Evolução da taxa de fótons H-ionizantes em unidades da massa formada. Também mostra o valor seguindo o código de cores para as mesmas metalicidades.}
 	\label{fig:Nh_qh}
 \end{figure}
 %---------------------------- Figure ----------------------------
@@ -158,7 +151,7 @@ Em \citet{Kennicutt.1998a} esse coeficiente é calculado utilizando diferentes m
 \label{apendice:EmLinesDataCube:props:example}
 Com a criação do objeto \emldc e sua adição ao PyCASSO, o processo de análise e produção de gráficos torna-se extremamente simples. Um exemplo de programa para produzir um gráfico BPT \citep{Baldwin.Phillips.Terlevich.1981a} utilizando os fluxos de quatro linhas de emissão (\Ha, \Hb, \oiii e \nii) pode ser visto na Figura \ref{fig:BPTprog}. Primeiro carregam-se os arquivos de dados utilizando o PyCASSO e o \emldc então todas as informações já estão prontas para serem utilizadas. Calculam-se então as razões entre as linhas e, por último, o gráfico é feito utilizando a biblioteca gráfica M\textsc{atplotlib} \footnote{\href{http://matplotlib.org/}{http://matplotlib.org/}}.
 
-Na Figura \ref{fig:BPTfig} podemos ver uma imagem produzida por um programa como o do exemplo anterior. Neste caso utilizamos os dados da galáxia NGC 2916 (objeto CALIFA 277). Classificada com tipo morfológico Sb, é considerad uma galáxia azul e com massa intermediária ($\sim 10^{11}\ M_\odot$). Todas as zonas neste gráfico possuem SN > 3 em todas as quatro linhas do BPT (\Hb, \oiii, \Ha e \nii). Podemos ver que as zonas mais próximas ao núcleo da galáxia estão distribuídas na ponta da asa direita no plano BPT, lado associado às regiões geralmente ionizadas por HOLMES ou por núcleos ativos (para uma discussão acerca ver Seção \ref{sec:DIGdisc:BPT}). Já do outro lado do gráfico, local associado às regiões de formação estelar, se encontram as zonas pertencentes ao disco da galáxia ($R$ > 1 HLR).
+Na Figura \ref{fig:BPTfig} podemos ver uma imagem produzida por um programa como o do exemplo anterior. Neste caso utilizamos os dados da galáxia NGC 2916 (objeto CALIFA 277). Classificada com tipo morfológico Sb, é considerada uma galáxia azul e com massa intermediária ($\sim 10^{11}\ M_\odot$). Todas as zonas neste gráfico possuem SN > 3 em todas as quatro linhas do BPT (\Hb, \oiii, \Ha e \nii). Podemos ver que as zonas mais próximas ao núcleo da galáxia estão distribuídas na ponta da asa direita no plano BPT, lado associado às regiões geralmente ionizadas por HOLMES ou por núcleos ativos (para uma discussão acerca ver Seção \ref{sec:DIGdisc:BPT}). Já do outro lado do gráfico, local associado às regiões de formação estelar, se encontram as zonas pertencentes ao disco da galáxia ($R$ > 1 HLR).
 
 %---------------------------- Figure ----------------------------
 \begin{figure}
