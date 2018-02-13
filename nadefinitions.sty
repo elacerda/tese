@@ -7,6 +7,7 @@
 \ProvidesPackage{nadefinitions}
 \usepackage{xspace}
 \usepackage[usenames]{color}
+\usepackage[normalem]{ulem}
 
 % ********************* Andre's Definitions ************************
 \def\starlight{\textsc{starlight}\xspace}      %smallcaps Starlight%
@@ -26,6 +27,13 @@
 % \def\WnII{W_{\mathrm{[N\,\textsc{ii}]}}}
 \def\OIII{\ifmmode [\mathrm{O}\textsc{iii}] \lambda 5007 \else [O\thinspace\textsc{iii}] $\lambda 5007$\xspace \fi}
 % \def\oIII{\ifmmode [\mathrm{O\,\textsc{iii}}] \else [O\thinspace{\sc iii}]\xspace \fi}
+%*******************************************************************
+
+% Correction% *******************************************************************
+% I guess these are Cid's definitions. I have found them in Luis'
+% masters thesis. Some of them are rather useful.
+% ********************* CID'S DEFINITIONS **************************
+\def\ojo{\fbox{\bf !$\odot$j$\odot$!}}      %Olho! Needs Correction%
 %*******************************************************************
 
 %********************* Lacerda's definition ************************
@@ -101,15 +109,7 @@
 \def\ATC{\color{cyan}}                			% Marks new stuff!
 \def\ATM{\color{magenta}}                		% Marks new stuff!
 \newcommand{\edu}[1]{{\ATM [EDU: #1]}}
-% Correction% *******************************************************************
-
-% I guess these are Cid's definitions. I have found them in Luis'
-% masters thesis. Some of them are rather useful.
-% ********************* CID'S DEFINITIONS **************************
-
-\def\ojo{\fbox{\bf !$\odot$j$\odot$!}}      %Olho! Needs Correction%
-
-%*******************************************************************
+\newcommand{\ED}[1]{\ojo {\ATM {\bf #1}}}
 
 % Journals - from AASTex
 % Natalia@UFSC - 16/Nov/2005
