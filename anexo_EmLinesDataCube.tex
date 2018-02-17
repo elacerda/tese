@@ -12,7 +12,7 @@
 \chapter{Organizando os ajustes nebulares com o EmLinesDataCube}
 \label{apendice:EmLinesDataCube}
 
-Feitas as medidas, temos o arcabouço para calcularmos várias propriedades nebulares. Escrevemos um objeto em \pyt (cujo nome titula esta seção) que, além de organizar os resultados provenientes do programa de medida das linhas de emissão, o coeficiente de extinção para as regiões nebulares ($\tauVN$), larguras equivalentes das linhas, assim como os erros propagados em cada cálculo. Esse objeto foi adicionado ao PyCASSO para facilitar a utilização dos demais membros do projeto. Com esse módulo fica fácil acessar as medidas dos fluxos integrados, a posição central, amplitudes e $\sigma$ das principais linhas de emissão, coeficientes para reconstrução do contínuo ao redor de cada linha de emissão, os erros nestas medidas, as propriedades mencionadas anteriormente e seus erros propagados.
+Feitas as medidas {\ATR \ojo ??DE QUE??]}, temos o arcabouço para calcularmos várias propriedades nebulares. Escrevemos um objeto em \pyt (cujo nome titula esta seção) que, além de organizar os resultados provenientes do programa de medida das linhas de emissão, o coeficiente de extinção para as regiões nebulares ($\tauVN$), larguras equivalentes das linhas, assim como os erros propagados em cada cálculo. Esse objeto foi adicionado ao PyCASSO para facilitar a utilização dos demais membros do projeto. Com esse módulo fica fácil acessar as medidas dos fluxos integrados, a posição central, amplitudes e largura das principais linhas de emissão, coeficientes para reconstrução do contínuo ao redor de cada linha de emissão, os erros nestas medidas, as propriedades mencionadas anteriormente e seus erros propagados.
 
 
 \section{Propriedades calculadas}
@@ -65,7 +65,7 @@ O erro propagado para $\tauVN$ é:
 	\epsilon (\tauVN) \approx \frac{2.886}{(S/N)_{\Hb}}
 	\label{eq:etaunebaprox}
 \end{equation}
-\noindent com valor típico \sim 0.14.
+\noindent com valor típico $\sim 0.14$.
 
 \subsection{Cálculo da taxa de formação estelar}
 \label{apendice:EmLinesDataCube:props:SFR}
@@ -79,11 +79,12 @@ Nós queremos calibrar $\LHalpha$ como um indicador de SFR usando uma relação 
 \noindent Portanto, nosso trabalho é encontrar $k$. Faremos isso investigando a natureza dos
 fótons H-ionizantes.
 
-Chamamos $\Lambda$ o valor total de luz ($l$) que recebemos de estrelas que se formaram $t$ anos atrás. $l(t)$ pode ser qualquer função que descreve a evolução temporal de qualquer fonte radiativa genérica \emph{por unidade de massa formada} de uma população estelar simples ({\em simple stellar population}; SSP). Como depende da massa formada fica claro que essa quantidade é dependente da Função de Massa Inicial ({\em Initial Mass Function}; IMF):
+Chamamos $\Lambda$ o valor total de luz ($l$) que recebemos de estrelas que se formaram $t$ anos atrás. $l(t)$ pode ser qualquer função que descreve a evolução temporal de qualquer fonte radiativa genérica \emph{por unidade de massa formada} de uma população estelar simples ({\em simple stellar population}; SSP). {\ATR \ojo isso tah esquisito.... nem tem IMF explicitramemte ai abaixo!!!] Como ??O QUE/QUEM?? depende da massa formada fica claro que essa quantidade é dependente da Função de Massa Inicial ({\em Initial Mass Function}; IMF):
 \begin{equation}
 	\Lambda(t) = \int_0^t l(t')\ \textrm{d}\textrm{M}(t').
 	\label{eq:dLambda}
 \end{equation}
+}
 \noindent Para obter $\Lambda$ nos falta saber como a massa em estrelas cresce no tempo, ou seja, saber como a SFR varia no tempo:
 \begin{equation}
 	\mathrm{d}\mathrm{M}(t)\ =\ \mathrm{SFR}(t)\ \mathrm{d}t
@@ -104,15 +105,18 @@ Chamamos $\Lambda$ o valor total de luz ($l$) que recebemos de estrelas que se f
 Utilizando \eqref{eq:dM_t} em \eqref{eq:dLambda} e integrando dentro do tempo do Universo ($T_U\ \sim$ 14 bilhões de anos) teremos hoje um total de luz:
 \begin{eqnarray}
 	\Lambda(t = T_U) &=& \int_0^{T_U} l(t)\ \textrm{d}\textrm{M}(t) \\
-	&=& \int_0^{T_U} \mathrm{SFR}(t)\ l(t)\ \textrm{d}t
+	&=& \int_0^{T_U} l(t)\ \mathrm{SFR}(t)\  \textrm{d}t
 	\label{eq:Lambda}
 \end{eqnarray}
-\noindent Assumindo o caso B de recombinação do hidrogênio, um em cada 2.226 fótons ionizantes produzem um fóton de \Ha \citep{Osterbrock.Ferland.2006a}. Esse número não varia muito em função da temperatura e da densidade nas regiões \Hii. Portanto:
+\noindent Assumindo o caso B de recombinação do hidrogênio, um em cada 2.226 fótons ionizantes produzem um fóton de \Ha \citep{Osterbrock.Ferland.2006a}.
+{\ATR [\ojo Se souberes como se calcular esse 2.226 em termos de recombination coefficients (a Natalia sabe) entao explica a conta em uma footonote, please!!]
+}
+ Esse número não varia muito em função da temperatura e da densidade nas regiões \Hii. Portanto:
 \begin{equation}
 	\LHalpha = h \nu_{\Ha} \frac{\mathrm{Q}_H}{2.226},
 	\label{eq:LHa_recomb_theory}
 \end{equation}
-\noindent onde $\mathrm{Q}_H$ é a taxa de fótons H-ionizantes. Em todo este processo assume-se que nenhuma radiação ionizante escapa da nuvem e, apesar de $\LHalpha$ estar corrigido por extinção, também assume-se que a poeira não absorve muito os fótons com $h\nu\ > 13.6$ eV. Escrevemos $dQ_H$ como a equação \eqref{eq:dLambda}.
+\noindent onde $\mathrm{Q}_H$ é a taxa de fótons H-ionizantes. Em todo este processo assume-se que nenhuma radiação ionizante escapa da nuvem e, apesar de $\LHalpha$ estar corrigido por extinção, também assume-se que a poeira não absorve muitos dos fótons com $h\nu\ > 13.6$ eV. Escrevemos $dQ_H$ como a equação \eqref{eq:dLambda}.
 \begin{equation}
 	Q_H(t)\ =\ \int dQ_H = \int q_H(t)\ \mathrm{d}\mathrm{M}(t)
 	\label{eq:QH_t}
@@ -128,7 +132,9 @@ Utilizando \eqref{eq:dM_t} em \eqref{eq:dLambda} e integrando dentro do tempo do
 	\label{eq:Nh}
 \end{equation}
 
-Utilizamos a base de populações estelares de \citet{Bruzual.Charlot.2003} com as isócronas de Padova 2000, juntamente com a IMF de \citet{Salpeter.1955a}. Neste caso, podemos ver na Figura \ref{fig:Nh_qh} a evolução temporal de $\mathcal{N}_H$ em valores absolutos (painel superior esquerdo) e relativamente ao total de $\mathcal{N}_H$ (painel superior direito). Em \citet[Figura 2b]{CidFernandes.etal.2011a} nós podemos ver a evolução temporal de $q_H$ sob todas as idades e metalicidades\footnote{Naquele estudo, o grupo \href{http://starlight.ufsc.br}{SEAGal/\STARLIGHT} utilizou as isócronas de Padova 1994 com a IMF de \citet{Chabrier.2003a}.}. A mesma figura é reproduzida no painel inferior. É notável que o número de fótons H-ionizantes rapidamente converge ao máximo perto de $t = 10^7$ anos. Deste mesmo gráfico mostramos que $q_H$ atinge um valor mínimo constante depois de uma certa idade. Nessa escala de tempo, dominam o regime de ionização estrelas velhas e quentes (ver Capítulo \ref{sec:DIGclass}). Também conclui-se que $\mathcal{N}_H$ é dependente da metalicidade, portanto o valor de $k$ em \eqref{eq:SFRHa} também\footnote{O valor de $k$ em nossa análise varia de 2.00 até 3.13 de acordo com a metalicidade indo de $0.02 Z_\odot@ até @1.58 Z_\odot$.}. Utilizando \eqref{eq:dM_t} em \eqref{eq:QH_t} e com uma simplificação graças a SFR constante dentro desta escala temporal ($\mathrm{SFR}(t)\rightarrow \mathrm{SFR}$), podemos reescrever \eqref{eq:QH_t} usando \eqref{eq:Nh}:
+Utilizamos a base de populações estelares de \citet{Bruzual.Charlot.2003} com as isócronas de Padova 2000, juntamente com a IMF de \citet{Salpeter.1955a}. Neste caso, podemos ver na Figura \ref{fig:Nh_qh} a evolução temporal de $\mathcal{N}_H$ em valores absolutos (painel superior esquerdo) e relativamente ao total de $\mathcal{N}_H$ (painel superior direito). Em \citet[Figura 2b]{CidFernandes.etal.2011a} nós podemos ver a evolução temporal de $q_H$ sob todas as idades e metalicidades\footnote{Naquele estudo, o grupo \href{http://starlight.ufsc.br}{SEAGal/\STARLIGHT} utilizou as isócronas de Padova 1994 com a IMF de \citet{Chabrier.2003a}.}. A mesma figura é reproduzida no painel inferior da Figura \ref{fig:Nh_qh}. É notável que o número de fótons H-ionizantes rapidamente converge ao máximo perto de $t = 10^7$ anos. Deste mesmo gráfico mostramos que $q_H$ atinge um valor mínimo constante depois de uma certa idade. Nessa escala de tempo, dominam o regime de ionização estrelas velhas e quentes (ver Capítulo \ref{sec:DIGclass}). Também conclui-se que $\mathcal{N}_H$ é dependente da metalicidade, portanto o valor de $k$ em \eqref{eq:SFRHa} também\footnote{O valor de $k$ em nossa análise varia de 2.00 até 3.13 de acordo com a metalicidade indo de $0.02 Z_\odot@ até @1.58 Z_\odot$. {\ATR \ojo ??PQ ESSES @'s??}}. 
+
+Utilizando \eqref{eq:dM_t} em \eqref{eq:QH_t} e com uma simplificação graças a SFR constante dentro desta escala temporal ($\mathrm{SFR}(t)\rightarrow \mathrm{SFR}$), podemos reescrever \eqref{eq:QH_t} usando \eqref{eq:Nh}:
 \begin{equation}
 	Q_H = \mathrm{SFR}\ \mathcal{N}_H(t_{\rm ion}\ =\ 10^7\ \textrm{anos, IMF, Z}{}_\star).
 	\label{eq:QH_converge}
@@ -138,7 +144,8 @@ Utilizamos a base de populações estelares de \citet{Bruzual.Charlot.2003} com 
 	\mathrm{SFR}_{\Ha} = \frac{2.226}{\mathcal{N}_H\ h \nu_{\Ha}} \times \LHalpha
 	\label{eq:SFR_theoric}
 \end{equation}
-\noindent Este método resulta em uma SFR recente, em termos de que, baseados na Figura \ref{fig:Nh_qh}, assumimos que o tempo para produção de fótons ionizantes relevantes para estimar a SFR baseada em $\LHalpha$ é de $t_{\rm ion} = 10^7$ anos. Finalmente, resolvendo \eqref{eq:SFR_theoric} encontramos o valor para $k$ em \eqref{eq:SFRHa}:
+\noindent 
+{\ATR [\ojo ajeita/reword essa frase!!] Este método resulta em uma SFR recente, em termos de que, baseados na Figura \ref{fig:Nh_qh}, assumimos que o tempo para produção de fótons ionizantes relevantes para estimar a SFR baseada em $\LHalpha$ é de $t_{\rm ion} = 10^7$ anos}. Finalmente, resolvendo \eqref{eq:SFR_theoric} encontramos o valor para $k$ em \eqref{eq:SFRHa}:
 \begin{equation}
 	\mathrm{SFR}_{\Ha}\ [\mathrm{M}_\odot\ \mathrm{yr}^{-1}] = 3.13 \times
 	\left(\frac{\LHalpha}{10^8\ \mathrm{L}_\odot}\right) = 8.1 \times 10^{-42}\ \LHalpha\ [ergs\ s^{-1}]
