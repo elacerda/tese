@@ -19,24 +19,22 @@ As propriedades da síntese são relacionadas às populações estelares e compa
 
 \section{Ensaio}
 \label{apendice:synvsneb:ensaio}
-Um programa feito da união entre o PyCASSO e o EmLineDataCube nos instiga a comparar medidas nebulares com as propriedades estelares. O gás é o combustível da formação estelar. As nuvens de gás molecular, formadas pelo esfriamento de gás do meio interestelar, se fragmentam formando estruturas menores e cada vez mais densas. A formação estelar acontece quando o centro dessas massas de gás colapsam devido ao desbalanceamento entre pressão e gravidade. 
+Um programa feito da união entre o PyCASSO e o EmLineDataCube nos instiga a comparar medidas nebulares com as propriedades estelares. O gás é o combustível da formação estelar. As nuvens de gás molecular, formadas pelo esfriamento de gás do meio interestelar, se fragmentam formando estruturas menores e cada vez mais densas. A formação estelar acontece quando o centro dessas massas de gás colapsam devido ao desbalanceamento entre pressão e gravidade.
 
-{\ATR MV DE LUGAR?? \ojo Essas regiões, que podem ser pequenas ou se estenderem a gigantes berçários estelares, estão geralmente cobertas por uma densa camada de poeira. No final do ciclo de vida das estrelas, diversos elementos são jogados no meio interestelar através das explosões de supernovas, alterando assim a composição química do gás disponível para produção de novas estrelas.
-}
-
-
-\citet{Schmidt.1959a} foi o primeiro a propor a existência de uma lei de potências que liga a taxa de formação estelar ({\em star formation rate}; SFR) e o gás. Anos depois, \citet{Kennicutt.1998a} estuda essa relação observacionalmente, utilizando diversos indicadores de formação estelar em diferentes faixas espectrais. Em seu trabalho, Kennicutt estabelece a ligação entre a densidade superficial do gás e da SFR. Hoje em dia essa é comumente chamada de relação de Kennicutt-Schmidt (KS) ou lei de formação estelar. A
-equação parametrizada por \citeauthor{Kennicutt.1998a} foi:
-\begin{equation}
-	\Sigma_{\mathrm{SFR}}\ =\ (2.5\pm0.7)\times 10^{-4} \left(\frac{\Sigma_{\mathrm{gas}}}{
-M_\odot\ \mathrm{pc}^{-2}}\right)^{1.4 \pm 0.15}\ M_\odot\ \mathrm{yr}^{-1}\ \mathrm{kpc}^{-2}.
-	\label{eq:SFRKennicutt}
-\end{equation}
-
-Diferentemente da área típica das regiões que estamos observando (regiões de galáxias com tamanhos típicos de $\sim 0.8 $ kpc, ver Seção \ref{sec:sample:definicao}), essa equação foi parametrizada para valores integrados de galáxias 
-{\ATR [\ojo ??QUE/PQ??] e representa basicamente que a escala de depleção do gás é constante}. Discute-se se essa é uma relação global \citep{Bigiel.etal.2008a, Blanc.etal.2009, Leroy.etal.2013a} ou local \citep[ {\ATR e.g., dependente da densidade superficial de gás; [\ojo ??CLARO QUE DEPENDE?? NAO ENTENDI ISSO]} ][]{Kennicutt.etal.2007a, Liu.etal.2011a, Calzetti.etal.2012a, Shetty.etal.2013} em galáxias e, por isso diversos estudos resolvidos espacialmente discutem sua aplicação sob tal resolução espacial. Diferentes manifestações dessa relação entre gás e estrelas sempre figuraram entre os objetivos da astronomia moderna. 
-
-O número de fótons que podem excitar \Ha deve ser proporcional a quantidade de estrelas que os produzem (estrelas jovens e massivas). Dessa forma podemos ter uma ideia da taxa recente com que se formam estrelas utilizando a luz que é emitida dessas estrelas mais massivas, dominantes da emissão em \Ha, com escala de tempo de vida bem conhecido ($\sim 10^7$ anos). Utilizando os modelos da síntese podemos calcular teoricamente a relação entre a SFR e a luminosidade de \Ha, $\LHalpha$ (ver Seção \ref{apendice:EmLinesDataCube:props:SFR}). Também com a síntese é possível obter a história de formação estelar, contudo através da fração de populações estelares com distintas idades \citep{Asari.etal.2007a}, não necessitando assim prender-se às zonas das galáxias onde o espectro tenha relação sinal ruído suficiente para a medida de todas as linhas espectrais necessárias para os cálculos sobre o gás e poeira. Uma comparação entre essas duas formas independentes de estimar a mesma propriedade é importante por diversas razões, além de ser um {\em sanity-check} para a síntese. Talvez a mais importante razão seja que calibrando uma parametrização de SFR recente baseado na síntese proporciona a avaliação dessa propriedade em regiões onde a emissão de \Ha não é regida pela a formação estelar e sim por outros regimes de ionização (e.g., AGN, HOLMES).
+% {\ATR MV DE LUGAR?? \ojo Essas regiões, que podem ser pequenas ou se estenderem a gigantes berçários estelares, estão geralmente cobertas por uma densa camada de poeira. No final do ciclo de vida das estrelas, diversos elementos são jogados no meio interestelar através das explosões de supernovas, alterando assim a composição química do gás disponível para produção de novas estrelas.
+% }
+%
+%
+% \citet{Schmidt.1959a} foi o primeiro a propor a existência de uma lei de potências que liga a taxa de formação estelar ({\em star formation rate}; SFR) e o gás. Anos depois, \citet{Kennicutt.1998a} estuda essa relação observacionalmente, utilizando diversos indicadores de formação estelar em diferentes faixas espectrais. Em seu trabalho, Kennicutt estabelece a ligação entre a densidade superficial do gás e da SFR. Hoje em dia essa é comumente chamada de relação de Kennicutt-Schmidt (KS) ou lei de formação estelar. A
+% equação parametrizada por \citeauthor{Kennicutt.1998a} foi:
+% \begin{equation}
+% 	\Sigma_{\mathrm{SFR}}\ =\ (2.5\pm0.7)\times 10^{-4} \left(\frac{\Sigma_{\mathrm{gas}}}{
+% M_\odot\ \mathrm{pc}^{-2}}\right)^{1.4 \pm 0.15}\ M_\odot\ \mathrm{yr}^{-1}\ \mathrm{kpc}^{-2}.
+% 	\label{eq:SFRKennicutt}
+% \end{equation}
+%
+% Diferentemente da área típica das regiões que estamos observando (regiões de galáxias com tamanhos típicos de $\sim 0.8 $ kpc, ver Seção \ref{sec:sample:definicao}), essa equação foi parametrizada para valores integrados de galáxias
+% {\ATR [\ojo ??QUE/PQ??] e representa basicamente que a escala de depleção do gás é constante}. Discute-se se essa é uma relação global \citep{Bigiel.etal.2008a, Blanc.etal.2009, Leroy.etal.2013a} ou local \citep[ {\ATR e.g., dependente da densidade superficial de gás; [\ojo ??CLARO QUE DEPENDE?? NAO ENTENDI ISSO]} ][]{Kennicutt.etal.2007a, Liu.etal.2011a, Calzetti.etal.2012a, Shetty.etal.2013} em galáxias e, por isso diversos estudos resolvidos espacialmente discutem sua aplicação sob tal resolução espacial. Diferentes manifestações dessa relação entre gás e estrelas sempre figuraram entre os objetivos da astronomia moderna.
 
 %---------------------------- Figure ----------------------------
 \begin{figure}
@@ -44,28 +42,28 @@ O número de fótons que podem excitar \Ha deve ser proporcional a quantidade de
 	\includegraphics[width=0.99\textwidth]{figuras/histosample.pdf}
 	\caption[Histogramas: densidade superficial de massa, idade média, fração de populações jovens e
 	relação axial.]
-	{Histogramas da densidade superficial de massa ({\em painel a}), idade média das populações
-estelares ({\em painel b}), fração em luz proveniente de populações jovens ($x_Y \equiv x_Y(t_\star <
-31.62$ milhões de anos, {\em painel c}) e relação axial ({\em painel d}). Em vermelho temos a
-distribuição de valores de 226176 regiões em 305 galáxias e, em azul, a de 16479 zonas de 184
-galáxias resultantes da seleção  {\ATR de zonas em discos $R > 0.7 HLR$ e onde SN $>3$ ??EM QUE LINHA(S)??\ojo} . Em cada gráfico temos os valores da média, mediana, desvio padrão,
-máximo e mínimo de cada distribuição.}
+	{Histogramas da densidade superficial de massa ({\em painel a}), idade média das populações estelares ({\em painel b}), fração em luz proveniente de populações jovens ($x_Y \equiv x_Y(t_\star < 31.62$ milhões de anos, {\em painel c}) e relação axial ({\em painel d}). Em vermelho temos a distribuição de valores de 226176 regiões em 305 galáxias e, em azul, a de 16479 zonas de 184 galáxias resultantes após a imposição de algumas restrições. Participam da amostra em azul as zonas em discos ($R > 0.7 HLR$) e onde SN $>3$ nas quatro linhas do BPT (\Hb, \oiii, \Ha, \nii). Em cada gráfico temos os valores da média, mediana, desvio padrão, máximo e mínimo de cada distribuição.}
 	\label{fig:histosample}
 \end{figure}
 %---------------------------- Figure ----------------------------
 
-Neste apêndice, desenvolvo alguns cálculos de propriedades que estão presentes no módulo \emldc graças às medidas de linhas de emissão, para uma amostra do CALIFA com os dados preparados pela {\em pipeline} de redução utilizada no DR2. Começamos com uma amostra de 226176 regiões de 305 galáxias espirais. Nos estudos que envolvem linhas de emissão fixamos um limite SN > 3 para cada linha presente em cada cálculo. Além dessa censura, mascaramos todas as regiões presentes nos bojos ($R$ > 0.7 HLR) de maneira a nos assegurarmos da influência majoritária de formação estelar em nossas regiões. Ainda dentro dessas limitamos todas as regiões onde não pudemos nos assegurar que 5\% da luz (em 5635 \AA) seja proveniente de populações jovens ($x_Y$). Esse parâmetro é produto da síntese, onde podemos saber qual a fração de luz provém de cada população estelar de diferentes idades e metalicidades.
+%Neste apêndice, desenvolvo alguns cálculos de propriedades que estão presentes no módulo \emldc graças às medidas de linhas de emissão,
+Realizamos este ensaio para uma amostra do CALIFA com os dados preparados pela {\em pipeline} de redução utilizada no DR2. Começamos com uma amostra de 226176 regiões de 305 galáxias espirais. Nos estudos que envolvem linhas de emissão fixamos um limite SN > 3 para as quatro linhas do BPT (\Hb, \oiii, \Ha, \nii).
+%cada linha presente em cada cálculo.
+Além dessa censura, mascaramos todas as regiões presentes nos bojos ($R$ > 0.7 HLR) de maneira a nos assegurarmos da influência majoritária de formação estelar em nossas regiões. Ainda dentro dessas limitamos todas as regiões onde não pudemos nos assegurar que 5\% da luz (em 5635 \AA) seja proveniente de populações jovens ($x_Y$). Esse parâmetro é produto da síntese, onde podemos saber qual a fração de luz provém de cada população estelar de diferentes idades e metalicidades.
 
 Na Figura \ref{fig:histosample}, os histogramas normalizados (a integral dentro do intervalo do histograma é 1) de algumas propriedades evidenciam os efeitos da máscara que forma esta amostra. Em vermelho temos as 226176 regiões em 305 galáxias e, em azul, as 16479 zonas de 184 galáxias (19 Sa, 38 Sb, 59 Sbc, 55 Sc e 13 Sd) restantes após a censura dos dados. É notável que nossa seleção busca zonas mais densas e mais jovens (maior fração de populações jovens diminuindo a idade média).
-{\ATR NAO ENTENDI ... }
-
-{\ATR \ojo mais grave: o que isso tudo tem a ver com SK???? tá muito embaralhado!}
+% {\ATR NAO ENTENDI ... }
+%
+% {\ATR \ojo mais grave: o que isso tudo tem a ver com SK???? tá muito embaralhado!}
 
 
 \section{Comparação entre as taxas de formação estelar}
 \label{apendice:synvsneb:SFR}
 
-Com a síntese de populações estelares podemos calcular a história de formação estelar utilizando o vetor cumulativo de massa, $\eta_\star(t_\star)$, que integra a fração total de massa convertida em estrelas para cada idade das populações da base ($\mu_j$). Dado um intervalo de tempo $t_\star$, podemos parametrizar a SFR como:
+O número de fótons que podem excitar \Ha deve ser proporcional a quantidade de estrelas que os produzem (estrelas jovens e massivas). Dessa forma podemos ter uma ideia da taxa recente com que se formam estrelas utilizando a luz que é emitida dessas estrelas mais massivas, dominantes da emissão em \Ha, com escala de tempo de vida bem conhecido ($\sim 10^7$ anos). Utilizando os modelos da síntese podemos calcular teoricamente a relação entre a SFR e a luminosidade de \Ha, $\LHalpha$ (ver Seção \ref{apendice:EmLinesDataCube:props:SFR}). Também com a síntese é possível obter a história de formação estelar, contudo através da fração de populações estelares com distintas idades \citep{Asari.etal.2007a}, não necessitando assim prender-se às zonas das galáxias onde o espectro tenha relação sinal ruído suficiente para a medida de todas as linhas espectrais necessárias para os cálculos sobre o gás e poeira. Uma comparação entre essas duas formas independentes de estimar a mesma propriedade é importante por diversas razões, além de ser um {\em sanity-check} para a síntese. Talvez a mais importante razão seja que calibrando uma parametrização de SFR recente baseado na síntese proporciona a avaliação dessa propriedade em regiões onde a emissão de \Ha não é regida pela a formação estelar e sim por outros regimes de ionização (e.g., AGN, HOLMES).
+
+Para esse cálculo da história de formação estelar através da síntese utilizamos o vetor cumulativo de massa, $\eta_\star(t_\star)$, que integra a fração total de massa convertida em estrelas para cada idade das populações da base ($\mu_j$). Dado um intervalo de tempo $t_\star$, podemos parametrizar a SFR como:
 \begin{eqnarray}
 	\eta_\star(t_\star)\ &=&\ \sum\limits_{t_{\star,j} > t_\star} \mu_j \\
 	\overline{\mathrm{SFR}_\star}(t_\star)\ &=&\ M_\star \frac{(1\ -\ \eta_\star(t_\star))}{t_\star},

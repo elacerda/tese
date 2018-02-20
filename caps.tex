@@ -47,13 +47,45 @@ Temos uma parceria de estudo de populações estelares com pesquisadores do Inst
 \label{sec:intro:UFSCeIAA:SLCAL}
 Um dos maiores frutos dessa cooperação é nossa participação no projeto CALIFA. Dentro dele, nós analisamos todos os cubos de dados dos objetos observados utilizando o código de síntese espectral \starlight e a plataforma PyCASSO ({\em Python CALIFA \starlight synthesis organiser}), descritos em \citet{CidFernandes.etal.2013a, CidFernandes.etal.2014a} e em \citet{deAmorim.etal.2017}. Com a síntese de populações estelares pode-se modelar os espectros provenientes das estrelas de diferentes idades e composições químicas (metalicidade), além da correção pela aplicação de uma lei de extinção por poeira. Essa análise foi basilar para a série de estudos que aconteceram nos últimos anos, resolvendo as populações estelares destes objetos no espaço e no tempo pela primeira vez. Aqui um rápido resumo do que nós desenvolvemos até agora:
 \edu{Figuras dos papers, 3 ou 4 de minha escolha com captions generosas e auto-explicativas}
+
+\section{Definição da amostra deste trabalho}
+\label{sec:sample:definicao}
+
+
+%---------------------------- Figure ----------------------------
+\begin{figure}
+  \includegraphics[scale=0.85]{figuras/Fig_age_McorSD_zonas_Bgsd01.pdf}
+  \caption[$\log \mu_\star\ \times$ \meanL{\log age}]
+  {Relação entre a densidade superficial de massa estelar (aqui chamado de $\mu_\star$) e idades estelares médias ponderadas pela luz, \meanL{\log age} de $98\,291$ zonas de 107 galáxias do CALIFA. As cores marcam a densidade de zonas no gráfico. Os círculos largos são os valores médios dessas quantidades para cada galáxia, coloridos por $M_\star$ conforme escrito no canto superior esquerdo. A linha tracejada marca $\mu_* = 7 \times 10^2$ M$_\odot$/pc$^2$, mostrando que regiões abaixo desse limite crítico de densidade apresentam correlação entre $\mu_\star$ e \meanL{\log t} e que as menos densas são também as mais jovens. Retirado de \citet{GonzalezDelgado.etal.2014a}.}
+  \label{fig:Age_McorSD_zonas}
+\end{figure}
+%---------------------------- Figure ----------------------------
+
+%---------------------------- Figure ----------------------------
+\begin{figure}
+  \includegraphics[scale=0.35]{figuras/Fig_age_logZ_zonas_Bgsd01.pdf}
+  \caption[\meanM{\log Z_\star} $\times\ \log \mu_\star$]
+  {Relação entre a metalicidade estelar local e a densidade superfical de massa estelar. Pontos pequenos representam 6000 {\em bins} radiais de 300 galáxias. {\em Painel esquerdo}: Círculos cinzas marcam os valores médios de \meanM{\log Z_\star} da distribuição de todos os pontos e as linhas tracejadas marcam os percentis 16 e 84. Círculos verdes representam os valores da distribuição média por galáxia. A barra de erro mostra a dispersão típica de um ponto nessa relação. Os pontos pequenos são coloridos pela distância radial que cada bin representa, em HLR. {\em Painel direito}: Pontos pequenos coloridos por \meanL{\log age}. Círculos azuis mostram a relação média por galáxia consideram apenas estrelas mais jovens que 2 Ganos no cálculo de $Z_\star$ (a barra de erro representa a dispersão típica). Estrelas azul-ciano mostram a relação $\mu$--Z nebular de \citet{Sanchez.etal.2013a} assumindo $12+ \log (O/H)_\odot = 8.66$. O gráfico mostra que \meanM{\log Z_\star} e $\log \mu_\star$ são fortemente correlacionadas e que $\mu_\star$ é um importante guia da metalicidade estelar, exceto nas regiões mais internas. Seguindo a mesma relação global entre M--Z, sistemas mais jovens são menos densos e mais pobres em metal e regiões mais velhas são mais densas e já atingiram sua evolução química. Retirado de \citet{GonzalezDelgado.etal.2014b}.}
+  \label{fig:McorSD_logZ_zonas}
+\end{figure}
+%---------------------------- Figure ----------------------------
+
+%---------------------------- Figure ----------------------------
+\begin{figure}
+  \includegraphics[scale=0.65]{figuras/Fig_MSSF_local_Vmax_Bgsd6e.pdf}
+  \caption[$\log \Sigma_{SFR}\ \times\ \log \mu_\star$]
+  {Sequência principal de formação estelar, relação $\mu_\star-\Sigma_{\rm SFR}$, para $\sim 12000$ {\em bins} radiais de 416 galáxias do CALIFA. Pontos são coloridos pelo tipo morfológico da galáxia que representam. Círculos brancos seguem os valores médios de $\log \Sigma_{\rm SFR}$ em {\em bins} de 0.2 dex em $\mu_\star$. Círculos laranja e azuis mostram a mesma média mas incluindo apenas galáxias Sa e Sc respectivamente. Linhas tracejadas diagonais marcam valores constantes da taxa de formação estelar específical, sSFR = 0.01, 0.1 e 1 Ganos$^{-1}$. O espalhamento dos pontos é visivelmente explicado por diferentes tipos morfológicos, porém seguem a mesma inclinação no plano.  Retirado de \citet{GonzalezDelgado.etal.2016a}.}
+  \label{fig:SFRSD_McorSD_bins}
+\end{figure}
+%---------------------------- Figure ----------------------------
+
 \begin{enumerate}[label=(\roman*)]
   \item Através da história de formação estelar ({\em star-formation history}; SFH) espacialmente resolvida, em \citet{Perez.etal.2013a} pudemos, pela primeira vez, traçar a história do crescimento da massa estelar de $\sim 100$ galáxias em função da distância radial. O resultado, que sugere que galáxias crescem de dentro para fora, foi confirmado por \citet{RGB.etal.2017} com uma amostra sete vezes maior.
   \item Informações espacialmente resolvidas e mapas 2-D das populações estelares foram usados para recuperar relações locais entre:
   \begin{enumerate*}[label=(\alph*)]
-    \item densidade superficial de massa estelar, $\Sigma_\star$, e idades estelares médias ponderadas pela luz, \meanL{\log t} \citep{GonzalezDelgado.etal.2014a};
-    \item metalicidade estelar média ponderada pela massa, \meanM{\log Z}, e $\Sigma_\star$ \citep{GonzalezDelgado.etal.2014b};
-    \item a densidade superficial da taxa de formação estelar, $\Sigma_{\rm SFR}}$, que funciona como um sensor de intensidade de formação estelar, e $\Sigma_\star$ \citep{GonzalezDelgado.etal.2016a}.
+    \item Figura \ref{fig:Age_McorSD_zonas} -- densidade superficial de massa estelar, $\Sigma_\star$, e idades estelares médias ponderadas pela luz, \meanL{\log t} \citep{GonzalezDelgado.etal.2014a};
+    \item Figura \ref{fig:McorSD_logZ_zonas} -- metalicidade estelar média ponderada pela massa, \meanM{\log Z}, e $\Sigma_\star$ \citep{GonzalezDelgado.etal.2014b};
+    \item Figura \ref{fig:SFRSD_McorSD_bins} --  a densidade superficial da taxa de formação estelar, $\Sigma_{\rm SFR}}$, que funciona como um sensor de intensidade de formação estelar, e $\Sigma_\star$ \citep{GonzalezDelgado.etal.2016a}.
   \end{enumerate*}
   Estes estudos serviram para mostrar que os processos locais desempenham papel fundamental regulando a formação estelar e enriquecimento químico no disco de galáxias espirais. Já nos esferóides esses processos são regulados pela massa estelar total, $M_\star$. Além do mais, com a comparação entre análise espectral integrada e espacialmente resolvida, encontramos que as propriedades das populações estelares são bem representadas por seus valores a 1 HLR\footnote{Half-light radius. Raio que contém metade da luz da galáxia na janela espectral de normalização dos espectros. Para os espectros do CALIFA a janela escolhida foi $5635 \pm 45$ \AA.} \citet{GonzalezDelgado.etal.2014a}.
   \item Estudando os perfis radiais de diversas propriedades físicas como a extinção estelar, $A_V$, $\Sigma_\star$, \meanL{\log t}, \meanM{\log Z} e seus gradientes em função da distância radial confirmamos que galáxias mais massivas são mais compactas, velhas, evoluídas quimicamente e menos avermelhadas por poeira. A dispersão nesses perfis parecem correlacionar com o tipo morfológico mostrando que para uma mesma $M_\star$, as galáxias mais {\em early-types} são também mais compactas, velhas e mais evoluídas quimicamente, o que evidencia que a interrupção da formação estelar está relacionada ao tipo morfológico \citep{GonzalezDelgado.etal.2015a}. Nesse mesmo artigo vimos que os gradientes negativos de \meanL{\log t} e \meanM{\log Z} confirmam que galáxias crescem de dentro para fora.
@@ -177,11 +209,9 @@ Como mencionado na Seção \ref{sec:intro:UFSCeIAA:SLCAL}, todos os cubos de dad
 %---------------------------- Figure ----------------------------
 \begin{figure}
 	\centering
-	\includegraphics[scale=0.4]{figuras/K0012-zone0-Hb.pdf}
-	\caption[Exemplo de ajuste de linha de emissão]
-	{Espectro na região da linha de \Hbeta em emissão para a zona central da galáxia UGC00148 (objeto
-CALIFA 12) juntamente com o melhor ajuste utilizando uma gaussiana. Em destaque a amplitude (A), o
-comprimento de onda central (x) e o desvio padrão neste ajuste (\sigma).}
+	\includegraphics[scale=0.6]{figuras/K0073_centralzone_HbO3HaN2S2.pdf}
+	\caption[SHIFU: Exemplo de ajuste de linha de emissão]
+	{\ED{Exemplo de saída do programa SHIFU. Ajuste das linhas de emissão do espectro central da galáxia NGC 0776 (CALIFA 73). Em destaque as linhas: \Hb (paineil superior esquerdo), \oiii (painel superior direito), \nii e \Ha (painel inferior esquerdo) e as duas linhas do \sii (painel inferior direito). Em cada painel vemos juntamente o melhor ajuste gaussiano acompanhado da amplitude (A), do comprimento de onda central (x) e do desvio padrão ($\sigma$) de cada linha. Figura produzida por R. García-Benito.}}
 	\label{fig:rgbline}
 \end{figure}
 %---------------------------- Figure ----------------------------
@@ -190,9 +220,8 @@ comprimento de onda central (x) e o desvio padrão neste ajuste (\sigma).}
 %e nem todas as partes da galáxia possuem gás.
 As linhas em emissão geralmente estão ligadas a processos de ionização do gás. O processo de ajuste das linhas de emissão foi feito utilizando o {\sc sherpa} IFU line fitting software (SHIFU; García-Benito et al. em prep.), baseado no pacote {\sc ciao's sherpa} \citep{Freeman.etal.2001, Doe.etal.2007}. Esse programa ajusta perfis gaussianos nas linhas de emissão presentes nos espectros residuais, além de estimar os erros envolvidos neste processo. Em um ajuste normal Gaussiano, os parâmetros geralmente são livres, todavia o ajuste leva em conta uma série de linhas de emissão que estão interligadas, regidas pela física de processos radiativos. Portanto, nessa tarefa alguns parâmetros são interligados e limitados de maneira conjunta. Por exemplo, nos ajustes utilizados neste trabalho as linhas do \nii têm \ED{seus fluxos integrados amarrados ($F_{6584}/F_{6548} = 2.9$)}. Também fixa-se a cinemática das linhas de mesmo íon.
 
-Um exemplo pode ser observado na Fig.\ \ref{fig:rgbline}. Nela vemos a linha de \Hb na zona central do objeto UGC00148 e o ajuste feito pelo programa. Essas medidas podem ser muito sensíveis no caso das linhas serem fracas, como é o caso de \Hb. Nosso estudo usa basicamente o fluxo de \Ha, que é muito menos afetado por incertezas. De fato, a mediana de SN$_{\Ha}$ para todas as zonas é 16 e apenas em 5\% dos casos SN$_{\Ha} < 1$. No Apêndice \ref{apendice:EmLinesDataCube} apresento o programa criado para organizar os resultados dos ajustes das linhas de emissão bem como alguns exemplos de utilização. Com essa classe em mãos, produzi estudos comparativos entre propriedades nebulares e estelares, expostos no Apêndice \ref{apendice:synvsneb}
+Um exemplo pode ser observado na Fig.\ \ref{fig:rgbline}. \ED{Nela vemos os melhores ajustes das linhas de emissão \Hb, \oiii, \nii, \Ha e \sii do espectro da região central da galáxia NGC 0776 (CALIFA 73).} Essas medidas podem ser muito sensíveis no caso das linhas serem fracas. Nosso estudo usa basicamente o fluxo de \Ha, que é muito menos afetado por incertezas. De fato, a mediana de SN$_{\Ha}$ para todas as zonas é 16 e apenas em 5\% dos casos SN$_{\Ha} < 1$. No Apêndice \ref{apendice:EmLinesDataCube} apresento o programa criado para organizar os resultados dos ajustes das linhas de emissão bem como alguns exemplos de utilização. Com essa classe em mãos, produzi estudos comparativos entre propriedades nebulares e estelares, expostos no Apêndice \ref{apendice:synvsneb}
 
-{\ATR\ojo sugiro engordar com mais uns plots de linhas na fig 2.1. outras linhas, como o3, n2, ha..}
 
 \section{Mapas de exemplo}
 \label{sec:sample:maps}
@@ -271,7 +300,7 @@ A Figura \ref{fig:WHaDistrib_ALLgals} mostra a distribução observada de $W_{\H
 %---------------------------- Figure ----------------------------
 \begin{figure}
   \includegraphics[scale=0.9]{figuras/bimodalWHa_model_both.pdf}
-\caption[Ajuste gaussiano de $W_{\Ha}$]
+\caption[Ajuste gaussiano de $W_{{\rm H}\alpha}$]
 {\ED{{\em Painel esquerdo}: Ajuste bimodal de gaussianas com os parâmetros média, desvio padrão e amplitude, índices 1 e 2 representam as duas populações, baixo e alto $W_{\Ha}$ respectivamente entre todas zonas de nossa amostra. {\em Painel direito}: O mesmo gráfico do painel esquerdo porém sem binagem espacial (todos os {\em spaxels}). As linhas tracejadas verticais são as médias evidenciando os centros de nossas duas populações, $\sim 1$ e $\sim 14$ \AA. No painel direito vemos que os valores dos centros das duas gaussianas são os mesmos basicamente.}}
  \label{fig:bimodal_model}
 \end{figure}
@@ -640,7 +669,7 @@ Os experimentos com frações de DIG para diferentes linhas de emissão já foi 
 \end{figure}
 
 Referencio aqui o trabalho de \citet{Sanchez.etal.2015MUSE}, um exemplo de estudo embasado em imagens com uma resolução espacial muito maior, obtidas com o MUSE. São $\sim 200\,000$ espectros amostrando cada parte da galáxia até dois raios efetivos, cobrindo uma área de $\sim 2' \times 1'$ arcmin$^2$. A resolução espacial é muito melhor que a maioria dos {\em surveys} atuais de IFS, e com uma análise individual de cada espectro podemos construir mapas como o de $W_{\Ha}$ da galáxia NGC 6754, reproduzido aqui na Figura \ref{fig:WHaSebasMUSE}.
-\ED{Análises estatísticas com mapas como o que está nessa figura, que mostra um domínio completo de regiões SFc permeadas por emissão mDIG em todo disco da NGC 6754, nos ajudarão a contabilizar a influência da emissão difusa em galáxias de uma maneira muito mais precisa. Esse estudo encontrou 396 regiões \hii nessa galáxia, 5--10 vezes mais do que análises anteriores com IFS de menor resolução espacial (e.g, \citealt{Sanchez.etal.2013a}), aumento esse previsto por simulações feitas por \citet{Mast.etal.2014}.}
+\ED{Análises estatísticas com mapas como esse, que mostra um domínio completo de regiões SFc permeadas por emissão mDIG em todo disco da NGC 6754, nos ajudarão a contabilizar a influência da emissão difusa em galáxias de uma maneira muito mais precisa. Esse estudo encontrou 396 regiões \hii nessa galáxia, 5--10 vezes mais do que análises anteriores com IFS de menor resolução espacial (e.g, \citealt{Sanchez.etal.2013a}), aumento esse previsto por simulações feitas por \citet{Mast.etal.2014}.}
 
 % \subsection{Mascarando elementos e removendo {\em outliers}}
 % \label{sec:sample:mask}
