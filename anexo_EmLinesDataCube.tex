@@ -12,7 +12,7 @@
 \chapter{Organizando os ajustes nebulares com o EmLinesDataCube}
 \label{apendice:EmLinesDataCube}
 
-Feitas as medidas \ED{dos fluxos integrados das linhas de emissão, conforme descrito na Seção \ref{sec:sample:eml}}, temos o arcabouço para calcularmos propriedades nebulares. Escrevi um objeto em \pyt (cujo nome titula esta seção) que, além de organizar os resultados provenientes do programa de medida das linhas de emissão, calcula o coeficiente de extinção para as regiões nebulares ($\tauVN$), larguras equivalentes das linhas, assim como os erros propagados em cada cálculo. Esse objeto foi adicionado ao PyCASSO para facilitar a utilização dos demais membros do projeto. Com esse módulo fica fácil acessar as medidas dos fluxos integrados, a posição central, amplitudes e largura das principais linhas de emissão, coeficientes para reconstrução do contínuo ao redor de cada linha de emissão, os erros nestas medidas, as propriedades mencionadas anteriormente e seus erros propagados.
+Feitas as medidas dos fluxos integrados das linhas de emissão, conforme descrito na Seção \ref{sec:sample:eml}, temos o arcabouço para calcularmos propriedades nebulares. Escrevi um objeto em \pyt (cujo nome titula esta seção) que, além de organizar os resultados provenientes do programa de medida das linhas de emissão, calcula o coeficiente de extinção para as regiões nebulares ($\tauVN$), larguras equivalentes das linhas, assim como os erros propagados em cada cálculo. Esse objeto foi adicionado ao PyCASSO para facilitar a utilização dos demais membros do projeto. Com esse módulo fica fácil acessar as medidas dos fluxos integrados, a posição central, amplitudes e largura das principais linhas de emissão, coeficientes para reconstrução do contínuo ao redor de cada linha de emissão, os erros nestas medidas, as propriedades mencionadas anteriormente e seus erros propagados.
 
 
 \section{Propriedades calculadas}
@@ -79,7 +79,7 @@ Nós queremos calibrar $\LHalpha$ como um indicador de SFR usando uma relação 
 \noindent Portanto, nosso trabalho é encontrar $k$. Faremos isso investigando a natureza dos
 fótons H-ionizantes.
 
-Chamamos $\Lambda$ o valor total de luz ($l$) que recebemos de estrelas que se formaram $t$ anos atrás. $l(t)$ pode ser qualquer função que descreve a evolução temporal de qualquer fonte radiativa genérica \emph{por unidade de massa formada}\footnote{\ED{A expressão {\em massa formada} é aqui utilizada porque quando falamos de sistemas estelares temos que diferenciar o quanto de massa se tornou em estrelas e o quanto ainda continua na forma de estrelas. Isso acontece porque a evolução estelar devolve matéria para o meio interestelar (atrvés de explosão de supernovas, nebulosas planetárias, ventos, etc). Uma SSP pode devolver para o ISM até 50\% de massa durante um tempo de Hubble, dependendo, entre outras coisas, da função de massa inicial.} de uma população estelar simples ({\em simple stellar population}; SSP):
+Chamamos $\Lambda$ o valor total de luz ($l$) que recebemos de estrelas que se formaram $t$ anos atrás. $l(t)$ pode ser qualquer função que descreve a evolução temporal de qualquer fonte radiativa genérica \emph{por unidade de massa formada}\footnote{A expressão {\em massa formada} é aqui utilizada porque quando falamos de sistemas estelares temos que diferenciar o quanto de massa se tornou em estrelas e o quanto ainda continua na forma de estrelas. Isso acontece porque a evolução estelar devolve matéria para o meio interestelar (atrvés de explosão de supernovas, nebulosas planetárias, ventos, etc). Uma SSP pode devolver para o ISM até 50\% de massa durante um tempo de Hubble, dependendo, entre outras coisas, da função de massa inicial.} de uma população estelar simples ({\em simple stellar population}; SSP):
 \begin{equation}
 	\Lambda(t) = \int_0^t l(t')\ \textrm{d}\textrm{M}(t').
 	\label{eq:dLambda}
@@ -108,29 +108,24 @@ Utilizando \eqref{eq:dM_t} em \eqref{eq:dLambda} e integrando dentro do tempo do
 	&=& \int_0^{T_U} l(t)\ \mathrm{SFR}(t)\  \textrm{d}t
 	\label{eq:Lambda}
 \end{eqnarray}
-\noindent Assumindo o caso B de recombinação do hidrogênio, um em cada 2.206 fótons ionizantes produzem um fóton de \Ha \citep{Osterbrock.Ferland.2006a}.
-\footnote{
-Em uma núvem em equilíbrio, o número total de ionizações por tempo, que é igual ao número total de fótons ionizantes emitidos, se balanceia com o número de recombinações por tempo:
+\noindent Assumindo o caso B de recombinação do hidrogênio, um em cada 2.206 fótons ionizantes produzem um fóton de \Ha \citep{Osterbrock.Ferland.2006a}\footnote{Em uma núvem em equilíbrio, o número total de ionizações por tempo, que é igual ao número total de fótons ionizantes emitidos em uma frequência $\nu$, se balanceia com o número de recombinações por tempo:
 \begin{eqnarray}
-		\int_{\nu_0}^{\infty} \frac{L}{h\nu} d \nu\ =\ \mathrm{Q}_H\ =\ \int_0^{r_1} n_p n_e \alpha_B({\rm H}, T) dV
+		\int_{\nu_0}^{\infty} \frac{L_\nu}{h\nu} d \nu\ =\ \mathrm{Q}_H\ =\ \int_0^{r_1} n_p n_e \alpha_B({\rm H}^0, T) dV,
 \end{eqnarray}
-A luminosidade de uma linha em particular em um volume (no nosso caso \Ha nesse volume) é:
+\noindent onde $L_\nu$ é a luminosidade em uma dada frequência, $r_1$ é o raio crítico de ionização (onde a ionização cai abruptamente a zero), $n_e$ e $n_p$ são as densidades de eletrons e prótons, respectivamente, por unidade de volume, $\alpha_B({\rm H}^0, T)$ é o coeficiente total de recombinação do Hidrogênio, em uma dada temperatura $T$, assumindo o caso B. A luminosidade de uma linha de recombinação em particular (no nosso caso \Ha) em um dado volume é:
 \begin{eqnarray}
-	L(\Ha)\ =\ \int_0^{r_1} 4 \pi j_{\Ha} dV = h \nu_{\Ha} \int_0^{r_1} n_p n_e \alpha_{\Ha}^{eff}({\rm H}, T) dV
-		%\int_{\nu_0}^{\infty} \frac{L}{h\nu} d \nu\ =\ \mathrm{Q}_H\ =\ \int_0^{r_1} n_p n_e \alpha_B({\rm H}, T) dV
+	L(\Ha)\ =\ \int_0^{r_1} 4 \pi j_{\Ha} dV = h \nu_{\Ha} \int_0^{r_1} n_p n_e \alpha_{\Ha}^{eff}({\rm H}^0, T) dV
 \end{eqnarray}
-Como queremos a relação entre o número de fótons H-ionizantes e o número de fótons emitidos pela núvem em uma linha de recombinação específica (\Ha) dividimos uma equação pela outra, obtendo:
+\noindent onde $j_{\Ha}$ é o coeficiente de emissividade de \Ha (dado em energia por volume, por tempo, por ângulo sólido por frequencia) e $\alpha_{\Ha}^{eff}({\rm H}^0, T)$ é o coeficiente de recombinação efetivo de \Ha.
+Dividindo a equação da relação entre o número de fótons emitidos pela núvem em uma linha de recombinação específica (\Ha) e o número de fótons H-ionizantes:
 \begin{eqnarray}
-	\frac{\frac{L(\Ha)}{h \nu_{\Ha}}}{\int_{\nu_0}^{\infty} \frac{L}{h\nu} d \nu}\ =\ \frac{\int_0^{r_1} n_p n_e \alpha_{\Ha}^{eff}({\rm H}, T) dV}{\int_0^{r_1} n_p n_e \alpha_B({\rm H}, T) dV}\ \approx\ \frac{\alpha_{\Ha}^{eff}({\rm H}, T)}{\alpha_B({\rm H}, T)}
+	\frac{\frac{L(\Ha)}{h \nu_{\Ha}}}{\int_{\nu_0}^{\infty} \frac{L}{h\nu} d \nu}\ =\ \frac{\int_0^{r_1} n_p n_e \alpha_{\Ha}^{eff}({\rm H}^0, T) dV}{\int_0^{r_1} n_p n_e \alpha_B({\rm H}^0, T) dV}\ \approx\ \frac{\alpha_{\Ha}^{eff}({\rm H}^0, T)}{\alpha_B({\rm H}^0, T)}
 \end{eqnarray}
-Utilizando as Tabelas 2.7 e 4.2 de \citet{Osterbrock.Ferland.2006a} calculamos:
+Utilizando a Tabela 4.2 de \citet{Osterbrock.Ferland.2006a}, que apresenta os valores de emissividade e do coeficiente efetivo de recombinação para \Hb, calcula-se o coeficiente efetivo de recombinação para o \Ha através da relação entre os coeficientes de \Ha e \Hb (disponível na mesma tabela), sob a temperatura de $10\,000$ K. Também aplicamos o valor do coeficiente de recombinação do caso B para o Hidrogênio com a mesma temperatura, registrado na Tabela 2.7 do mesmo livro, finalmente obtemos:
 \begin{eqnarray}
-	\frac{\alpha_{\Ha}^{eff}({\rm H}, T)}{\alpha_B({\rm H}, T)}\ =\ \frac{2.59\times10^{-13}}{3.03\times10^{-14} \frac{2.87\ \lambda_{\Ha}}{\lambda_{\Hb}}}\ \approx\ 2.206
+	\frac{\alpha_{\Ha}^{eff}({\rm H}^0, T)}{\alpha_B({\rm H}^0, T)}\ =\ \frac{2.59\times10^{-13}}{3.03\times10^{-14}} \frac{1}{2.87} \frac{\lambda_{\Hb}}{\lambda_{\Ha}}\ \approx\ 2.206
 \end{eqnarray}
-}
-{\ATR [\ojo Se souberes como se calcular esse 2.206 em termos de recombination coefficients (a Natalia sabe) entao explica a conta em uma footonote, please!!]
-}
- Esse número não varia muito em função da temperatura e da densidade nas regiões \Hii. Portanto:
+}. Esse número não varia muito em função da temperatura e da densidade nas regiões \Hii. Portanto:
 \begin{equation}
 	\LHalpha = h \nu_{\Ha} \frac{\mathrm{Q}_H}{2.206},
 	\label{eq:LHa_recomb_theory}
@@ -165,7 +160,7 @@ Utilizando \eqref{eq:dM_t} em \eqref{eq:QH_t} e com uma simplificação graças 
 \end{equation}
 \noindent
 %{\ATR [\ojo ajeita/reword essa frase!!] Este método resulta em uma SFR recente, em termos de que, baseados na Figura \ref{fig:Nh_qh}, assumimos que o tempo para produção de fótons ionizantes relevantes para estimar a SFR baseada em $\LHalpha$ é de $t_{\rm ion} = 10^7$ anos}. Finalmente, resolvendo \eqref{eq:SFR_theoric} encontramos o valor para $k$ em \eqref{eq:SFRHa}:
-\ED{Quando fazemos este tipo de estudo utilizando $\LHalpha$, temos a estimativa de uma SFR recente pois assumimos que o tempo para produção de fótons ionizantes relevantes para estimar a SFR é de $t_{\rm ion} = 10^7$ anos. Porém, como vimos anteriormente através da Figura \ref{fig:Nh_qh} essa é a escala de tempo onde a disponibilidade de fótons é praticamente máxima.} Finalmente, resolvendo \eqref{eq:SFR_theoric} encontramos o valor para $k$ em \eqref{eq:SFRHa}:
+Quando fazemos este tipo de estudo utilizando $\LHalpha$, temos a estimativa de uma SFR recente pois assumimos que o tempo para produção de fótons ionizantes relevantes para estimar a SFR é de $t_{\rm ion} = 10^7$ anos. Porém, como vimos anteriormente através da Figura \ref{fig:Nh_qh} essa é a escala de tempo onde a disponibilidade de fótons é praticamente máxima. Finalmente, resolvendo \eqref{eq:SFR_theoric} encontramos o valor para $k$ em \eqref{eq:SFRHa}:
 
 \begin{equation}
 	\mathrm{SFR}_{\Ha}\ [\mathrm{M}_\odot\ \mathrm{yr}^{-1}] = 3.13 \times
