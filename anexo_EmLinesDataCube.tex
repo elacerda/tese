@@ -79,7 +79,7 @@ Nós queremos calibrar $\LHalpha$ como um indicador de SFR usando uma relação 
 \noindent Portanto, nosso trabalho é encontrar $k$. Faremos isso investigando a natureza dos
 fótons H-ionizantes.
 
-Chamamos $\Lambda$ o valor total de luz ($l$) que recebemos de estrelas que se formaram $t$ anos atrás. $l(t)$ pode ser qualquer função que descreve a evolução temporal de qualquer fonte radiativa genérica \emph{por unidade de massa formada}\footnote{\ED{A expressão {\em massa formada} é aqui utilizada porque quando falamos de sistemas estelares temos que diferenciar o quanto de massa se tornou em estrelas e o quanto ainda continua na forma de estrelas. Isso acontece porque a evolução estelar devolve matéria para o meio interestelar (atrvés de explosão de supernovas, nebulosas planetárias, ventos, etc). Uma SSP pode devolver para o ISM até 50\% de massa durante um tempo de Hubble, dependendo, entre outras coisas, da função de massa inicial (\{em initial mass function}; IMF).}} de uma população estelar simples ({\em simple stellar population}; SSP):
+Chamamos $\Lambda$ o valor total de luz ($l$) que recebemos de estrelas que se formaram $t$ anos atrás. $l(t)$ pode ser qualquer função que descreve a evolução temporal de qualquer fonte radiativa genérica \emph{por unidade de massa formada}\footnote{\ED{A expressão {\em massa formada} é aqui utilizada porque quando falamos de sistemas estelares temos que diferenciar o quanto de massa se tornou em estrelas e o quanto ainda continua na forma de estrelas. Isso acontece porque a evolução estelar devolve matéria para o meio interestelar (atrvés de explosão de supernovas, nebulosas planetárias, ventos, etc). Uma SSP pode devolver para o ISM até 50\% de massa durante um tempo de Hubble, dependendo, entre outras coisas, da função de massa inicial.} de uma população estelar simples ({\em simple stellar population}; SSP):
 \begin{equation}
 	\Lambda(t) = \int_0^t l(t')\ \textrm{d}\textrm{M}(t').
 	\label{eq:dLambda}
@@ -108,12 +108,31 @@ Utilizando \eqref{eq:dM_t} em \eqref{eq:dLambda} e integrando dentro do tempo do
 	&=& \int_0^{T_U} l(t)\ \mathrm{SFR}(t)\  \textrm{d}t
 	\label{eq:Lambda}
 \end{eqnarray}
-\noindent Assumindo o caso B de recombinação do hidrogênio, um em cada 2.226 fótons ionizantes produzem um fóton de \Ha \citep{Osterbrock.Ferland.2006a}.
-{\ATR [\ojo Se souberes como se calcular esse 2.226 em termos de recombination coefficients (a Natalia sabe) entao explica a conta em uma footonote, please!!]
+\noindent Assumindo o caso B de recombinação do hidrogênio, um em cada 2.206 fótons ionizantes produzem um fóton de \Ha \citep{Osterbrock.Ferland.2006a}.
+\footnote{
+Em uma núvem em equilíbrio, o número total de ionizações por tempo, que é igual ao número total de fótons ionizantes emitidos, se balanceia com o número de recombinações por tempo:
+\begin{eqnarray}
+		\int_{\nu_0}^{\infty} \frac{L}{h\nu} d \nu\ =\ \mathrm{Q}_H\ =\ \int_0^{r_1} n_p n_e \alpha_B({\rm H}, T) dV
+\end{eqnarray}
+A luminosidade de uma linha em particular em um volume (no nosso caso \Ha nesse volume) é:
+\begin{eqnarray}
+	L(\Ha)\ =\ \int_0^{r_1} 4 \pi j_{\Ha} dV = h \nu_{\Ha} \int_0^{r_1} n_p n_e \alpha_{\Ha}^{eff}({\rm H}, T) dV
+		%\int_{\nu_0}^{\infty} \frac{L}{h\nu} d \nu\ =\ \mathrm{Q}_H\ =\ \int_0^{r_1} n_p n_e \alpha_B({\rm H}, T) dV
+\end{eqnarray}
+Como queremos a relação entre o número de fótons H-ionizantes e o número de fótons emitidos pela núvem em uma linha de recombinação específica (\Ha) dividimos uma equação pela outra, obtendo:
+\begin{eqnarray}
+	\frac{\frac{L(\Ha)}{h \nu_{\Ha}}}{\int_{\nu_0}^{\infty} \frac{L}{h\nu} d \nu}\ =\ \frac{\int_0^{r_1} n_p n_e \alpha_{\Ha}^{eff}({\rm H}, T) dV}{\int_0^{r_1} n_p n_e \alpha_B({\rm H}, T) dV}\ \approx\ \frac{\alpha_{\Ha}^{eff}({\rm H}, T)}{\alpha_B({\rm H}, T)}
+\end{eqnarray}
+Utilizando as Tabelas 2.7 e 4.2 de \citet{Osterbrock.Ferland.2006a} calculamos:
+\begin{eqnarray}
+	\frac{\alpha_{\Ha}^{eff}({\rm H}, T)}{\alpha_B({\rm H}, T)}\ =\ \frac{2.59\times10^{-13}}{3.03\times10^{-14} \frac{2.87\ \lambda_{\Ha}}{\lambda_{\Hb}}}\ \approx\ 2.206
+\end{eqnarray}
+}
+{\ATR [\ojo Se souberes como se calcular esse 2.206 em termos de recombination coefficients (a Natalia sabe) entao explica a conta em uma footonote, please!!]
 }
  Esse número não varia muito em função da temperatura e da densidade nas regiões \Hii. Portanto:
 \begin{equation}
-	\LHalpha = h \nu_{\Ha} \frac{\mathrm{Q}_H}{2.226},
+	\LHalpha = h \nu_{\Ha} \frac{\mathrm{Q}_H}{2.206},
 	\label{eq:LHa_recomb_theory}
 \end{equation}
 \noindent onde $\mathrm{Q}_H$ é a taxa de fótons H-ionizantes. Em todo este processo assume-se que nenhuma radiação ionizante escapa da nuvem e, apesar de $\LHalpha$ estar corrigido por extinção, também assume-se que a poeira não absorve muitos dos fótons com $h\nu\ > 13.6$ eV. Escrevemos $dQ_H$ como a equação \eqref{eq:dLambda}.
@@ -141,7 +160,7 @@ Utilizando \eqref{eq:dM_t} em \eqref{eq:QH_t} e com uma simplificação graças 
 \end{equation}
 \noindent Substituindo \eqref{eq:QH_converge} em \eqref{eq:LHa_recomb_theory} podemos escrever:
 \begin{equation}
-	\mathrm{SFR}_{\Ha} = \frac{2.226}{\mathcal{N}_H\ h \nu_{\Ha}} \times \LHalpha
+	\mathrm{SFR}_{\Ha} = \frac{2.206}{\mathcal{N}_H\ h \nu_{\Ha}} \times \LHalpha
 	\label{eq:SFR_theoric}
 \end{equation}
 \noindent
