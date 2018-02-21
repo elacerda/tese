@@ -114,12 +114,12 @@ Utilizando \eqref{eq:dM_t} em \eqref{eq:dLambda} e integrando dentro do tempo do
 \end{eqnarray}
 \noindent onde $L_\nu$ é a luminosidade em uma dada frequência, $r_1$ é o raio crítico de ionização (onde a ionização cai abruptamente a zero), $n_e$ e $n_p$ são as densidades de eletrons e prótons, respectivamente, por unidade de volume, $\alpha_B({\rm H}^0, T)$ é o coeficiente total de recombinação do Hidrogênio, em uma dada temperatura $T$, assumindo o caso B. A luminosidade de uma linha de recombinação em particular (no nosso caso \Ha) em um dado volume é:
 \begin{eqnarray}
-	L(\Ha)\ =\ \int_0^{r_1} 4 \pi j_{\Ha} dV = h \nu_{\Ha} \int_0^{r_1} n_p n_e \alpha_{\Ha}^{eff}({\rm H}^0, T) dV
+	L_{\Ha}\ =\ \int_0^{r_1} 4 \pi j_{\Ha} dV = h \nu_{\Ha} \int_0^{r_1} n_p n_e \alpha_{\Ha}^{eff}({\rm H}^0, T) dV
 \end{eqnarray}
 \noindent onde $j_{\Ha}$ é o coeficiente de emissividade de \Ha (dado em energia por volume, por tempo, por ângulo sólido por frequencia) e $\alpha_{\Ha}^{eff}({\rm H}^0, T)$ é o coeficiente de recombinação efetivo de \Ha.
 Dividindo a equação da relação entre o número de fótons emitidos pela núvem em uma linha de recombinação específica (\Ha) e o número de fótons H-ionizantes:
 \begin{eqnarray}
-	\frac{\frac{L(\Ha)}{h \nu_{\Ha}}}{\int_{\nu_0}^{\infty} \frac{L}{h\nu} d \nu}\ =\ \frac{\int_0^{r_1} n_p n_e \alpha_{\Ha}^{eff}({\rm H}^0, T) dV}{\int_0^{r_1} n_p n_e \alpha_B({\rm H}^0, T) dV}\ \approx\ \frac{\alpha_{\Ha}^{eff}({\rm H}^0, T)}{\alpha_B({\rm H}^0, T)}
+	\frac{\frac{L_{\Ha}}{h \nu_{\Ha}}}{\int_{\nu_0}^{\infty} \frac{L_\nu}{h\nu} d \nu}\ =\ \frac{\int_0^{r_1} n_p n_e \alpha_{\Ha}^{eff}({\rm H}^0, T) dV}{\int_0^{r_1} n_p n_e \alpha_B({\rm H}^0, T) dV}\ \approx\ \frac{\alpha_{\Ha}^{eff}({\rm H}^0, T)}{\alpha_B({\rm H}^0, T)}
 \end{eqnarray}
 Utilizando a Tabela 4.2 de \citet{Osterbrock.Ferland.2006a}, que apresenta os valores de emissividade e do coeficiente efetivo de recombinação para \Hb, calcula-se o coeficiente efetivo de recombinação para o \Ha através da relação entre os coeficientes de \Ha e \Hb (disponível na mesma tabela), sob a temperatura de $10\,000$ K. Também aplicamos o valor do coeficiente de recombinação do caso B para o Hidrogênio com a mesma temperatura, registrado na Tabela 2.7 do mesmo livro, finalmente obtemos:
 \begin{eqnarray}
