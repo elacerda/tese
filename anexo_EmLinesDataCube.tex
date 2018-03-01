@@ -107,24 +107,11 @@ Utilizando \eqref{eq:dM_t} em \eqref{eq:dLambda} e integrando dentro do tempo do
 	&=& \int_0^{T_U} l(t)\ \mathrm{SFR}(t)\  \textrm{d}t
 	\label{eq:Lambda}
 \end{eqnarray}
-\noindent Assumindo o caso B de recombinação do hidrogênio, um em cada 2.206 fótons ionizantes produzem um fóton de \Ha \citep{Osterbrock.Ferland.2006a}\footnote{Em uma núvem em equilíbrio, o número total de ionizações por tempo, que é igual ao número total de fótons ionizantes emitidos em uma frequência $\nu$, se balanceia com o número de recombinações por tempo:
-\begin{eqnarray}
-		\int_{\nu_0}^{\infty} \frac{L_\nu}{h\nu} d \nu\ =\ \mathrm{Q}_H\ =\ \int_0^{r_1} n_p n_e \alpha_B({\rm H}^0, T) dV,
-\end{eqnarray}
-\noindent onde $L_\nu$ é a luminosidade em uma dada frequência, $r_1$ é o raio crítico de ionização (onde a ionização cai abruptamente a zero), $n_e$ e $n_p$ são as densidades de eletrons e prótons, respectivamente, por unidade de volume, $\alpha_B({\rm H}^0, T)$ é o coeficiente total de recombinação do Hidrogênio, em uma dada temperatura $T$, assumindo o caso B. A luminosidade de uma linha de recombinação em particular (no nosso caso \Ha) em um dado volume é:
-\begin{eqnarray}
-	L_{\Ha}\ =\ \int_0^{r_1} 4 \pi j_{\Ha} dV = h \nu_{\Ha} \int_0^{r_1} n_p n_e \alpha_{\Ha}^{eff}({\rm H}^0, T) dV
-\end{eqnarray}
-\noindent onde $j_{\Ha}$ é o coeficiente de emissividade de \Ha (dado em energia por volume, por tempo, por ângulo sólido por frequencia) e $\alpha_{\Ha}^{eff}({\rm H}^0, T)$ é o coeficiente de recombinação efetivo de \Ha.
-Dividindo a equação da relação entre o número de fótons emitidos pela núvem em uma linha de recombinação específica (\Ha) e o número de fótons H-ionizantes:
-\begin{eqnarray}
-	\frac{\frac{L_{\Ha}}{h \nu_{\Ha}}}{\int_{\nu_0}^{\infty} \frac{L_\nu}{h\nu} d \nu}\ =\ \frac{\int_0^{r_1} n_p n_e \alpha_{\Ha}^{eff}({\rm H}^0, T) dV}{\int_0^{r_1} n_p n_e \alpha_B({\rm H}^0, T) dV}\ \approx\ \frac{\alpha_{\Ha}^{eff}({\rm H}^0, T)}{\alpha_B({\rm H}^0, T)}
-\end{eqnarray}
-Utilizando a Tabela 4.2 de \citet{Osterbrock.Ferland.2006a}, que apresenta os valores de emissividade e do coeficiente efetivo de recombinação para \Hb, calcula-se o coeficiente efetivo de recombinação para o \Ha através da relação entre os coeficientes de \Ha e \Hb (disponível na mesma tabela), sob a temperatura de $10\,000$ K. Também aplicamos o valor do coeficiente de recombinação do caso B para o Hidrogênio com a mesma temperatura, registrado na Tabela 2.7 do mesmo livro, finalmente obtemos:
-\begin{eqnarray}
-	\frac{\alpha_{\Ha}^{eff}({\rm H}^0, T)}{\alpha_B({\rm H}^0, T)}\ =\ \frac{2.59\times10^{-13}}{3.03\times10^{-14}} \frac{1}{2.87} \frac{\lambda_{\Hb}}{\lambda_{\Ha}}\ \approx\ 2.206
-\end{eqnarray}
-}. Esse número não varia muito em função da temperatura e da densidade nas regiões \Hii. Portanto:
+\noindent Assumindo o caso B de recombinação do hidrogênio, um em cada 2.206 fótons ionizantes produzem um fóton de \Ha \citep{Osterbrock.Ferland.2006a}\footnote{Em um volme $\Delta V$ de uma região \hii, o número de recombinações $p + e \rightarrow {\rm H}^0$ por tempo é dado por $n_p n_e \alpha_B({\rm H}^0) \Delta V$, onde $n_e$ e $n_p$ são as densidades eletronica e protônica e $\alpha_B({\rm H}^0)$ é o coeficiente total de recombinações para o caso B. Na Tabela 2.7 de \citet{Osterbrock.Ferland.2006a} temos $\alpha_B({\rm H}^0) = 2.59\times10^{-13}$ recombinações $\times\,cm^3\,s^{-1}$ (para uma temperatura de $10\,000$ K). Durante a cascata de recombinação, alguns dos elétrons passam pela transição $n = 3 \rightarrow 2$, produzindo \Ha. Seja $\alpha_{\Ha}^{eff}({\rm H}^0)$ o coeficiente que conta apenas esse tipo de recombinação. Esse valor não é explicitamente dado no livro de \citet{Osterbrock.Ferland.2006a}, porém eles provém (na Tabela 4.7) o valor eficaz para \Hb ($\alpha_{\Hb}^{eff}({\rm H}^0) = 3.03\times10^{-14}$), juntamente com a razão entre as emissividades $j_{\Ha}/j_{\Hb} = 2.87$. Usando
+$$
+\frac{ \alpha_{\Ha}^{eff}({\rm H}^0) }{ \alpha_{\Hb}^{eff}({\rm H}^0) } = \frac{ j_{\Ha} / h\nu_{\Ha} }{ j_{\Hb} / h\nu_{\Hb} }
+$$
+\noindent (onde a razão de energias dos fótons de \Ha e \Hb aparecem porque $j$ mede energia e $\alpha$ mede um número de recombinações), nós finalmente obtemos $\alpha_{\Ha}^{eff}({\rm H}^0) = 1.17\times10^{-13} \, cm^{3}\,s^{-1}$ , ou $0.453 \times \alpha_B({\rm H}^0)$. Em outras palavras, um a cada $1/0.453 = 2.206$ recombinações produz um fóton de \Ha. Considerando a núvem em equilíbrio (o número de fotoionizações se balanceia com o de recombinações) e que a radiação $h\nu > 13.6$ eV não escape da núvem, podemos finalmente dizer que um a cada 2.206 fótons ionizantes produz um fóton \Ha.}. Esse número não varia muito em função da temperatura e da densidade nas regiões \Hii. Portanto:
 \begin{equation}
 	\LHalpha = h \nu_{\Ha} \frac{\mathrm{Q}_H}{2.206},
 	\label{eq:LHa_recomb_theory}
