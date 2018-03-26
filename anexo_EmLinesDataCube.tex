@@ -9,17 +9,12 @@
 %                                                               %
 %:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::%
 
-\chapter{Organizando os ajustes nebulares com o EmLinesDataCube}
-\label{apendice:EmLinesDataCube}
 
-Feitas as medidas dos fluxos integrados das linhas de emissão, conforme descrito na Seção \ref{sec:sample:eml}, temos o arcabouço para calcularmos propriedades nebulares. Escrevi um objeto em \pyt (cujo nome titula esta seção) que, além de organizar os resultados provenientes do programa de medida das linhas de emissão, calcula o coeficiente de extinção para as regiões nebulares ($\tauVN$), larguras equivalentes das linhas, assim como os erros propagados em cada cálculo. Esse objeto foi adicionado ao PyCASSO para facilitar a utilização dos demais membros do projeto. Com esse módulo fica fácil acessar as medidas dos fluxos integrados, a posição central, amplitudes e largura das principais linhas de emissão, coeficientes para reconstrução do contínuo ao redor de cada linha de emissão, os erros nestas medidas, as propriedades mencionadas anteriormente e seus erros propagados.
+\chapter{Propriedades calculadas no \emldc}
+\label{apendice:EMLprops}
 
-
-\section{Propriedades calculadas}
-\label{apendice:EmLinesDataCube:props}
-
-\subsection{Extinção estimada através do decremento de Balmer}
-\label{apendice:EmLinesDataCube:props:tauvneb}
+\section{Extinção estimada através do decremento de Balmer}
+\label{apendice:EMLprops:tauvneb}
 Em um modelo que assume que entre o observador e a fonte de energia existe uma camada difusa, como uma cortina, que extingue a luz diferentemente em cada comprimento de onda, temos:
 \begin{equation}
 	F_\lambda^{obs} = F_\lambda^{int} e^{-\tau_\lambda}
@@ -67,8 +62,8 @@ O erro propagado para $\tauVN$ é:
 \end{equation}
 \noindent com valor típico $\sim 0.14$.
 
-\subsection{Cálculo da taxa de formação estelar}
-\label{apendice:EmLinesDataCube:props:SFR}
+\section{Cálculo da taxa de formação estelar}
+\label{apendice:EMLprops:SFR}
 Um dos métodos mais utilizados para medida da SFR recente utiliza a linha de emissão de \Ha. Nesse método assume-se que a formação estelar é constante nos últimos $t$ anos, que deve englobar pelo menos o tempo de vida das estrelas massivas ionizantes, as quais produzem basicamente todos os fótons que geram as linhas de emissão em \Ha.
 
 Nós queremos calibrar $\LHalpha$ como um indicador de SFR usando uma relação linear:
@@ -155,72 +150,5 @@ Quando fazemos este tipo de estudo utilizando $\LHalpha$, temos a estimativa de 
 \end{equation}
 
 Em \citet{Kennicutt.1998a} esse coeficiente é calculado utilizando diferentes modelos estelares mas utilizando a mesma IMF. Nosso valor é bem próximo daquele obtido no artigo ($7.9 \times 10^{-42}$).
-
-\subsection{Exemplo de utilização}
-\label{apendice:EmLinesDataCube:props:example}
-Com a criação do objeto \emldc e sua adição ao PyCASSO, o processo de análise e produção de gráficos torna-se extremamente simples. Um exemplo de programa para produzir um gráfico BPT \citep{Baldwin.Phillips.Terlevich.1981a} utilizando os fluxos de quatro linhas de emissão (\Ha, \Hb, \oiii e \nii) pode ser visto na Figura \ref{fig:BPTprog}. Primeiro carregam-se os arquivos de dados utilizando o PyCASSO e o \emldc então todas as informações já estão prontas para serem utilizadas. Calculam-se então as razões entre as linhas e, por último, o gráfico é feito utilizando a biblioteca gráfica M\textsc{atplotlib} \footnote{\href{http://matplotlib.org/}{http://matplotlib.org/}}.
-
-Na Figura \ref{fig:BPTfig} podemos ver uma imagem produzida por um programa como o do exemplo anterior. Neste caso utilizamos os dados da galáxia NGC 2916 (objeto CALIFA 277). Classificada com tipo morfológico Sb, é considerada uma galáxia azul e com massa intermediária ($\sim 10^{11}\ M_\odot$). Todas as zonas neste gráfico possuem SN > 3 em todas as quatro linhas do BPT (\Hb, \oiii, \Ha e \nii). Podemos ver que as zonas mais próximas ao núcleo da galáxia estão distribuídas na ponta da asa direita no plano BPT, lado associado às regiões geralmente ionizadas por HOLMES ou por núcleos ativos (para uma discussão acerca ver Seção \ref{sec:DIGdisc:BPT}). Já do outro lado do gráfico, local associado às regiões de formação estelar, se encontram as zonas pertencentes ao disco da galáxia ($R$ > 1 HLR).
-
-%---------------------------- Figure ----------------------------
-\begin{figure}
-	\begin{python}
-import numpy as np
-from matplotlib import pyplot as plt
-from pycasso import fitsQ3DataCube
-
-CALIFASuperFits='K0277.fits'
-EmLinesFits='K0277.EML.fits'
-# Carregando arquivos FITS
-K = fitsQ3DataCube(CALIFASuperFits)
-K.loadEmLinesDataCube(EmLinesFits)
-# Agora todos as informacoes sobre as linhas de
-# emissao estao instanciadas em K.EL
-
-# Indices dos vetores aonde estao armazenados os
-# fluxos de cada linha
-Ha_obs__z = K.EL.flux[K.EL.lines.index('6563'), :]
-Hb_obs__z = K.EL.flux[K.EL.lines.index('4861'), :]
-N2_obs__z = K.EL.flux[K.EL.lines.index('6583'), :]
-O3_obs__z = K.EL.flux[K.EL.lines.index('5007'), :]
-# Razao entre os fluxos de N2/Ha e O3/Hb
-N2Ha__z = np.log10(N2_obs__z) - np.log10(Ha_obs__z)
-O3Hb__z = np.log10(O3_obs__z) - np.log10(Hb_obs__z)
-
-# Grafico
-f = plt.figure()
-ax = f.gca()
-sc = ax.scatter(N2Ha__z, O3Hb__z, c = K.zoneDistance_HLR,
-           		cmap = 'viridis_r', marker = 'o', s = 10,
-           		alpha = 0.8, edgecolor = 'none')
-ax.set_xlabel(r'$\log\ [NII]/H\alpha$')
-ax.set_ylabel(r'$\log\ [OIII]/H\beta$')
-cb = plt.colorbar(sc, ticks = [0, 0.5, 1, 1.5, 2])
-cb.set_label('R [HLR]')
-plt.axis([-0.6, 0.3, -1.5, 1])
-f.savefig('%s-BPT.pdf' % K.califaID)
-	\end{python}
-	\caption[Exemplo de programa utilizando o EmLinesDataCube]
-	{Exemplo de programa utilizando os fluxos de \Ha, \Hb, \OIII e \NII
-para construção de um gráfico BPT utilizando o objeto \emldc juntamente com o PyCASSO.}
-	\label{fig:BPTprog}
-\end{figure}
-%---------------------------- Figure ----------------------------
-
-%---------------------------- Figure ----------------------------
-\begin{figure}
-	\centering
-	%\includegraphics[scale=0.8, trim=2cm 13cm 2cm 3cm, clip]{figuras/O3N2_CALIFA.pdf}
-	\includegraphics[scale=0.6]{figuras/K0277-BPT.pdf}
-	\caption[Diagrama BPT da galáxia NGC2916]
-	{Diagrama BPT para as regiões com $S/N > 3$ nas linhas \Hb, \OIII, \Ha e \NII, da galáxia
-NGC2916 (objeto CALIFA 277) produzida por um programa como o do exemplo da Figura \ref{fig:BPTprog}.
-As cores marcam a distância ao centro da galáxia em unidades do raio que contém metade da luz (HLR). As
-linhas são definidas por \citet[][K01]{Kewley.etal.2001a}, \citet[][S06]{Stasinska.etal.2006a} e
-\citet[][CF10]{CidFernandes.etal.2010a}.}
-	\label{fig:BPTfig}
-\end{figure}
-%---------------------------- Figure ----------------------------
-
 
 % End of this chapter
