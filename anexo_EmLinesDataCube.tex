@@ -36,12 +36,12 @@ Em um modelo que assume que entre o observador e a fonte de energia existe uma c
 \end{eqnarray}
 \noindent Nessa equação, os $q_\lambda$ são provenientes da curva de extinção adotada.
 
-Utilizando \eqref{eq:tauV} podemos calcular qual o coeficiente de extinção para essas regiões nebulares. Para este cálculo utilizamos o fato de que a razão entre os fluxos intrínsecos das duas primeiras linhas da série de Balmer, \Ha e \Hb, varia muito um pouco com a metalicidade, a densidade e a temperatura. Usamos aqui esse valor como constante e igual a $2.86$ \citep[densidade eletrônica de $n = 100\ cm^{-3}$ e temperatura eletrônica $T_e = 10^4$ K; ][]{Osterbrock.Ferland.2006a}. Tambem utilizamos $q_{\Ha}  = 0.81775$ e $q_{\Hb} = 1.16427$ (valores da calibração empírica feita por \citeauthor{CCM1989a}). Com isso temos:
+Utilizando \eqref{eq:tauV} podemos calcular qual o coeficiente de extinção para essas regiões nebulares. Para este cálculo utilizamos o fato de que a razão entre os fluxos intrínsecos das duas primeiras linhas da série de Balmer, \Ha e \Hb, varia muito um pouco com a metalicidade, a densidade e a temperatura. Usamos aqui esse valor como constante e igual a $2,86$ \citep[densidade eletrônica de $n = 100\ cm^{-3}$ e temperatura eletrônica $T_e = 10^4$ K; ][]{Osterbrock.Ferland.2006a}. Tambem utilizamos $q_{\Ha}  = 0,81775$ e $q_{\Hb} = 1,16427$ (valores da calibração empírica feita por \citeauthor{CCM1989a}). Com isso temos:
 \begin{equation}
-	\tauVN = 2.886\ \ln \left( \frac{F_{\Ha}^{obs}/F_{\Hb}^{obs}}{2.86} \right).
+	\tauVN = 2,886\ \ln \left( \frac{F_{\Ha}^{obs}/F_{\Hb}^{obs}}{2,86} \right).
 \end{equation}
 
-O valor de $\tauVN$ varia tipicamente entre 0.6 e 0.65 (média e mediana) nas regiões aqui estudadas (ver também Seção \ref{apendice:synvsneb:tauv}).
+O valor de $\tauVN$ varia tipicamente entre 0,6 e 0,65 (média e mediana) nas regiões aqui estudadas (ver também Seção \ref{apendice:synvsneb:tauv}).
 O erro propagado para $\tauVN$ é:
 \begin{eqnarray}
 	\tauVN &\equiv& \tauVN(F_{\Ha}^{obs}, F_{\Hb}^{obs}) \\
@@ -57,10 +57,10 @@ O erro propagado para $\tauVN$ é:
 \end{eqnarray}
 \noindent Os termos de dentro da raiz em \eqref{eq:etauneb} são o inverso das relações sinal-ruído ($S/N$) de \Ha e \Hb. Como \Hb é sempre a mais ruidosa das duas, podemos aproximar a incerteza em $\tauVN$ por:
 \begin{equation}
-	\epsilon (\tauVN) \approx \frac{2.886}{(S/N)_{\Hb}}
+	\epsilon (\tauVN) \approx \frac{2,886}{(S/N)_{\Hb}}
 	\label{eq:etaunebaprox}
 \end{equation}
-\noindent com valor típico $\sim 0.14$.
+\noindent com valor típico $\sim 0,14$.
 
 \section{Cálculo da taxa de formação estelar}
 \label{apendice:EMLprops:SFR}
@@ -91,7 +91,7 @@ Chamamos $\Lambda$ o valor total de luz ($l$) que recebemos de estrelas que se f
 	\includegraphics[scale=0.62]{figuras/Nh_logt_metBase_Padova2000_salp.pdf}
 	\caption[Evolução temporal do número e da taxa de fótons H-ionizantes em unidades da massa
 	formada.]
-	{\emph{Painel superior esquerdo}: A	evolução no tempo do número de fótons ($\mathcal{N}_H$) para 6 metalicidades (de 0.02 $Z_\odot$ até 1.58 $Z_\odot$) que compoem nossos modelos de SSP. A linha preta grossa representa a evolução utilizando metalicidade solar. \emph{Painel superior direito}: O mesmo que o \emph{painel superior esquerdo}, contudo normalizado pelo valor total de $\mathcal{N}_H$. A linha pontilhada representa 95\% do total de $\mathcal{N}_H$. Em destaque a região ao redor de 10 milhões de anos. \emph{Painel inferior}: Evolução da taxa de fótons H-ionizantes em unidades da massa formada. Também mostra o valor seguindo o código de cores para as mesmas metalicidades.}
+	{\emph{Painel superior esquerdo}: A	evolução no tempo do número de fótons ($\mathcal{N}_H$) para 6 metalicidades (de 0,02 $Z_\odot$ até 1,58 $Z_\odot$) que compoem nossos modelos de SSP. A linha preta grossa representa a evolução utilizando metalicidade solar. \emph{Painel superior direito}: O mesmo que o \emph{painel superior esquerdo}, contudo normalizado pelo valor total de $\mathcal{N}_H$. A linha pontilhada representa 95\% do total de $\mathcal{N}_H$. Em destaque a região ao redor de 10 milhões de anos. \emph{Painel inferior}: Evolução da taxa de fótons H-ionizantes em unidades da massa formada. Também mostra o valor seguindo o código de cores para as mesmas metalicidades.}
 	\label{fig:Nh_qh}
 \end{figure}
 %---------------------------- Figure ----------------------------
@@ -102,21 +102,21 @@ Utilizando \eqref{eq:dM_t} em \eqref{eq:dLambda} e integrando dentro do tempo do
 	&=& \int_0^{T_U} l(t)\ \mathrm{SFR}(t)\  \textrm{d}t
 	\label{eq:Lambda}
 \end{eqnarray}
-\noindent Assumindo o caso B de recombinação do hidrogênio, um em cada 2.206 fótons ionizantes produzem um fóton de \Ha \citep{Osterbrock.Ferland.2006a}\footnote{Em um volme $\Delta V$ de uma região \hii, o número de recombinações $p + e \rightarrow {\rm H}^0$ por tempo é dado por $n_p n_e \alpha_B({\rm H}^0) \Delta V$, onde $n_e$ e $n_p$ são as densidades eletronica e protônica e $\alpha_B({\rm H}^0)$ é o coeficiente total de recombinações para o caso B. Na Tabela 2.7 de \citet{Osterbrock.Ferland.2006a} temos $\alpha_B({\rm H}^0) = 2.59\times10^{-13}$ recombinações $\times\,cm^3\,s^{-1}$ (para uma temperatura de $10\,000$ K). Durante a cascata de recombinação, alguns dos elétrons passam pela transição $n = 3 \rightarrow 2$, produzindo \Ha. Seja $\alpha_{\Ha}^{eff}({\rm H}^0)$ o coeficiente que conta apenas esse tipo de recombinação. Esse valor não é explicitamente dado no livro de \citet{Osterbrock.Ferland.2006a}, porém eles provém (na Tabela 4.7) o valor eficaz para \Hb ($\alpha_{\Hb}^{eff}({\rm H}^0) = 3.03\times10^{-14}$), juntamente com a razão entre as emissividades $j_{\Ha}/j_{\Hb} = 2.87$. Usando
+\noindent Assumindo o caso B de recombinação do hidrogênio, um em cada 2,206 fótons ionizantes produzem um fóton de \Ha \citep{Osterbrock.Ferland.2006a}\footnote{Em um volme $\Delta V$ de uma região \hii, o número de recombinações $p + e \rightarrow {\rm H}^0$ por tempo é dado por $n_p n_e \alpha_B({\rm H}^0) \Delta V$, onde $n_e$ e $n_p$ são as densidades eletronica e protônica e $\alpha_B({\rm H}^0)$ é o coeficiente total de recombinações para o caso B. Na Tabela 2.7 de \citet{Osterbrock.Ferland.2006a} temos $\alpha_B({\rm H}^0) = 2,59\times10^{-13}$ recombinações $\times\,cm^3\,s^{-1}$ (para uma temperatura de $10\,000$ K). Durante a cascata de recombinação, alguns dos elétrons passam pela transição $n = 3 \rightarrow 2$, produzindo \Ha. Seja $\alpha_{\Ha}^{eff}({\rm H}^0)$ o coeficiente que conta apenas esse tipo de recombinação. Esse valor não é explicitamente dado no livro de \citet{Osterbrock.Ferland.2006a}, porém eles provém (na Tabela 4.7) o valor eficaz para \Hb ($\alpha_{\Hb}^{eff}({\rm H}^0) = 3,03\times10^{-14}$), juntamente com a razão entre as emissividades $j_{\Ha}/j_{\Hb} = 2,87$. Usando
 $$
 \frac{ \alpha_{\Ha}^{eff}({\rm H}^0) }{ \alpha_{\Hb}^{eff}({\rm H}^0) } = \frac{ j_{\Ha} / h\nu_{\Ha} }{ j_{\Hb} / h\nu_{\Hb} }
 $$
-\noindent (onde a razão de energias dos fótons de \Ha e \Hb aparecem porque $j$ mede energia e $\alpha$ mede um número de recombinações), nós finalmente obtemos $\alpha_{\Ha}^{eff}({\rm H}^0) = 1.17\times10^{-13} \, cm^{3}\,s^{-1}$ , ou $0.453 \times \alpha_B({\rm H}^0)$. Em outras palavras, um a cada $1/0.453 = 2.206$ recombinações produz um fóton de \Ha. Considerando a núvem em equilíbrio (o número de fotoionizações se balanceia com o de recombinações) e que a radiação $h\nu > 13.6$ eV não escape da núvem, podemos finalmente dizer que um a cada 2.206 fótons ionizantes produz um fóton \Ha.}. Esse número não varia muito em função da temperatura e da densidade nas regiões \Hii. Portanto:
+\noindent (onde a razão de energias dos fótons de \Ha e \Hb aparecem porque $j$ mede energia e $\alpha$ mede um número de recombinações), nós finalmente obtemos $\alpha_{\Ha}^{eff}({\rm H}^0) = 1,17\times10^{-13} \, cm^{3}\,s^{-1}$ , ou $0,453 \times \alpha_B({\rm H}^0)$. Em outras palavras, um a cada $1/0,453 = 2,206$ recombinações produz um fóton de \Ha. Considerando a núvem em equilíbrio (o número de fotoionizações se balanceia com o de recombinações) e que a radiação $h\nu > 13,6$ eV não escape da núvem, podemos finalmente dizer que um a cada 2,206 fótons ionizantes produz um fóton \Ha.}. Esse número não varia muito em função da temperatura e da densidade nas regiões \Hii. Portanto:
 \begin{equation}
-	\LHalpha = h \nu_{\Ha} \frac{\mathrm{Q}_H}{2.206},
+	\LHalpha = h \nu_{\Ha} \frac{\mathrm{Q}_H}{2,206},
 	\label{eq:LHa_recomb_theory}
 \end{equation}
-\noindent onde $\mathrm{Q}_H$ é a taxa de fótons H-ionizantes. Em todo este processo assume-se que nenhuma radiação ionizante escapa da nuvem e, apesar de $\LHalpha$ estar corrigido por extinção, também assume-se que a poeira não absorve muitos dos fótons com $h\nu\ > 13.6$ eV. Escrevemos $dQ_H$ como a equação \eqref{eq:dLambda}.
+\noindent onde $\mathrm{Q}_H$ é a taxa de fótons H-ionizantes. Em todo este processo assume-se que nenhuma radiação ionizante escapa da nuvem e, apesar de $\LHalpha$ estar corrigido por extinção, também assume-se que a poeira não absorve muitos dos fótons com $h\nu\ > 13,6$ eV. Escrevemos $dQ_H$ como a equação \eqref{eq:dLambda}.
 \begin{equation}
 	Q_H(t)\ =\ \int dQ_H = \int q_H(t)\ \mathrm{d}\mathrm{M}(t)
 	\label{eq:QH_t}
 \end{equation}
-\noindent Nas equações acima, $q_H$ (que assume o mesmo papel de $l(t)$ na Equação \ref{eq:dLambda}) é a taxa de fótons H-ionizantes por unidade de massa formada. Considerando os fótons que possam ionizar o hidrogênio ($h\nu\ \geq\ 13.6$ eV ou $\lambda\ \leq\ 912\AA$) escrevemos:
+\noindent Nas equações acima, $q_H$ (que assume o mesmo papel de $l(t)$ na Equação \ref{eq:dLambda}) é a taxa de fótons H-ionizantes por unidade de massa formada. Considerando os fótons que possam ionizar o hidrogênio ($h\nu\ \geq\ 13,6$ eV ou $\lambda\ \leq\ 912\AA$) escrevemos:
 \begin{equation}
 	q_H(t) = \int_0^{912\AA} \frac{l_\lambda\ \lambda}{h c} d\lambda.
 	\label{eq:qH}
@@ -127,7 +127,7 @@ $$
 	\label{eq:Nh}
 \end{equation}
 
-Utilizamos a base de populações estelares de \citet{Bruzual.Charlot.2003} com as isócronas de Padova 2000, juntamente com a IMF de \citet{Salpeter.1955a}. Neste caso, podemos ver na Figura \ref{fig:Nh_qh} a evolução temporal de $\mathcal{N}_H$ em valores absolutos (painel superior esquerdo) e relativamente ao total de $\mathcal{N}_H$ (painel superior direito). Em \citet[Figura 2b]{CidFernandes.etal.2011a} nós podemos ver a evolução temporal de $q_H$ sob todas as idades e metalicidades\footnote{Naquele estudo, o grupo \href{http://starlight.ufsc.br}{SEAGal/\STARLIGHT} utilizou as isócronas de Padova 1994 com a IMF de \citet{Chabrier.2003a}.}. A mesma figura é reproduzida no painel inferior da Figura \ref{fig:Nh_qh}. É notável que o número de fótons H-ionizantes rapidamente converge ao máximo perto de $t = 10^7$ anos. Deste mesmo gráfico mostramos que $q_H$ atinge um valor mínimo constante depois de uma certa idade. Nessa escala de tempo, dominam o regime de ionização estrelas velhas e quentes (ver Capítulo \ref{sec:DIGclass}). Também conclui-se que $\mathcal{N}_H$ é dependente da metalicidade, portanto o valor de $k$ em \eqref{eq:SFRHa} também\footnote{O valor de $k$ em nossa análise varia de 2.00 até 3.13 de acordo com a metalicidade indo de $0.02 Z_\odot$ até $1.58 Z_\odot$.}.
+Utilizamos a base de populações estelares de \citet{Bruzual.Charlot.2003} com as isócronas de Padova 2000, juntamente com a IMF de \citet{Salpeter.1955a}. Neste caso, podemos ver na Figura \ref{fig:Nh_qh} a evolução temporal de $\mathcal{N}_H$ em valores absolutos (painel superior esquerdo) e relativamente ao total de $\mathcal{N}_H$ (painel superior direito). Em \citet[Figura 2b]{CidFernandes.etal.2011a} nós podemos ver a evolução temporal de $q_H$ sob todas as idades e metalicidades\footnote{Naquele estudo, o grupo \href{http://starlight.ufsc.br}{SEAGal/\STARLIGHT} utilizou as isócronas de Padova 1994 com a IMF de \citet{Chabrier.2003a}.}. A mesma figura é reproduzida no painel inferior da Figura \ref{fig:Nh_qh}. É notável que o número de fótons H-ionizantes rapidamente converge ao máximo perto de $t = 10^7$ anos. Deste mesmo gráfico mostramos que $q_H$ atinge um valor mínimo constante depois de uma certa idade. Nessa escala de tempo, dominam o regime de ionização estrelas velhas e quentes (ver Capítulo \ref{sec:DIGclass}). Também conclui-se que $\mathcal{N}_H$ é dependente da metalicidade, portanto o valor de $k$ em \eqref{eq:SFRHa} também\footnote{O valor de $k$ em nossa análise varia de 2,00 até 3,13 de acordo com a metalicidade indo de $0,02 Z_\odot$ até $1,58 Z_\odot$.}.
 
 Utilizando \eqref{eq:dM_t} em \eqref{eq:QH_t} e com uma simplificação graças a SFR constante dentro desta escala temporal ($\mathrm{SFR}(t)\rightarrow \mathrm{SFR}$), podemos reescrever \eqref{eq:QH_t} usando \eqref{eq:Nh}:
 \begin{equation}
@@ -136,7 +136,7 @@ Utilizando \eqref{eq:dM_t} em \eqref{eq:QH_t} e com uma simplificação graças 
 \end{equation}
 \noindent Substituindo \eqref{eq:QH_converge} em \eqref{eq:LHa_recomb_theory} podemos escrever:
 \begin{equation}
-	\mathrm{SFR}_{\Ha} = \frac{2.206}{\mathcal{N}_H\ h \nu_{\Ha}} \times \LHalpha
+	\mathrm{SFR}_{\Ha} = \frac{2,206}{\mathcal{N}_H\ h \nu_{\Ha}} \times \LHalpha
 	\label{eq:SFR_theoric}
 \end{equation}
 \noindent
@@ -144,11 +144,11 @@ Utilizando \eqref{eq:dM_t} em \eqref{eq:QH_t} e com uma simplificação graças 
 Quando fazemos este tipo de estudo utilizando $\LHalpha$, temos a estimativa de uma SFR recente pois assumimos que o tempo para produção de fótons ionizantes relevantes para estimar a SFR é de $t_{\rm ion} = 10^7$ anos. Porém, como vimos anteriormente através da Figura \ref{fig:Nh_qh} essa é a escala de tempo onde a disponibilidade de fótons é praticamente máxima. Finalmente, resolvendo \eqref{eq:SFR_theoric} encontramos o valor para $k$ em \eqref{eq:SFRHa}:
 
 \begin{equation}
-	\mathrm{SFR}_{\Ha}\ [\mathrm{M}_\odot\ \mathrm{yr}^{-1}] = 3.13 \times
-	\left(\frac{\LHalpha}{10^8\ \mathrm{L}_\odot}\right) = 8.1 \times 10^{-42}\ \LHalpha\ [ergs\ s^{-1}]
+	\mathrm{SFR}_{\Ha}\ [\mathrm{M}_\odot\ \mathrm{yr}^{-1}] = 3,13 \times
+	\left(\frac{\LHalpha}{10^8\ \mathrm{L}_\odot}\right) = 8,1 \times 10^{-42}\ \LHalpha\ [ergs\ s^{-1}]
 	\label{eq:SFRNeb}
 \end{equation}
 
-Em \citet{Kennicutt.1998a} esse coeficiente é calculado utilizando diferentes modelos estelares mas utilizando a mesma IMF. Nosso valor é bem próximo daquele obtido no artigo ($7.9 \times 10^{-42}$).
+Em \citet{Kennicutt.1998a} esse coeficiente é calculado utilizando diferentes modelos estelares mas utilizando a mesma IMF. Nosso valor é bem próximo daquele obtido no artigo ($7,9 \times 10^{-42}$).
 
 % End of this chapter
