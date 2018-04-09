@@ -49,7 +49,7 @@
 \usepackage{xfrac}
 
 %%%% Lacerda %%%%
-\usepackage[colorlinks=true,bookmarks=true,linkcolor=blue,urlcolor=blue,citecolor=blue]{hyperref}
+\usepackage[colorlinks=true,bookmarks=true,linkcolor=black,urlcolor=black,citecolor=black]{hyperref}
 
 % linhas orfans e viuvas
 \clubpenalty=1000
